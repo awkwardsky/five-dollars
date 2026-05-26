@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://awkwardsky.github.io/five-dollars/sitemap.xml
