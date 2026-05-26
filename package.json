@@ -9,6 +9,7 @@
     "deliver:digest": "node scripts/deliver-digest.mjs",
     "fetch:opportunities": "node --no-warnings scripts/fetch-opportunities.mjs",
     "update:issue": "node scripts/update-github-issue.mjs",
+    "update:release": "node scripts/update-github-release.mjs",
     "test:payment": "node tests/payment-core.test.mjs",
     "verify:site": "node scripts/verify-site.mjs",
     "verify": "npm run test:payment && npm run verify:site",
@@ -16,7 +17,7 @@
     "scheduler:run-now": "./ops/run-local-scheduler-now.sh",
     "scheduler:status": "./ops/status-local-scheduler.sh",
     "scheduler:uninstall": "./ops/uninstall-local-scheduler.sh",
-    "run:daily": "npm run fetch:opportunities && npm run check:payment && npm run build:site && npm run verify && npm run deliver:digest && npm run update:issue"
+    "run:daily": "npm run fetch:opportunities && npm run check:payment && npm run build:site && npm run verify && npm run deliver:digest && npm run update:issue && npm run update:release"
   },
   "dependencies": {
     "qrcode": "^1.5.4"

@@ -21,6 +21,7 @@
 17. Done: add dedicated public payment/about pages, share metadata, structured data, and `llms.txt`.
 18. Done: add a static search/filter interface over generated opportunity data.
 19. Done: add automated GitHub milestone issue updates for one stable public status surface.
+20. Done: add automated GitHub status release updates under one stable tag.
 
 ## Non-Negotiable Constraints
 

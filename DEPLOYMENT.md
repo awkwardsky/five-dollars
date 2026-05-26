@@ -39,6 +39,7 @@ Outputs:
 - `site/payment-qr.svg`
 - `logs/*.json`
 - GitHub issue: `Five dollar milestone status`
+- GitHub release: `five-dollar-status`
 
 ## Option B: Local macOS Scheduler
 
