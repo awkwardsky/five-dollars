@@ -164,7 +164,11 @@ function renderIssueBody({ project: projectConfig, niche: activeNiche, paymentSt
   return `${issueMarker}
 # Five dollar milestone status
 
-This issue is maintained automatically by the daily workflow. It keeps the public funding request and the latest opportunity scan visible in one stable GitHub surface.
+This issue is maintained automatically by the daily workflow. It keeps the public funding request and the latest opportunity shortlist visible in one stable GitHub surface.
+
+## Who it helps
+
+Grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups can use the radar as a daily shortlist of relevant U.S. government grants and contracts.
 
 ## Payment
 

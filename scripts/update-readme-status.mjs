@@ -70,6 +70,8 @@ function renderStatusBlock({ project: projectConfig, niche: activeNiche, payment
 ## Live Status
 
 - Product: ${activeNiche.name}
+- What it is: Daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
+- Who it helps: Grant writers, BD teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
 - Public site: ${absoluteUrl(baseUrl, "") || "https://awkwardsky.github.io/five-dollars/"}
 - Payment page: ${absoluteUrl(baseUrl, "payment.html") || "https://awkwardsky.github.io/five-dollars/payment.html"}
 - Payment status JSON: ${absoluteUrl(baseUrl, "payment-status.json") || "https://awkwardsky.github.io/five-dollars/payment-status.json"}

@@ -1,11 +1,13 @@
 # five dollars
 
-Automated project for building a small public data product and verifying the first inbound USDT-TRC20 payment of at least 5 USDT.
+Automated project for publishing a daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams, with public verification of the first inbound USDT-TRC20 payment of at least 5 USDT.
 
 <!-- five-dollars-status:start -->
 ## Live Status
 
 - Product: Software, AI, and Automation Opportunities
+- What it is: Daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
+- Who it helps: Grant writers, BD teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
 - Public site: https://awkwardsky.github.io/five-dollars/
 - Payment page: https://awkwardsky.github.io/five-dollars/payment.html
 - Payment status JSON: https://awkwardsky.github.io/five-dollars/payment-status.json
@@ -35,7 +37,7 @@ Automated project for building a small public data product and verifying the fir
 
 ## Current Product
 
-Government Opportunity Radar scans public U.S. government opportunity sources for software, AI, automation, cybersecurity, data, and cloud-related grants/contracts.
+Government Opportunity Radar scans public U.S. government opportunity sources for software, AI, automation, cybersecurity, data, and cloud-related grants/contracts. It is built for grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that want a daily shortlist instead of a broad manual search.
 
 Generated outputs:
 

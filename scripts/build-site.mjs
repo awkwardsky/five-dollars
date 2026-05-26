@@ -20,7 +20,7 @@ const paymentStatus = await readJsonIfExists(paymentLogPath);
 const publicSiteUrl = normalizeSiteUrl(process.env.PUBLIC_SITE_URL ?? project.site?.publicUrl ?? "");
 const siteTitle = "Government Opportunity Radar";
 const siteDescription =
-  "Daily public scan of U.S. grants and contracts for software, AI, automation, cybersecurity, data, and cloud opportunities.";
+  "Daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.";
 const db = new DatabaseSync(dbPath);
 const opportunities = db
   .prepare(`
@@ -150,16 +150,16 @@ ${renderHead({
         <div class="masthead-copy">
           <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
           <h1 id="page-title">Government Opportunity Radar</h1>
-          <p class="summary">Daily scan of public U.S. government grant and contract sources for software, AI, automation, cybersecurity, data, and cloud opportunities.</p>
+          <p class="summary">A daily shortlist for software companies, AI labs, grant writers, proposal teams, and research groups that need to spot relevant U.S. government funding opportunities without checking multiple portals by hand.</p>
         </div>
         <div class="status-panel" aria-label="Current scan status">
           <div>
-            <span>Tracked</span>
+            <span>Current listings</span>
             <strong>${items.length}</strong>
           </div>
           <div>
-            <span>Top score</span>
-            <strong>${topScore}</strong>
+            <span>Topic pages</span>
+            <strong>${topicItems.length}</strong>
           </div>
           <div>
             <span>Next deadline</span>
@@ -168,9 +168,21 @@ ${renderHead({
         </div>
       </section>
 
+      <section class="audience-section" aria-labelledby="audience-title">
+        <div>
+          <h2 id="audience-title">Built for teams that need funding signals, not another portal.</h2>
+          <p>Each run turns public Grants.gov and optional SAM.gov data into a smaller set of searchable matches, topic pages, RSS, JSON, and source links.</p>
+        </div>
+        <ul class="audience-list">
+          <li><strong>BD and proposal teams</strong><span>Find relevant grant and contract leads before writing a bid.</span></li>
+          <li><strong>Software and AI operators</strong><span>Track public-sector demand for AI, data, cybersecurity, automation, and cloud work.</span></li>
+          <li><strong>Grant writers and researchers</strong><span>Start from a ranked shortlist instead of a broad keyword search.</span></li>
+        </ul>
+      </section>
+
       <section class="signal-section" aria-labelledby="signal-title">
         <div>
-          <h2 id="signal-title">Signal Map</h2>
+          <h2 id="signal-title">Current signal map</h2>
           <p>Generated ${escapeHtml(generatedAt)}</p>
         </div>
         ${renderSignalMap(visibleItems)}
@@ -178,7 +190,7 @@ ${renderHead({
 
       <section class="payment-strip" aria-label="Payment milestone">
         <div>
-          <span>${paymentReceived ? "First milestone funded" : "Fund the first run"}</span>
+          <span>${paymentReceived ? "First milestone funded" : "Support the radar"}</span>
           <strong>${paymentReceived ? "Received" : "5 USDT"}</strong>
         </div>
         <code>${escapeHtml(projectConfig.payout.address)}</code>
@@ -187,16 +199,16 @@ ${renderHead({
 
       <section class="offer-section" aria-labelledby="offer-title">
         <div class="offer-copy">
-          <p class="eyebrow">Pilot offer</p>
-          <h2 id="offer-title">Support the daily public scan.</h2>
-          <p>Send 5 USDT on TRON to fund the first milestone. The system checks this public address automatically and records whether the milestone has been reached.</p>
+          <p class="eyebrow">Support option</p>
+          <h2 id="offer-title">Fund the first daily shortlist.</h2>
+          <p>If this saves time for sourcing public-sector opportunities, send 5 USDT on TRON to support the automated scan. The system checks the public address automatically and records when the milestone is reached.</p>
         </div>
         ${renderPaymentCard({ project: projectConfig, paymentStatus: currentPaymentStatus })}
       </section>
 
       <section class="topic-section" aria-labelledby="topics-title">
         <div class="section-heading">
-          <h2 id="topics-title">Tracked Topics</h2>
+          <h2 id="topics-title">Coverage</h2>
           <span>${topicItems.length} pages</span>
         </div>
         <div class="topic-grid">
@@ -206,7 +218,7 @@ ${renderHead({
 
       <section class="search-section" aria-labelledby="search-title">
         <div class="section-heading">
-          <h2 id="search-title">Search Data</h2>
+          <h2 id="search-title">Search the current scan</h2>
           <span id="search-count">${items.length} records</span>
         </div>
         <div class="search-controls">
@@ -227,7 +239,7 @@ ${renderHead({
 
       <section class="opportunity-list" aria-labelledby="opportunities-title">
         <div class="section-heading">
-          <h2 id="opportunities-title">Top Matches</h2>
+          <h2 id="opportunities-title">Today's Shortlist</h2>
           <span>${visibleItems.length} records</span>
         </div>
         ${visibleItems.map(renderOpportunity).join("\n")}
@@ -251,7 +263,7 @@ function renderAboutPage({ project: projectConfig, niche: activeNiche, opportuni
 ${renderHead({
   title: `About | ${siteTitle}`,
   description:
-    "How Government Opportunity Radar is generated, what public data it uses, and how the five-dollar milestone is verified.",
+    "Who Government Opportunity Radar helps, how the daily shortlist is generated, and how the five-dollar milestone is verified.",
   cssPath: "styles.css",
   feedPath: "feed.xml",
   canonicalPath: "about.html",
@@ -276,7 +288,7 @@ ${renderHead({
         <div class="masthead-copy">
           <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
           <h1 id="about-title">About the radar</h1>
-          <p class="summary">A daily static data product that watches public U.S. government opportunity sources and publishes the strongest software, AI, automation, cybersecurity, data, and cloud matches.</p>
+          <p class="summary">A daily static data product for teams that need a fast shortlist of software, AI, automation, cybersecurity, data, and cloud opportunities from public U.S. government sources.</p>
         </div>
         <div class="status-panel" aria-label="Product status">
           <div>
@@ -296,7 +308,12 @@ ${renderHead({
 
       <section class="content-section" aria-labelledby="product-title">
         <h2 id="product-title">Product</h2>
-        <p>Government Opportunity Radar converts public opportunity records into a small, searchable publishing surface: a front page, topic pages, individual opportunity pages, RSS, JSON, sitemap, and a machine-readable payment request.</p>
+        <p>Government Opportunity Radar converts broad public opportunity records into a focused, searchable shortlist for grant writers, business development teams, proposal teams, software operators, AI labs, and research groups.</p>
+      </section>
+
+      <section class="content-section" aria-labelledby="value-title">
+        <h2 id="value-title">What it saves</h2>
+        <p>The radar is meant to reduce daily manual checking across government portals. It publishes topic pages, individual opportunity pages, RSS, JSON, sitemap, source links, and a visible payment milestone from the same automated run.</p>
       </section>
 
       <section class="content-section" aria-labelledby="automation-title">
@@ -348,7 +365,7 @@ ${renderHead({
         <div class="masthead-copy">
           <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
           <h1 id="payment-title">Payment status</h1>
-          <p class="summary">The first milestone is 5 USDT on TRON / TRC20. This page is rebuilt from the latest automated chain check.</p>
+          <p class="summary">Support the daily shortlist if it helps source grants, contracts, or public-sector demand signals. The first milestone is 5 USDT on TRON / TRC20, verified by an automated chain check.</p>
         </div>
         <div class="status-panel" aria-label="Payment status">
           <div>
@@ -396,7 +413,7 @@ ${renderHead({
               <dd><a href="${escapeAttribute(tronScanAddressUrl(projectConfig.payout.address))}">TronScan</a></dd>
             </div>
           </dl>
-          <p class="payment-note">Send only ${escapeHtml(projectConfig.token.symbol)} on ${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}. The checker watches this public receive address only.</p>
+          <p class="payment-note">Send only ${escapeHtml(projectConfig.token.symbol)} on ${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}. The checker watches this public receive address only and marks the milestone funded after a qualifying inbound transfer.</p>
         </div>
       </section>
     </main>
@@ -925,6 +942,8 @@ function renderLlmsTxt({ project: projectConfig, niche: activeNiche, opportuniti
 
 ${siteDescription}
 
+Audience: grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that need a faster shortlist of public-sector opportunities.
+
 ## Canonical resources
 
 - Site: ${siteUrl}
@@ -1198,6 +1217,57 @@ dt {
   gap: 24px;
   align-items: center;
   border-bottom: 1px solid var(--line);
+}
+
+.audience-section {
+  padding: 26px 0;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+  gap: 24px;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+}
+
+.audience-section h2 {
+  max-width: 520px;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.audience-section p {
+  max-width: 560px;
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.audience-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+}
+
+.audience-list li {
+  min-height: 132px;
+  padding: 16px;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.audience-list strong {
+  font-size: 0.98rem;
+}
+
+.audience-list span {
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .signal-section h2,
@@ -1574,6 +1644,7 @@ dd {
 
 @media (max-width: 820px) {
   .masthead,
+  .audience-section,
   .signal-section,
   .payment-strip,
   .offer-section,
@@ -1612,6 +1683,7 @@ dd {
   }
 
   .topic-grid,
+  .audience-list,
   .search-controls,
   .detail-grid {
     grid-template-columns: 1fr;

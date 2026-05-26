@@ -166,6 +166,10 @@ function renderReleaseBody({ project: projectConfig, niche: activeNiche, payment
 
 This release is updated automatically from the daily workflow. It is a stable, non-spam public status surface for the Government Opportunity Radar and the first 5 USDT milestone.
 
+## Who it helps
+
+Grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups can use the radar as a daily shortlist of relevant U.S. government grants and contracts.
+
 ## Payment milestone
 
 - Status: ${paymentReceived ? "received" : "waiting for first qualifying transfer"}
