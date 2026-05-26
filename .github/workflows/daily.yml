@@ -54,6 +54,7 @@ jobs:
           path: |
             data/opportunities.sqlite
             digests/latest.md
+            README.md
             site/**
             logs/*.json
 
@@ -61,7 +62,7 @@ jobs:
         run: |
           git config user.name "five-dollars-bot"
           git config user.email "five-dollars-bot@users.noreply.github.com"
-          git add data/opportunities.sqlite digests/latest.md site logs/*.json
+          git add data/opportunities.sqlite digests/latest.md README.md site logs/*.json
           git diff --cached --quiet || git commit -m "Update daily opportunities and payment check"
           git push
 

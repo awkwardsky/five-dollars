@@ -9,6 +9,8 @@ const workflowPath = resolve(rootDir, ".github/workflows/daily.yml");
 const packagePath = resolve(rootDir, "package.json");
 const projectPath = resolve(rootDir, "config/project.json");
 const readmePath = resolve(rootDir, "README.md");
+const paymentLogPath = resolve(rootDir, "logs/payment-check-latest.json");
+const runLogPath = resolve(rootDir, "logs/run-latest.json");
 const errors = [];
 
 const funding = await readText(fundingPath);
@@ -16,6 +18,8 @@ const workflow = await readText(workflowPath);
 const packageConfig = await readJson(packagePath);
 const project = await readJson(projectPath);
 const readme = await readText(readmePath);
+const paymentLog = await readJson(paymentLogPath);
+const runLog = await readJson(runLogPath);
 const paymentPageUrl = "https://awkwardsky.github.io/five-dollars/payment.html";
 
 if (!funding.includes("custom:") || !funding.includes(paymentPageUrl)) {
@@ -45,6 +49,8 @@ for (const requiredReadmeText of [
   project.payout.address,
   "https://github.com/awkwardsky/five-dollars/issues/1",
   "https://github.com/awkwardsky/five-dollars/releases/tag/five-dollar-status",
+  paymentLog.checkedAt,
+  runLog.finishedAt,
 ]) {
   if (!readme.includes(requiredReadmeText)) {
     errors.push(`README.md live status block is missing ${requiredReadmeText}`);
