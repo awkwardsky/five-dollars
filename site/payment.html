@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment | Government Opportunity Radar</title>
+    <meta name="description" content="Public USDT TRC20 payment request and latest automated receipt status." />
+    <meta property="og:title" content="Payment | Government Opportunity Radar" />
+    <meta property="og:description" content="Public USDT TRC20 payment request and latest automated receipt status." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Payment | Government Opportunity Radar" />
+    <meta name="twitter:description" content="Public USDT TRC20 payment request and latest automated receipt status." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="alternate" type="application/rss+xml" title="Government Opportunity Radar" href="feed.xml" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Payment | Government Opportunity Radar","description":"USDT TRC20 payment request and receipt status.","url":"payment.html","dateModified":"2026-05-26T18:46:55.865Z","potentialAction":{"@type":"DonateAction","price":"5","priceCurrency":"USDT","recipient":"TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ"}}</script>
+  </head>
+  <body>
+    <main class="page detail-page">
+      <nav class="top-nav" aria-label="Site">
+  <a class="" href="./index.html">Radar</a>
+  <a class="active" href="./payment.html">Payment</a>
+  <a class="" href="./about.html">About</a>
+  <a href="./feed.xml">RSS</a>
+  <a href="./opportunities.json">JSON</a>
+</nav>
+      <section class="masthead compact-masthead" aria-labelledby="payment-title">
+        <div class="masthead-copy">
+          <p class="eyebrow">Software, AI, and Automation Opportunities</p>
+          <h1 id="payment-title">Payment status</h1>
+          <p class="summary">The first milestone is 5 USDT on TRON / TRC20. This page is rebuilt from the latest automated chain check.</p>
+        </div>
+        <div class="status-panel" aria-label="Payment status">
+          <div>
+            <span>Status</span>
+            <strong>Open</strong>
+          </div>
+          <div>
+            <span>Matches</span>
+            <strong>0</strong>
+          </div>
+          <div>
+            <span>Listings</span>
+            <strong>60</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="payment-page-grid" aria-label="Payment request">
+        <div class="payment-card">
+  <dl>
+    <div>
+      <dt>Amount</dt>
+      <dd>5 USDT</dd>
+    </div>
+    <div>
+      <dt>Network</dt>
+      <dd>TRON / TRC20</dd>
+    </div>
+    <div>
+      <dt>USDT contract</dt>
+      <dd><code>TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t</code></dd>
+    </div>
+    <div>
+      <dt>Status</dt>
+      <dd>Waiting for first qualifying transfer</dd>
+    </div>
+    <div>
+      <dt>Last checked</dt>
+      <dd>2026-05-26T18:46:55.865Z</dd>
+    </div>
+  </dl>
+  <figure class="payment-qr">
+    <img src="payment-qr.svg" width="160" height="160" alt="QR code for the USDT TRC20 receive address" />
+    <figcaption>Scan address only. Confirm TRON / TRC20 before sending.</figcaption>
+  </figure>
+  <div class="payment-actions">
+    <button class="copy-button" type="button" data-copy="TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ">Copy address</button>
+    <a class="text-link" href="https://tronscan.org/#/address/TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ">View on TronScan</a>
+    <a class="text-link" href="payment-request.json">Payment JSON</a>
+  </div>
+  <p class="payment-note">This is a receive-only public address. Do not send private keys, seed phrases, exchange credentials, or non-TRC20 assets.</p>
+</div>
+        <div class="content-section">
+          <h2>Latest check</h2>
+          <dl class="detail-grid">
+            <div>
+              <dt>Received</dt>
+              <dd>No</dd>
+            </div>
+            <div>
+              <dt>Last checked</dt>
+              <dd>2026-05-26T18:46:55.865Z</dd>
+            </div>
+            <div>
+              <dt>Required minimum</dt>
+              <dd>5 USDT</dd>
+            </div>
+            <div>
+              <dt>Payment JSON</dt>
+              <dd><a href="payment-request.json">payment-request.json</a></dd>
+            </div>
+            <div>
+              <dt>Status JSON</dt>
+              <dd><a href="payment-status.json">payment-status.json</a></dd>
+            </div>
+            <div>
+              <dt>Explorer</dt>
+              <dd><a href="https://tronscan.org/#/address/TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ">TronScan</a></dd>
+            </div>
+          </dl>
+          <p class="payment-note">Send only USDT on TRON / TRC20. The checker watches this public receive address only.</p>
+        </div>
+      </section>
+    </main>
+    <script>
+document.querySelectorAll("[data-copy]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const text = button.getAttribute("data-copy");
+    try {
+      await navigator.clipboard.writeText(text);
+      button.textContent = "Copied";
+    } catch {
+      button.textContent = text;
+    }
+  });
+});
+</script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-05-26T18:46:26.617Z",
+  "finishedAt": "2026-05-26T18:46:55.735Z",
+  "niche": "software-ai-automation",
+  "fetched": {
+    "grants": 68,
+    "sam": 0,
+    "total": 68
+  },
+  "matched": 67,
+  "savedDigest": "/Users/haru/Project/claude-code/five dollars/digests/latest.md",
+  "savedDatabase": "/Users/haru/Project/claude-code/five dollars/data/opportunities.sqlite",
+  "notes": [
+    "SAM.gov skipped because SAM_API_KEY is not set."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "five-dollars",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:payment": "node scripts/check-payment.mjs",
+    "build:site": "node --no-warnings scripts/build-site.mjs",
+    "deliver:digest": "node scripts/deliver-digest.mjs",
+    "fetch:opportunities": "node --no-warnings scripts/fetch-opportunities.mjs",
+    "test:payment": "node tests/payment-core.test.mjs",
+    "verify:site": "node scripts/verify-site.mjs",
+    "verify": "npm run test:payment && npm run verify:site",
+    "scheduler:install": "./ops/install-local-scheduler.sh",
+    "scheduler:run-now": "./ops/run-local-scheduler-now.sh",
+    "scheduler:status": "./ops/status-local-scheduler.sh",
+    "scheduler:uninstall": "./ops/uninstall-local-scheduler.sh",
+    "run:daily": "npm run fetch:opportunities && npm run check:payment && npm run build:site && npm run verify && npm run deliver:digest"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

@@ -1,0 +1,1826 @@
+import { DatabaseSync } from "node:sqlite";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import QRCode from "qrcode";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const rootDir = resolve(__dirname, "..");
+const dbPath = resolve(rootDir, "data/opportunities.sqlite");
+const projectPath = resolve(rootDir, "config/project.json");
+const nichePath = resolve(rootDir, "config/niches.json");
+const paymentLogPath = resolve(rootDir, "logs/payment-check-latest.json");
+const siteDir = resolve(rootDir, "site");
+const opportunitiesDir = resolve(siteDir, "opportunities");
+const topicsDir = resolve(siteDir, "topics");
+
+const project = JSON.parse(await readFile(projectPath, "utf8"));
+const niche = JSON.parse(await readFile(nichePath, "utf8")).primary;
+const paymentStatus = await readJsonIfExists(paymentLogPath);
+const publicSiteUrl = normalizeSiteUrl(process.env.PUBLIC_SITE_URL ?? project.site?.publicUrl ?? "");
+const siteTitle = "Government Opportunity Radar";
+const siteDescription =
+  "Daily public scan of U.S. grants and contracts for software, AI, automation, cybersecurity, data, and cloud opportunities.";
+const db = new DatabaseSync(dbPath);
+const opportunities = db
+  .prepare(`
+    SELECT
+      source,
+      source_id as sourceId,
+      title,
+      agency,
+      opportunity_number as opportunityNumber,
+      status,
+      open_date as openDate,
+      close_date as closeDate,
+      amount,
+      score,
+      summary,
+      official_url as officialUrl
+    FROM opportunities
+    WHERE niche_id = ?
+    ORDER BY score DESC, close_date = '', close_date ASC
+    LIMIT 60
+  `)
+  .all(niche.id);
+db.close();
+
+const pages = opportunities.map(normalizeOpportunity).map((opportunity) => ({
+  ...opportunity,
+  slug: opportunitySlug(opportunity),
+}));
+const topOpportunities = pages.slice(0, 30);
+const topics = buildTopics(pages, niche);
+const paymentQrSvg = await QRCode.toString(project.payout.address, {
+  type: "svg",
+  errorCorrectionLevel: "M",
+  margin: 2,
+  width: 256,
+  color: {
+    dark: "#17212b",
+    light: "#ffffff",
+  },
+});
+const paymentRequest = {
+  network: project.network,
+  token: project.token.symbol,
+  standard: project.token.standard,
+  contractAddress: project.token.contractAddress,
+  amount: project.payout.minimumReceipt,
+  address: project.payout.address,
+  qrPayload: project.payout.address,
+};
+
+await mkdir(siteDir, { recursive: true });
+await rm(opportunitiesDir, { recursive: true, force: true });
+await rm(topicsDir, { recursive: true, force: true });
+await mkdir(opportunitiesDir, { recursive: true });
+await mkdir(topicsDir, { recursive: true });
+
+await writeFile(resolve(siteDir, "index.html"), renderPage({ project, niche, opportunities: pages, topics, paymentStatus }));
+await writeFile(
+  resolve(siteDir, "about.html"),
+  renderAboutPage({ project, niche, opportunities: pages, topics, paymentStatus }),
+);
+await writeFile(
+  resolve(siteDir, "payment.html"),
+  renderPaymentPage({ project, niche, opportunities: pages, paymentStatus, paymentRequest }),
+);
+await writeFile(resolve(siteDir, "styles.css"), renderStyles());
+await writeFile(resolve(siteDir, "app.js"), renderAppScript());
+await writeFile(resolve(siteDir, "opportunities.json"), `${JSON.stringify(pages, null, 2)}\n`);
+await writeFile(resolve(siteDir, "payment-status.json"), `${JSON.stringify(paymentStatus ?? {}, null, 2)}\n`);
+await writeFile(resolve(siteDir, "payment-request.json"), `${JSON.stringify(paymentRequest, null, 2)}\n`);
+await writeFile(resolve(siteDir, "payment-qr.svg"), annotatePaymentQrSvg(paymentQrSvg, paymentRequest));
+await writeFile(resolve(siteDir, "llms.txt"), renderLlmsTxt({ project, niche, opportunities: topOpportunities, topics, paymentStatus }));
+await writeFile(resolve(siteDir, "feed.xml"), renderFeed({ niche, opportunities: topOpportunities, publicSiteUrl }));
+await writeFile(resolve(siteDir, "sitemap.xml"), renderSitemap({ publicSiteUrl, opportunities: pages, topics }));
+await writeFile(resolve(siteDir, "robots.txt"), renderRobots({ publicSiteUrl }));
+await writeFile(resolve(siteDir, ".nojekyll"), "");
+
+for (const opportunity of pages) {
+  await writeFile(
+    resolve(opportunitiesDir, `${opportunity.slug}.html`),
+    renderOpportunityPage({ project, niche, opportunity, paymentStatus }),
+  );
+}
+
+for (const topic of topics) {
+  await writeFile(resolve(topicsDir, `${topic.slug}.html`), renderTopicPage({ project, niche, topic, paymentStatus }));
+}
+
+console.log(
+  JSON.stringify(
+    {
+      builtAt: new Date().toISOString(),
+      output: resolve(siteDir, "index.html"),
+      opportunities: pages.length,
+      detailPages: pages.length,
+      topicPages: topics.length,
+    },
+    null,
+    2,
+  ),
+);
+
+function renderPage({ project: projectConfig, niche: activeNiche, opportunities: items, topics: topicItems, paymentStatus: currentPaymentStatus }) {
+  const visibleItems = items.slice(0, 30);
+  const topScore = Math.max(...items.map((item) => item.score), 0);
+  const nextDeadline = findNextDeadline(items);
+  const generatedAt = new Date().toISOString();
+  const paymentReceived = Boolean(currentPaymentStatus?.received);
+  const paymentCheckedAt = currentPaymentStatus?.checkedAt ?? "not checked yet";
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+${renderHead({
+  title: siteTitle,
+  description: siteDescription,
+  cssPath: "styles.css",
+  feedPath: "feed.xml",
+  canonicalPath: "",
+  jsonLd: renderHomeStructuredData({ activeNiche, items, topicItems, generatedAt }),
+})}
+  </head>
+  <body>
+    <main class="page">
+      ${renderTopNav(".", "index")}
+      <section class="masthead" aria-labelledby="page-title">
+        <div class="masthead-copy">
+          <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
+          <h1 id="page-title">Government Opportunity Radar</h1>
+          <p class="summary">Daily scan of public U.S. government grant and contract sources for software, AI, automation, cybersecurity, data, and cloud opportunities.</p>
+        </div>
+        <div class="status-panel" aria-label="Current scan status">
+          <div>
+            <span>Tracked</span>
+            <strong>${items.length}</strong>
+          </div>
+          <div>
+            <span>Top score</span>
+            <strong>${topScore}</strong>
+          </div>
+          <div>
+            <span>Next deadline</span>
+            <strong>${escapeHtml(nextDeadline)}</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="signal-section" aria-labelledby="signal-title">
+        <div>
+          <h2 id="signal-title">Signal Map</h2>
+          <p>Generated ${escapeHtml(generatedAt)}</p>
+        </div>
+        ${renderSignalMap(visibleItems)}
+      </section>
+
+      <section class="payment-strip" aria-label="Payment milestone">
+        <div>
+          <span>${paymentReceived ? "First milestone funded" : "Fund the first run"}</span>
+          <strong>${paymentReceived ? "Received" : "5 USDT"}</strong>
+        </div>
+        <code>${escapeHtml(projectConfig.payout.address)}</code>
+        <span>${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}</span>
+      </section>
+
+      <section class="offer-section" aria-labelledby="offer-title">
+        <div class="offer-copy">
+          <p class="eyebrow">Pilot offer</p>
+          <h2 id="offer-title">Support the daily public scan.</h2>
+          <p>Send 5 USDT on TRON to fund the first milestone. The system checks this public address automatically and records whether the milestone has been reached.</p>
+        </div>
+        ${renderPaymentCard({ project: projectConfig, paymentStatus: currentPaymentStatus })}
+      </section>
+
+      <section class="topic-section" aria-labelledby="topics-title">
+        <div class="section-heading">
+          <h2 id="topics-title">Tracked Topics</h2>
+          <span>${topicItems.length} pages</span>
+        </div>
+        <div class="topic-grid">
+          ${topicItems.map(renderTopicCard).join("\n")}
+        </div>
+      </section>
+
+      <section class="search-section" aria-labelledby="search-title">
+        <div class="section-heading">
+          <h2 id="search-title">Search Data</h2>
+          <span id="search-count">${items.length} records</span>
+        </div>
+        <div class="search-controls">
+          <label>
+            <span>Search</span>
+            <input id="opportunity-search" type="search" autocomplete="off" placeholder="title, agency, keyword" />
+          </label>
+          <label>
+            <span>Topic</span>
+            <select id="topic-filter">
+              <option value="">All topics</option>
+              ${topicItems.map((topic) => `<option value="${escapeAttribute(topic.name)}">${escapeHtml(topic.name)}</option>`).join("\n")}
+            </select>
+          </label>
+        </div>
+        <div id="search-results" class="search-results" aria-live="polite"></div>
+      </section>
+
+      <section class="opportunity-list" aria-labelledby="opportunities-title">
+        <div class="section-heading">
+          <h2 id="opportunities-title">Top Matches</h2>
+          <span>${visibleItems.length} records</span>
+        </div>
+        ${visibleItems.map(renderOpportunity).join("\n")}
+      </section>
+    </main>
+    ${renderOpportunityDataScript({ opportunities: items, topics: topicItems })}
+    <script src="app.js"></script>
+    ${renderCopyScript()}
+  </body>
+</html>
+`;
+}
+
+function renderAboutPage({ project: projectConfig, niche: activeNiche, opportunities: items, topics: topicItems, paymentStatus: currentPaymentStatus }) {
+  const generatedAt = new Date().toISOString();
+  const paymentReceived = Boolean(currentPaymentStatus?.received);
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+${renderHead({
+  title: `About | ${siteTitle}`,
+  description:
+    "How Government Opportunity Radar is generated, what public data it uses, and how the five-dollar milestone is verified.",
+  cssPath: "styles.css",
+  feedPath: "feed.xml",
+  canonicalPath: "about.html",
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: `About ${siteTitle}`,
+    description: siteDescription,
+    dateModified: generatedAt,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteTitle,
+      url: absoluteUrl(publicSiteUrl, "") || "index.html",
+    },
+  },
+})}
+  </head>
+  <body>
+    <main class="page detail-page">
+      ${renderTopNav(".", "about")}
+      <section class="masthead compact-masthead" aria-labelledby="about-title">
+        <div class="masthead-copy">
+          <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
+          <h1 id="about-title">About the radar</h1>
+          <p class="summary">A daily static data product that watches public U.S. government opportunity sources and publishes the strongest software, AI, automation, cybersecurity, data, and cloud matches.</p>
+        </div>
+        <div class="status-panel" aria-label="Product status">
+          <div>
+            <span>Pages</span>
+            <strong>${items.length}</strong>
+          </div>
+          <div>
+            <span>Topics</span>
+            <strong>${topicItems.length}</strong>
+          </div>
+          <div>
+            <span>Milestone</span>
+            <strong>${paymentReceived ? "Funded" : "Open"}</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="product-title">
+        <h2 id="product-title">Product</h2>
+        <p>Government Opportunity Radar converts public opportunity records into a small, searchable publishing surface: a front page, topic pages, individual opportunity pages, RSS, JSON, sitemap, and a machine-readable payment request.</p>
+      </section>
+
+      <section class="content-section" aria-labelledby="automation-title">
+        <h2 id="automation-title">Automation</h2>
+        <ul class="plain-list">
+          <li>Fetches public opportunity data and stores it in SQLite.</li>
+          <li>Builds the static site, feed, sitemap, JSON exports, and QR payment asset.</li>
+          <li>Checks the public TRON address for an inbound ${escapeHtml(projectConfig.token.symbol)} transfer of at least ${escapeHtml(projectConfig.payout.minimumReceipt)}.</li>
+          <li>Runs locally through the macOS scheduler or remotely through GitHub Actions after deployment.</li>
+        </ul>
+      </section>
+
+      <section class="content-section" aria-labelledby="limits-title">
+        <h2 id="limits-title">Operating rules</h2>
+        <p>The project does not use fake traffic, ad-click automation, spam, private keys, seed phrases, login-wall scraping, or revenue guarantees. The first milestone is considered complete only when the public chain check finds a qualifying inbound transfer.</p>
+        <div class="resource-links">
+          <a href="payment.html">Payment status</a>
+          <a href="opportunities.json">Opportunity JSON</a>
+          <a href="llms.txt">LLM summary</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+`;
+}
+
+function renderPaymentPage({ project: projectConfig, niche: activeNiche, opportunities: items, paymentStatus: currentPaymentStatus, paymentRequest: request }) {
+  const paymentReceived = Boolean(currentPaymentStatus?.received);
+  const checkedAt = currentPaymentStatus?.checkedAt ?? "not checked yet";
+  const matchingTransferCount = currentPaymentStatus?.matchingTransferCount ?? 0;
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+${renderHead({
+  title: `Payment | ${siteTitle}`,
+  description: `Public ${projectConfig.token.symbol} ${projectConfig.token.standard} payment request and latest automated receipt status.`,
+  cssPath: "styles.css",
+  feedPath: "feed.xml",
+  canonicalPath: "payment.html",
+  jsonLd: renderPaymentStructuredData({ project: projectConfig, paymentStatus: currentPaymentStatus, paymentRequest: request }),
+})}
+  </head>
+  <body>
+    <main class="page detail-page">
+      ${renderTopNav(".", "payment")}
+      <section class="masthead compact-masthead" aria-labelledby="payment-title">
+        <div class="masthead-copy">
+          <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
+          <h1 id="payment-title">Payment status</h1>
+          <p class="summary">The first milestone is 5 USDT on TRON / TRC20. This page is rebuilt from the latest automated chain check.</p>
+        </div>
+        <div class="status-panel" aria-label="Payment status">
+          <div>
+            <span>Status</span>
+            <strong>${paymentReceived ? "Funded" : "Open"}</strong>
+          </div>
+          <div>
+            <span>Matches</span>
+            <strong>${matchingTransferCount}</strong>
+          </div>
+          <div>
+            <span>Listings</span>
+            <strong>${items.length}</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="payment-page-grid" aria-label="Payment request">
+        ${renderPaymentCard({ project: projectConfig, paymentStatus: currentPaymentStatus })}
+        <div class="content-section">
+          <h2>Latest check</h2>
+          <dl class="detail-grid">
+            <div>
+              <dt>Received</dt>
+              <dd>${paymentReceived ? "Yes" : "No"}</dd>
+            </div>
+            <div>
+              <dt>Last checked</dt>
+              <dd>${escapeHtml(checkedAt)}</dd>
+            </div>
+            <div>
+              <dt>Required minimum</dt>
+              <dd>${escapeHtml(projectConfig.payout.minimumReceipt)} ${escapeHtml(projectConfig.token.symbol)}</dd>
+            </div>
+            <div>
+              <dt>Payment JSON</dt>
+              <dd><a href="payment-request.json">payment-request.json</a></dd>
+            </div>
+            <div>
+              <dt>Status JSON</dt>
+              <dd><a href="payment-status.json">payment-status.json</a></dd>
+            </div>
+            <div>
+              <dt>Explorer</dt>
+              <dd><a href="${escapeAttribute(tronScanAddressUrl(projectConfig.payout.address))}">TronScan</a></dd>
+            </div>
+          </dl>
+          <p class="payment-note">Send only ${escapeHtml(projectConfig.token.symbol)} on ${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}. The checker watches this public receive address only.</p>
+        </div>
+      </section>
+    </main>
+    ${renderCopyScript()}
+  </body>
+</html>
+`;
+}
+
+function renderOpportunity(item, index) {
+  const detailUrl = `opportunities/${item.slug}.html`;
+  return `<article class="opportunity">
+  <div class="opportunity-rank">${index + 1}</div>
+  <div class="opportunity-body">
+    <div class="opportunity-meta">
+      <span>${escapeHtml(item.source)}</span>
+      <span>${escapeHtml(item.status || "Unknown status")}</span>
+      <span>Score ${escapeHtml(String(item.score))}</span>
+    </div>
+    <h3><a href="${escapeAttribute(detailUrl)}">${escapeHtml(item.title)}</a></h3>
+    <dl>
+      <div>
+        <dt>Agency</dt>
+        <dd>${escapeHtml(item.agency || "Unknown")}</dd>
+      </div>
+      <div>
+        <dt>Deadline</dt>
+        <dd>${escapeHtml(item.closeDate || "Not listed")}</dd>
+      </div>
+      <div>
+        <dt>Amount</dt>
+        <dd>${escapeHtml(item.amount || "Not listed")}</dd>
+      </div>
+    </dl>
+    <p>${escapeHtml(trimText(item.summary, 360))}</p>
+    <div class="resource-links">
+      <a href="${escapeAttribute(detailUrl)}">Read scan page</a>
+      <a href="${escapeAttribute(item.officialUrl)}">Official source</a>
+    </div>
+  </div>
+</article>`;
+}
+
+function renderOpportunityPage({ project: projectConfig, niche: activeNiche, opportunity, paymentStatus: currentPaymentStatus }) {
+  const paymentReceived = Boolean(currentPaymentStatus?.received);
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+${renderHead({
+  title: `${opportunity.title} | ${siteTitle}`,
+  description: trimText(opportunity.summary, 150),
+  cssPath: "../styles.css",
+  feedPath: "../feed.xml",
+  canonicalPath: `opportunities/${opportunity.slug}.html`,
+  type: "article",
+  jsonLd: renderOpportunityStructuredData(opportunity),
+})}
+  </head>
+  <body>
+    <main class="page detail-page">
+      ${renderTopNav("..", "opportunity")}
+      <article class="detail-article">
+        <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
+        <h1>${escapeHtml(opportunity.title)}</h1>
+        <div class="opportunity-meta detail-meta">
+          <span>${escapeHtml(opportunity.source)}</span>
+          <span>${escapeHtml(opportunity.status || "Unknown status")}</span>
+          <span>Score ${escapeHtml(String(opportunity.score))}</span>
+        </div>
+        <dl class="detail-grid">
+          <div>
+            <dt>Agency</dt>
+            <dd>${escapeHtml(opportunity.agency || "Unknown")}</dd>
+          </div>
+          <div>
+            <dt>Opportunity number</dt>
+            <dd>${escapeHtml(opportunity.opportunityNumber || "Not listed")}</dd>
+          </div>
+          <div>
+            <dt>Open date</dt>
+            <dd>${escapeHtml(opportunity.openDate || "Not listed")}</dd>
+          </div>
+          <div>
+            <dt>Deadline</dt>
+            <dd>${escapeHtml(opportunity.closeDate || "Not listed")}</dd>
+          </div>
+          <div>
+            <dt>Amount</dt>
+            <dd>${escapeHtml(opportunity.amount || "Not listed")}</dd>
+          </div>
+          <div>
+            <dt>Source ID</dt>
+            <dd>${escapeHtml(opportunity.sourceId || "Not listed")}</dd>
+          </div>
+        </dl>
+        <section class="detail-summary" aria-labelledby="summary-title">
+          <h2 id="summary-title">Source Summary</h2>
+          <p>${escapeHtml(trimText(opportunity.summary, 1800))}</p>
+        </section>
+        <div class="resource-links detail-links">
+          <a href="${escapeAttribute(opportunity.officialUrl)}">Open official source</a>
+          <a href="../index.html">Back to radar</a>
+          <a href="../payment.html">Payment status</a>
+        </div>
+      </article>
+      <section class="payment-strip detail-payment" aria-label="Payment milestone">
+        <div>
+          <span>${paymentReceived ? "First milestone funded" : "Fund the first run"}</span>
+          <strong>${paymentReceived ? "Received" : "5 USDT"}</strong>
+        </div>
+        <code>${escapeHtml(projectConfig.payout.address)}</code>
+        <span>${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}</span>
+      </section>
+    </main>
+  </body>
+</html>
+`;
+}
+
+function renderTopicPage({ project: projectConfig, niche: activeNiche, topic, paymentStatus: currentPaymentStatus }) {
+  const paymentReceived = Boolean(currentPaymentStatus?.received);
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+${renderHead({
+  title: `${topic.name} | ${siteTitle}`,
+  description: `Daily ${topic.name} grant and contract scan from public U.S. government sources.`,
+  cssPath: "../styles.css",
+  feedPath: "../feed.xml",
+  canonicalPath: `topics/${topic.slug}.html`,
+  jsonLd: renderTopicStructuredData(topic),
+})}
+  </head>
+  <body>
+    <main class="page">
+      ${renderTopNav("..", "topic")}
+      <section class="masthead compact-masthead" aria-labelledby="topic-title">
+        <div class="masthead-copy">
+          <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
+          <h1 id="topic-title">${escapeHtml(topic.name)}</h1>
+          <p class="summary">${escapeHtml(topic.items.length)} current public opportunities matched this topic in the latest scan.</p>
+        </div>
+        <div class="status-panel" aria-label="Topic status">
+          <div>
+            <span>Matches</span>
+            <strong>${topic.items.length}</strong>
+          </div>
+          <div>
+            <span>Status</span>
+            <strong>${paymentReceived ? "Funded" : "Open"}</strong>
+          </div>
+          <div>
+            <span>Token</span>
+            <strong>${escapeHtml(projectConfig.token.symbol)}</strong>
+          </div>
+        </div>
+      </section>
+      <section class="opportunity-list" aria-labelledby="topic-opportunities">
+        <div class="section-heading">
+          <h2 id="topic-opportunities">Topic Matches</h2>
+          <span>${topic.items.length} records</span>
+        </div>
+        ${topic.items.map((item, index) => renderTopicOpportunity(item, index)).join("\n")}
+      </section>
+    </main>
+  </body>
+</html>
+`;
+}
+
+function renderTopicOpportunity(item, index) {
+  return `<article class="opportunity">
+  <div class="opportunity-rank">${index + 1}</div>
+  <div class="opportunity-body">
+    <div class="opportunity-meta">
+      <span>${escapeHtml(item.source)}</span>
+      <span>${escapeHtml(item.status || "Unknown status")}</span>
+      <span>Score ${escapeHtml(String(item.score))}</span>
+    </div>
+    <h3><a href="../opportunities/${escapeAttribute(item.slug)}.html">${escapeHtml(item.title)}</a></h3>
+    <dl>
+      <div>
+        <dt>Agency</dt>
+        <dd>${escapeHtml(item.agency || "Unknown")}</dd>
+      </div>
+      <div>
+        <dt>Deadline</dt>
+        <dd>${escapeHtml(item.closeDate || "Not listed")}</dd>
+      </div>
+      <div>
+        <dt>Amount</dt>
+        <dd>${escapeHtml(item.amount || "Not listed")}</dd>
+      </div>
+    </dl>
+  </div>
+</article>`;
+}
+
+function renderTopicCard(topic) {
+  return `<a class="topic-card" href="topics/${escapeAttribute(topic.slug)}.html">
+  <span>${escapeHtml(topic.name)}</span>
+  <strong>${topic.items.length}</strong>
+</a>`;
+}
+
+function renderPaymentCard({ project: projectConfig, paymentStatus: currentPaymentStatus, qrPath = "payment-qr.svg" }) {
+  const paymentReceived = Boolean(currentPaymentStatus?.received);
+  const paymentCheckedAt = currentPaymentStatus?.checkedAt ?? "not checked yet";
+
+  return `<div class="payment-card">
+  <dl>
+    <div>
+      <dt>Amount</dt>
+      <dd>${escapeHtml(projectConfig.payout.minimumReceipt)} ${escapeHtml(projectConfig.token.symbol)}</dd>
+    </div>
+    <div>
+      <dt>Network</dt>
+      <dd>${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}</dd>
+    </div>
+    <div>
+      <dt>USDT contract</dt>
+      <dd><code>${escapeHtml(projectConfig.token.contractAddress)}</code></dd>
+    </div>
+    <div>
+      <dt>Status</dt>
+      <dd>${paymentReceived ? "Funded" : "Waiting for first qualifying transfer"}</dd>
+    </div>
+    <div>
+      <dt>Last checked</dt>
+      <dd>${escapeHtml(paymentCheckedAt)}</dd>
+    </div>
+  </dl>
+  <figure class="payment-qr">
+    <img src="${escapeAttribute(qrPath)}" width="160" height="160" alt="QR code for the USDT TRC20 receive address" />
+    <figcaption>Scan address only. Confirm ${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)} before sending.</figcaption>
+  </figure>
+  <div class="payment-actions">
+    <button class="copy-button" type="button" data-copy="${escapeAttribute(projectConfig.payout.address)}">Copy address</button>
+    <a class="text-link" href="${escapeAttribute(tronScanAddressUrl(projectConfig.payout.address))}">View on TronScan</a>
+    <a class="text-link" href="payment-request.json">Payment JSON</a>
+  </div>
+  <p class="payment-note">This is a receive-only public address. Do not send private keys, seed phrases, exchange credentials, or non-TRC20 assets.</p>
+</div>`;
+}
+
+function renderOpportunityDataScript({ opportunities: items, topics: topicItems }) {
+  const topicBySlug = new Map();
+  for (const topic of topicItems) {
+    for (const item of topic.items) {
+      const existing = topicBySlug.get(item.slug) ?? [];
+      existing.push(topic.name);
+      topicBySlug.set(item.slug, existing);
+    }
+  }
+
+  const searchItems = items.map((item) => ({
+    title: item.title,
+    agency: item.agency,
+    source: item.source,
+    status: item.status,
+    score: item.score,
+    closeDate: item.closeDate,
+    amount: item.amount,
+    summary: trimText(item.summary, 420),
+    url: `opportunities/${item.slug}.html`,
+    officialUrl: item.officialUrl,
+    topics: topicBySlug.get(item.slug) ?? [],
+  }));
+
+  return `<script type="application/json" id="opportunity-data">${escapeScriptJson(searchItems)}</script>`;
+}
+
+function renderTopNav(rootPath, current) {
+  return `<nav class="top-nav" aria-label="Site">
+  <a class="${current === "index" ? "active" : ""}" href="${escapeAttribute(`${rootPath}/index.html`)}">Radar</a>
+  <a class="${current === "payment" ? "active" : ""}" href="${escapeAttribute(`${rootPath}/payment.html`)}">Payment</a>
+  <a class="${current === "about" ? "active" : ""}" href="${escapeAttribute(`${rootPath}/about.html`)}">About</a>
+  <a href="${escapeAttribute(`${rootPath}/feed.xml`)}">RSS</a>
+  <a href="${escapeAttribute(`${rootPath}/opportunities.json`)}">JSON</a>
+</nav>`;
+}
+
+function renderSignalMap(items) {
+  const points = items.slice(0, 24);
+  const maxScore = Math.max(...points.map((item) => item.score), 1);
+  const circles = points
+    .map((item, index) => {
+      const column = index % 8;
+      const row = Math.floor(index / 8);
+      const cx = 26 + column * 54;
+      const cy = 24 + row * 46;
+      const radius = 7 + Math.round((item.score / maxScore) * 12);
+      const fill = item.source === "SAM.gov" ? "#246b8f" : "#1f7f5d";
+      return `<circle cx="${cx}" cy="${cy}" r="${radius}" fill="${fill}"><title>${escapeHtml(item.title)} (${item.score})</title></circle>`;
+    })
+    .join("");
+
+  return `<svg class="signal-map" viewBox="0 0 430 140" role="img" aria-label="Opportunity score signal map">${circles}</svg>`;
+}
+
+function renderHead({ title, description, cssPath, feedPath, canonicalPath, type = "website", jsonLd }) {
+  const canonicalUrl = absoluteUrl(publicSiteUrl, canonicalPath);
+  const canonicalTag = canonicalUrl ? `\n    <link rel="canonical" href="${escapeAttribute(canonicalUrl)}" />` : "";
+  const urlTags = canonicalUrl
+    ? `\n    <meta property="og:url" content="${escapeHtml(canonicalUrl)}" />`
+    : "";
+  const jsonLdTag = jsonLd
+    ? `\n    <script type="application/ld+json">${renderJsonLd(jsonLd)}</script>`
+    : "";
+
+  return `    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}" />
+    <meta property="og:title" content="${escapeHtml(title)}" />
+    <meta property="og:description" content="${escapeHtml(description)}" />
+    <meta property="og:type" content="${escapeHtml(type)}" />${urlTags}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="${escapeHtml(title)}" />
+    <meta name="twitter:description" content="${escapeHtml(description)}" />${canonicalTag}
+    <link rel="stylesheet" href="${escapeAttribute(cssPath)}" />
+    <link rel="alternate" type="application/rss+xml" title="${escapeAttribute(siteTitle)}" href="${escapeAttribute(feedPath)}" />${jsonLdTag}`;
+}
+
+function renderJsonLd(value) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
+
+function escapeScriptJson(value) {
+  return JSON.stringify(value).replace(/</g, "\\u003c").replace(/&/g, "\\u0026");
+}
+
+function renderHomeStructuredData({ activeNiche, items, topicItems, generatedAt }) {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: siteTitle,
+      description: siteDescription,
+      url: absoluteUrl(publicSiteUrl, "") || "index.html",
+      dateModified: generatedAt,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      name: `${siteTitle} opportunities`,
+      description: activeNiche.name,
+      dateModified: generatedAt,
+      distribution: [
+        {
+          "@type": "DataDownload",
+          encodingFormat: "application/json",
+          contentUrl: absoluteUrl(publicSiteUrl, "opportunities.json") || "opportunities.json",
+        },
+        {
+          "@type": "DataDownload",
+          encodingFormat: "application/rss+xml",
+          contentUrl: absoluteUrl(publicSiteUrl, "feed.xml") || "feed.xml",
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Top government opportunity matches",
+      numberOfItems: items.length,
+      itemListElement: items.slice(0, 20).map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: absoluteUrl(publicSiteUrl, `opportunities/${item.slug}.html`) || `opportunities/${item.slug}.html`,
+        name: item.title,
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Tracked topic pages",
+      numberOfItems: topicItems.length,
+      itemListElement: topicItems.map((topic, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: absoluteUrl(publicSiteUrl, `topics/${topic.slug}.html`) || `topics/${topic.slug}.html`,
+        name: topic.name,
+      })),
+    },
+  ];
+}
+
+function renderOpportunityStructuredData(opportunity) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: opportunity.title,
+    description: trimText(opportunity.summary, 240),
+    url: absoluteUrl(publicSiteUrl, `opportunities/${opportunity.slug}.html`) || `opportunities/${opportunity.slug}.html`,
+    isBasedOn: opportunity.officialUrl,
+    about: {
+      "@type": "Thing",
+      name: opportunity.agency || opportunity.source,
+    },
+  };
+}
+
+function renderTopicStructuredData(topic) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${topic.name} | ${siteTitle}`,
+    description: `Daily ${topic.name} grant and contract scan from public U.S. government sources.`,
+    url: absoluteUrl(publicSiteUrl, `topics/${topic.slug}.html`) || `topics/${topic.slug}.html`,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: topic.items.length,
+      itemListElement: topic.items.slice(0, 20).map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: absoluteUrl(publicSiteUrl, `opportunities/${item.slug}.html`) || `opportunities/${item.slug}.html`,
+        name: item.title,
+      })),
+    },
+  };
+}
+
+function renderPaymentStructuredData({ project: projectConfig, paymentStatus: currentPaymentStatus, paymentRequest }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Payment | ${siteTitle}`,
+    description: `${projectConfig.token.symbol} ${projectConfig.token.standard} payment request and receipt status.`,
+    url: absoluteUrl(publicSiteUrl, "payment.html") || "payment.html",
+    dateModified: currentPaymentStatus?.checkedAt ?? new Date().toISOString(),
+    potentialAction: {
+      "@type": "DonateAction",
+      price: paymentRequest.amount,
+      priceCurrency: paymentRequest.token,
+      recipient: paymentRequest.address,
+    },
+  };
+}
+
+function renderFeed({ niche: activeNiche, opportunities: items, publicSiteUrl: baseUrl }) {
+  const siteLink = baseUrl || "/";
+  const generatedAt = new Date().toUTCString();
+  const itemXml = items
+    .slice(0, 20)
+    .map((item) => {
+      const link = absoluteUrl(baseUrl, `opportunities/${item.slug}.html`) || item.officialUrl || siteLink;
+      return `    <item>
+      <title>${escapeXml(item.title)}</title>
+      <link>${escapeXml(link)}</link>
+      <guid>${escapeXml(`${item.source}:${item.title}:${item.closeDate}`)}</guid>
+      <description>${escapeXml(trimText(item.summary, 500))}</description>
+    </item>`;
+    })
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Government Opportunity Radar</title>
+    <link>${escapeXml(siteLink)}</link>
+    <description>${escapeXml(activeNiche.name)}</description>
+    <lastBuildDate>${escapeXml(generatedAt)}</lastBuildDate>
+${itemXml}
+  </channel>
+</rss>
+`;
+}
+
+function renderSitemap({ publicSiteUrl: baseUrl, opportunities: items, topics }) {
+  const entries = [
+    { path: "", changefreq: "daily" },
+    { path: "about.html", changefreq: "weekly" },
+    { path: "payment.html", changefreq: "daily" },
+    { path: "feed.xml", changefreq: "daily" },
+    { path: "llms.txt", changefreq: "daily" },
+    { path: "opportunities.json", changefreq: "daily" },
+    { path: "payment-status.json", changefreq: "daily" },
+    { path: "payment-request.json", changefreq: "monthly" },
+    { path: "payment-qr.svg", changefreq: "monthly" },
+    ...topics.map((topic) => ({ path: `topics/${topic.slug}.html`, changefreq: "daily" })),
+    ...items.map((item) => ({ path: `opportunities/${item.slug}.html`, changefreq: "weekly" })),
+  ];
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries.map((entry) => renderSitemapEntry(baseUrl, entry)).join("\n")}
+</urlset>
+`;
+}
+
+function renderSitemapEntry(baseUrl, entry) {
+  const loc = absoluteUrl(baseUrl, entry.path) || `/${entry.path}`;
+
+  return `  <url>
+    <loc>${escapeXml(loc)}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+  </url>`;
+}
+
+function renderRobots({ publicSiteUrl: baseUrl }) {
+  const sitemap = baseUrl ? `\nSitemap: ${baseUrl}/sitemap.xml` : "";
+
+  return `User-agent: *
+Allow: /
+${sitemap}
+`;
+}
+
+function renderLlmsTxt({ project: projectConfig, niche: activeNiche, opportunities: items, topics: topicItems, paymentStatus: currentPaymentStatus }) {
+  const siteUrl = absoluteUrl(publicSiteUrl, "") || "index.html";
+  const paymentUrl = absoluteUrl(publicSiteUrl, "payment.html") || "payment.html";
+  const dataUrl = absoluteUrl(publicSiteUrl, "opportunities.json") || "opportunities.json";
+  const feedUrl = absoluteUrl(publicSiteUrl, "feed.xml") || "feed.xml";
+  const paymentReceived = Boolean(currentPaymentStatus?.received);
+  const checkedAt = currentPaymentStatus?.checkedAt ?? "not checked yet";
+  const topItems = items
+    .slice(0, 12)
+    .map((item, index) => `${index + 1}. ${item.title} - ${item.agency || "Unknown agency"} - deadline ${item.closeDate || "not listed"}`)
+    .join("\n");
+
+  return `# ${siteTitle}
+
+${siteDescription}
+
+## Canonical resources
+
+- Site: ${siteUrl}
+- Payment status: ${paymentUrl}
+- JSON data: ${dataUrl}
+- RSS feed: ${feedUrl}
+
+## Payment milestone
+
+- Network: ${projectConfig.network}
+- Token: ${projectConfig.token.symbol} ${projectConfig.token.standard}
+- Receive address: ${projectConfig.payout.address}
+- Required first inbound receipt: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
+- Current status: ${paymentReceived ? "received" : "not received"}
+- Last checked: ${checkedAt}
+
+## Topics
+
+${topicItems.map((topic) => `- ${topic.name}: ${topic.items.length} current matches`).join("\n")}
+
+## Current top opportunities
+
+${topItems}
+
+## Operating rules
+
+No fake traffic, ad-click automation, spam, private keys, seed phrases, login-wall scraping, or revenue guarantees.
+`;
+}
+
+function annotatePaymentQrSvg(svg, paymentRequest) {
+  const title = `USDT TRC20 receive address`;
+  const description = `${paymentRequest.address} on ${paymentRequest.network} ${paymentRequest.standard}`;
+  return svg.replace(
+    /(<svg\b[^>]*>)/,
+    `$1<title>${escapeXml(title)}</title><desc>${escapeXml(description)}</desc>`,
+  );
+}
+
+function findNextDeadline(items) {
+  const dates = items
+    .map((item) => item.closeDate)
+    .filter((value) => /^\d{2}\/\d{2}\/\d{4}$/.test(value))
+    .sort((left, right) => new Date(left) - new Date(right));
+
+  return dates[0] ?? "rolling";
+}
+
+function buildTopics(items, activeNiche) {
+  const topicTerms = [
+    "software",
+    "artificial intelligence",
+    "automation",
+    "cybersecurity",
+    "data science",
+    "cloud",
+  ];
+
+  return topicTerms
+    .map((term) => {
+      const matchedItems = items
+        .filter((item) => opportunityContains(item, term))
+        .slice(0, 20);
+
+      return {
+        name: titleCase(term),
+        slug: slugify(term),
+        items: matchedItems,
+      };
+    })
+    .filter((topic) => topic.items.length > 0 || activeNiche.keywords.includes(topic.name.toLowerCase()));
+}
+
+function opportunityContains(item, term) {
+  const haystack = `${item.title} ${item.summary} ${item.agency}`.toLowerCase();
+  const loweredTerm = term.toLowerCase();
+
+  if (loweredTerm === "artificial intelligence") {
+    return haystack.includes("artificial intelligence") || /\bai\b/.test(haystack);
+  }
+
+  if (loweredTerm === "data science") {
+    return haystack.includes("data science") || haystack.includes("data-enabled") || haystack.includes("analytics");
+  }
+
+  return haystack.includes(loweredTerm);
+}
+
+function opportunitySlug(opportunity) {
+  const source = slugify(opportunity.source || "source");
+  const id = slugify(opportunity.sourceId || opportunity.opportunityNumber || opportunity.title);
+  const title = slugify(opportunity.title).slice(0, 70);
+  return `${source}-${id}-${title}`.replace(/-+$/g, "");
+}
+
+function slugify(value) {
+  return String(value ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 96) || "item";
+}
+
+function titleCase(value) {
+  return String(value)
+    .split(/\s+/)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+function normalizeOpportunity(opportunity) {
+  return {
+    ...opportunity,
+    title: cleanFullText(opportunity.title),
+    agency: cleanFullText(opportunity.agency),
+    opportunityNumber: cleanFullText(opportunity.opportunityNumber),
+    status: cleanFullText(opportunity.status),
+    openDate: cleanFullText(opportunity.openDate),
+    closeDate: cleanFullText(opportunity.closeDate),
+    amount: cleanFullText(opportunity.amount),
+    summary: cleanFullText(opportunity.summary),
+  };
+}
+
+function renderStyles() {
+  return `:root {
+  color-scheme: light;
+  --bg: #eef2f4;
+  --ink: #17212b;
+  --muted: #61717f;
+  --line: #d5dde1;
+  --surface: #ffffff;
+  --green: #1f7f5d;
+  --blue: #246b8f;
+  --gold: #b98525;
+  --red: #a64a4d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 52px;
+}
+
+.top-nav {
+  min-height: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.top-nav a,
+.resource-links a,
+.text-link,
+.copy-button {
+  min-height: 36px;
+  padding: 8px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.top-nav a.active {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.masthead {
+  min-height: 280px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  gap: 24px;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  max-width: 760px;
+  font-size: 4.25rem;
+  line-height: 0.96;
+}
+
+.summary {
+  max-width: 680px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.status-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.status-panel div {
+  min-height: 116px;
+  padding: 16px;
+  display: grid;
+  align-content: space-between;
+  border-left: 1px solid var(--line);
+}
+
+.status-panel div:first-child {
+  border-left: 0;
+}
+
+.status-panel span,
+.payment-strip span,
+.section-heading span,
+.signal-section p,
+dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+.status-panel strong {
+  font-size: 1.7rem;
+}
+
+.signal-section {
+  min-height: 190px;
+  padding: 26px 0;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.signal-section h2,
+.section-heading h2 {
+  font-size: 1.25rem;
+}
+
+.signal-section p {
+  margin-top: 8px;
+}
+
+.signal-map {
+  width: 100%;
+  min-height: 140px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff, #f7fafb);
+}
+
+.payment-strip {
+  min-height: 84px;
+  margin: 22px 0;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  border-left: 6px solid var(--gold);
+  background: #fff8e8;
+}
+
+.offer-section {
+  margin: 22px 0;
+  padding: 28px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
+  gap: 24px;
+  align-items: start;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.offer-copy h2 {
+  max-width: 460px;
+  font-size: 2rem;
+  line-height: 1.08;
+}
+
+.offer-copy p:last-child {
+  max-width: 520px;
+  margin-top: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.payment-card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbfc;
+}
+
+.payment-card dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.payment-qr {
+  margin: 16px 0 0;
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.payment-qr img {
+  width: 160px;
+  height: 160px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.payment-qr figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 720;
+  line-height: 1.55;
+}
+
+.payment-note {
+  margin-top: 16px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.payment-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.copy-button {
+  cursor: pointer;
+}
+
+.payment-strip div {
+  display: grid;
+  gap: 4px;
+}
+
+.payment-strip strong {
+  font-size: 1.5rem;
+}
+
+code {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.section-heading {
+  min-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.topic-section {
+  margin: 24px 0;
+  padding-bottom: 8px;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.topic-card {
+  min-height: 86px;
+  padding: 16px;
+  display: grid;
+  align-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  text-decoration: none;
+}
+
+.topic-card span {
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.topic-card strong {
+  font-size: 2rem;
+}
+
+.search-section {
+  margin: 24px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.search-controls {
+  margin: 12px 0 16px;
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(180px, 260px);
+  gap: 12px;
+}
+
+.search-controls label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 760;
+}
+
+.search-controls input,
+.search-controls select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.search-results {
+  display: grid;
+  gap: 12px;
+}
+
+.search-result {
+  min-height: 160px;
+}
+
+.empty-state {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.opportunity-list {
+  display: grid;
+  gap: 12px;
+}
+
+.opportunity {
+  min-height: 186px;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.opportunity-rank {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #e3f1eb;
+  color: var(--green);
+  font-weight: 900;
+}
+
+.opportunity-body {
+  min-width: 0;
+}
+
+.opportunity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.opportunity-meta span {
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+
+dl {
+  margin: 14px 0;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr;
+  gap: 12px;
+}
+
+dt,
+dd {
+  margin: 0;
+}
+
+dd {
+  margin-top: 3px;
+  font-weight: 760;
+}
+
+.opportunity p {
+  color: #344653;
+  line-height: 1.58;
+}
+
+.resource-links {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.content-section {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.content-section h2 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.content-section p,
+.plain-list {
+  color: #344653;
+  line-height: 1.68;
+}
+
+.plain-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.plain-list li + li {
+  margin-top: 8px;
+}
+
+.payment-page-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.detail-page {
+  width: min(980px, calc(100% - 32px));
+}
+
+.detail-article {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.detail-article h1 {
+  font-size: 3rem;
+}
+
+.detail-meta {
+  margin-top: 16px;
+}
+
+.detail-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.detail-summary {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.detail-summary h2 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.detail-summary p {
+  color: #344653;
+  line-height: 1.68;
+}
+
+.compact-masthead {
+  min-height: 220px;
+}
+
+@media (max-width: 820px) {
+  .masthead,
+  .signal-section,
+  .payment-strip,
+  .offer-section,
+  .payment-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .status-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .status-panel div {
+    min-height: 82px;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .status-panel div:first-child {
+    border-top: 0;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-qr {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-grid,
+  .search-controls,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    width: min(100% - 24px, 420px);
+    padding-top: 18px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .opportunity {
+    grid-template-columns: 1fr;
+  }
+}
+`;
+}
+
+function renderAppScript() {
+  return `(function () {
+  const dataNode = document.getElementById("opportunity-data");
+  const searchInput = document.getElementById("opportunity-search");
+  const topicFilter = document.getElementById("topic-filter");
+  const results = document.getElementById("search-results");
+  const count = document.getElementById("search-count");
+
+  if (!dataNode || !searchInput || !topicFilter || !results || !count) {
+    return;
+  }
+
+  let opportunities = [];
+  try {
+    opportunities = JSON.parse(dataNode.textContent || "[]");
+  } catch {
+    return;
+  }
+
+  function updateResults() {
+    const query = normalize(searchInput.value);
+    const topic = topicFilter.value;
+    const filtered = opportunities.filter((item) => {
+      const matchesTopic = !topic || item.topics.includes(topic);
+      const haystack = normalize([
+        item.title,
+        item.agency,
+        item.source,
+        item.status,
+        item.summary,
+        item.topics.join(" "),
+      ].join(" "));
+      return matchesTopic && (!query || haystack.includes(query));
+    });
+
+    count.textContent = filtered.length + " records";
+    results.innerHTML = filtered.slice(0, 12).map(renderResult).join("") || '<p class="empty-state">No matches</p>';
+  }
+
+  function renderResult(item, index) {
+    return '<article class="opportunity search-result">' +
+      '<div class="opportunity-rank">' + String(index + 1) + '</div>' +
+      '<div class="opportunity-body">' +
+      '<div class="opportunity-meta">' +
+      '<span>' + escapeHtml(item.source || "Source") + '</span>' +
+      '<span>' + escapeHtml(item.status || "Unknown status") + '</span>' +
+      '<span>Score ' + escapeHtml(String(item.score || 0)) + '</span>' +
+      '</div>' +
+      '<h3><a href="' + escapeAttribute(item.url) + '">' + escapeHtml(item.title || "Untitled") + '</a></h3>' +
+      '<dl>' +
+      '<div><dt>Agency</dt><dd>' + escapeHtml(item.agency || "Unknown") + '</dd></div>' +
+      '<div><dt>Deadline</dt><dd>' + escapeHtml(item.closeDate || "Not listed") + '</dd></div>' +
+      '<div><dt>Amount</dt><dd>' + escapeHtml(item.amount || "Not listed") + '</dd></div>' +
+      '</dl>' +
+      '<p>' + escapeHtml(item.summary || "No source summary listed.") + '</p>' +
+      '</div>' +
+      '</article>';
+  }
+
+  function normalize(value) {
+    return String(value || "").toLowerCase().replace(/\\s+/g, " ").trim();
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function escapeAttribute(value) {
+    const url = String(value || "");
+    if (!url || /^\\s*javascript:/i.test(url)) {
+      return "#";
+    }
+    return escapeHtml(url);
+  }
+
+  searchInput.addEventListener("input", updateResults);
+  topicFilter.addEventListener("change", updateResults);
+  updateResults();
+}());
+`;
+}
+
+function trimText(value, maxLength) {
+  const text = cleanFullText(value);
+
+  if (text.length <= maxLength) {
+    return text || "No source summary listed.";
+  }
+
+  return `${text.slice(0, maxLength - 3).trim()}...`;
+}
+
+function cleanFullText(value) {
+  return String(value ?? "")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(Number.parseInt(code, 16)))
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&rsquo;/g, "'")
+    .replace(/&lsquo;/g, "'")
+    .replace(/&rdquo;/g, "\"")
+    .replace(/&ldquo;/g, "\"")
+    .replace(/&mdash;/g, "-")
+    .replace(/&ndash;/g, "-")
+    .replace(/\u200b/g, "")
+    .replace(/¿s/g, "'s")
+    .replace(/¿/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function escapeXml(value) {
+  return escapeHtml(value);
+}
+
+function escapeAttribute(value) {
+  const url = String(value ?? "");
+
+  if (!url || /^\s*javascript:/i.test(url)) {
+    return "#";
+  }
+
+  return escapeHtml(url);
+}
+
+function absoluteUrl(baseUrl, path) {
+  if (!baseUrl) {
+    return "";
+  }
+
+  const cleanedPath = String(path ?? "").replace(/^\/+/g, "");
+  return cleanedPath ? `${baseUrl}/${cleanedPath}` : `${baseUrl}/`;
+}
+
+function tronScanAddressUrl(address) {
+  return `https://tronscan.org/#/address/${address}`;
+}
+
+function renderCopyScript() {
+  return `<script>
+document.querySelectorAll("[data-copy]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const text = button.getAttribute("data-copy");
+    try {
+      await navigator.clipboard.writeText(text);
+      button.textContent = "Copied";
+    } catch {
+      button.textContent = text;
+    }
+  });
+});
+</script>`;
+}
+
+async function readJsonIfExists(path) {
+  try {
+    return JSON.parse(await readFile(path, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+function normalizeSiteUrl(value) {
+  const url = String(value ?? "").trim().replace(/\/+$/, "");
+
+  if (!url) {
+    return "";
+  }
+
+  if (!/^https:\/\//.test(url)) {
+    return "";
+  }
+
+  return url;
+}

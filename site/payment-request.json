@@ -1,0 +1,9 @@
+{
+  "network": "TRON",
+  "token": "USDT",
+  "standard": "TRC20",
+  "contractAddress": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+  "amount": "5",
+  "address": "TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ",
+  "qrPayload": "TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ"
+}

@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-05-26T18:46:58.033Z",
+  "delivered": false,
+  "skipped": true,
+  "reason": "RESEND_API_KEY is not set.",
+  "subscriberCount": 0
+}

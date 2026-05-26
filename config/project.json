@@ -1,0 +1,23 @@
+{
+  "projectName": "five dollars",
+  "network": "TRON",
+  "token": {
+    "symbol": "USDT",
+    "standard": "TRC20",
+    "contractAddress": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+    "decimals": 6
+  },
+  "payout": {
+    "address": "TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ",
+    "minimumReceipt": "5"
+  },
+  "site": {
+    "publicUrl": ""
+  },
+  "verification": {
+    "provider": "TronGrid",
+    "endpoint": "https://api.trongrid.io/v1/accounts/{address}/transactions/trc20",
+    "direction": "inbound",
+    "requiresPrivateKey": false
+  }
+}

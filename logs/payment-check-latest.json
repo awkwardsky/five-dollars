@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-05-26T18:46:55.865Z",
+  "received": false,
+  "address": "TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ",
+  "network": "TRON",
+  "token": "USDT",
+  "minimumReceipt": 5,
+  "matchingTransferCount": 0,
+  "firstReceipt": null,
+  "sources": [
+    "TronGrid"
+  ],
+  "errors": [
+    "TronScan returned non-JSON response 401: <html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></cen"
+  ]
+}

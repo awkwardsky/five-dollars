@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | Government Opportunity Radar</title>
+    <meta name="description" content="How Government Opportunity Radar is generated, what public data it uses, and how the five-dollar milestone is verified." />
+    <meta property="og:title" content="About | Government Opportunity Radar" />
+    <meta property="og:description" content="How Government Opportunity Radar is generated, what public data it uses, and how the five-dollar milestone is verified." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About | Government Opportunity Radar" />
+    <meta name="twitter:description" content="How Government Opportunity Radar is generated, what public data it uses, and how the five-dollar milestone is verified." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="alternate" type="application/rss+xml" title="Government Opportunity Radar" href="feed.xml" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About Government Opportunity Radar","description":"Daily public scan of U.S. grants and contracts for software, AI, automation, cybersecurity, data, and cloud opportunities.","dateModified":"2026-05-26T18:46:57.559Z","isPartOf":{"@type":"WebSite","name":"Government Opportunity Radar","url":"index.html"}}</script>
+  </head>
+  <body>
+    <main class="page detail-page">
+      <nav class="top-nav" aria-label="Site">
+  <a class="" href="./index.html">Radar</a>
+  <a class="" href="./payment.html">Payment</a>
+  <a class="active" href="./about.html">About</a>
+  <a href="./feed.xml">RSS</a>
+  <a href="./opportunities.json">JSON</a>
+</nav>
+      <section class="masthead compact-masthead" aria-labelledby="about-title">
+        <div class="masthead-copy">
+          <p class="eyebrow">Software, AI, and Automation Opportunities</p>
+          <h1 id="about-title">About the radar</h1>
+          <p class="summary">A daily static data product that watches public U.S. government opportunity sources and publishes the strongest software, AI, automation, cybersecurity, data, and cloud matches.</p>
+        </div>
+        <div class="status-panel" aria-label="Product status">
+          <div>
+            <span>Pages</span>
+            <strong>60</strong>
+          </div>
+          <div>
+            <span>Topics</span>
+            <strong>6</strong>
+          </div>
+          <div>
+            <span>Milestone</span>
+            <strong>Open</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="product-title">
+        <h2 id="product-title">Product</h2>
+        <p>Government Opportunity Radar converts public opportunity records into a small, searchable publishing surface: a front page, topic pages, individual opportunity pages, RSS, JSON, sitemap, and a machine-readable payment request.</p>
+      </section>
+
+      <section class="content-section" aria-labelledby="automation-title">
+        <h2 id="automation-title">Automation</h2>
+        <ul class="plain-list">
+          <li>Fetches public opportunity data and stores it in SQLite.</li>
+          <li>Builds the static site, feed, sitemap, JSON exports, and QR payment asset.</li>
+          <li>Checks the public TRON address for an inbound USDT transfer of at least 5.</li>
+          <li>Runs locally through the macOS scheduler or remotely through GitHub Actions after deployment.</li>
+        </ul>
+      </section>
+
+      <section class="content-section" aria-labelledby="limits-title">
+        <h2 id="limits-title">Operating rules</h2>
+        <p>The project does not use fake traffic, ad-click automation, spam, private keys, seed phrases, login-wall scraping, or revenue guarantees. The first milestone is considered complete only when the public chain check finds a qualifying inbound transfer.</p>
+        <div class="resource-links">
+          <a href="payment.html">Payment status</a>
+          <a href="opportunities.json">Opportunity JSON</a>
+          <a href="llms.txt">LLM summary</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+# Government Opportunity Radar
+
+Daily public scan of U.S. grants and contracts for software, AI, automation, cybersecurity, data, and cloud opportunities.
+
+## Canonical resources
+
+- Site: index.html
+- Payment status: payment.html
+- JSON data: opportunities.json
+- RSS feed: feed.xml
+
+## Payment milestone
+
+- Network: TRON
+- Token: USDT TRC20
+- Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
+- Required first inbound receipt: 5 USDT
+- Current status: not received
+- Last checked: 2026-05-26T18:46:55.865Z
+
+## Topics
+
+- Software: 14 current matches
+- Artificial Intelligence: 20 current matches
+- Automation: 4 current matches
+- Cybersecurity: 10 current matches
+- Data Science: 14 current matches
+- Cloud: 7 current matches
+
+## Current top opportunities
+
+1. Pathways to Enable Secure Open-Source Ecosystems - U.S. National Science Foundation - deadline 09/01/2026
+2. Tech Innovation Lab - U.S. Mission to Morocco - deadline 07/13/2026
+3. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
+4. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
+5. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
+6. UNITED STATES MILITARY ACADEMY Broad Agency Announcement - Dept of the Army -- Materiel Command - deadline 03/31/2027
+7. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU) - Geological Survey - deadline 05/30/2026
+8. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina - U.S. Mission to Argentina - deadline 05/31/2026
+9. Public Diplomacy Section Praia: Small Grants Program - U.S. Mission to Cape Verde - deadline 06/19/2026
+10. Science of Learning and Augmented Intelligence - U.S. National Science Foundation - deadline 08/05/2026
+11. Postdoctoral Research Fellowships in Biology - U.S. National Science Foundation - deadline 09/29/2026
+12. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed) - National Institutes of Health - deadline 10/19/2026
+
+## Operating rules
+
+No fake traffic, ad-click automation, spam, private keys, seed phrases, login-wall scraping, or revenue guarantees.
