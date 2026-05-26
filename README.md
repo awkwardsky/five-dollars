@@ -1,25 +1,25 @@
 # five dollars
 
-Automated project for publishing a daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams, with public verification of the first inbound USDT-TRC20 payment of at least 5 USDT.
+Automated project for publishing a searchable daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams, with public verification for an optional 5 USDT TRC20 support target.
 
 <!-- five-dollars-status:start -->
 ## Live Status
 
 - Product: Software, AI, and Automation Opportunities
-- What it is: Daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
-- Who it helps: Grant writers, BD teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
+- What it is: Searchable daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
+- Who it helps: Grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
 - Public site: https://awkwardsky.github.io/five-dollars/
-- Payment page: https://awkwardsky.github.io/five-dollars/payment.html
-- Payment status JSON: https://awkwardsky.github.io/five-dollars/payment-status.json
+- Support page: https://awkwardsky.github.io/five-dollars/payment.html
+- Support status JSON: https://awkwardsky.github.io/five-dollars/payment-status.json
 - GitHub status issue: https://github.com/awkwardsky/five-dollars/issues/1
 - GitHub status release: https://github.com/awkwardsky/five-dollars/releases/tag/five-dollar-status
 - RSS feed: https://awkwardsky.github.io/five-dollars/feed.xml
 - Funding metadata: `.github/FUNDING.yml`
 
-### Payment
+### Optional Support
 
-- Status: Waiting for first qualifying transfer
-- Required first receipt: 5 USDT
+- Status: Not received yet
+- Support target: 5 USDT
 - Network: TRON / TRC20
 - Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
 - Matching transfers: 0
@@ -37,14 +37,14 @@ Automated project for publishing a daily shortlist of U.S. government grants and
 
 ## Current Product
 
-Government Opportunity Radar scans public U.S. government opportunity sources for software, AI, automation, cybersecurity, data, and cloud-related grants/contracts. It is built for grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that want a daily shortlist instead of a broad manual search.
+Government Opportunity Radar scans public U.S. government opportunity sources for software, AI, automation, cybersecurity, data, and cloud-related grants/contracts. It is built for grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that want a daily shortlist instead of a broad manual search.
 
 Generated outputs:
 
-- `.github/FUNDING.yml` - GitHub Sponsor button metadata pointing to the public payment page
+- `.github/FUNDING.yml` - GitHub Sponsor button metadata pointing to the public support page
 - `site/index.html` - public product page
 - `site/about.html` - product and automation explanation
-- `site/payment.html` - public payment request and latest milestone status
+- `site/payment.html` - optional support request and latest receipt status
 - `site/app.js` - static search/filter interface for the public page
 - `site/opportunities/*.html` - generated detail pages for individual opportunities
 - `site/topics/*.html` - topic landing pages
@@ -52,8 +52,8 @@ Generated outputs:
 - `site/feed.xml` - RSS feed
 - `site/sitemap.xml` - crawler sitemap
 - `site/opportunities.json` - machine-readable opportunity data
-- `site/payment-status.json` - public milestone status
-- `site/payment-request.json` - machine-readable payment request
+- `site/payment-status.json` - public support receipt status
+- `site/payment-request.json` - machine-readable support request
 - `site/payment-qr.svg` - QR code for the public receive address
 - `digests/latest.md` - email-ready digest
 - `data/opportunities.sqlite` - local opportunity database
@@ -61,12 +61,12 @@ Generated outputs:
 - `logs/github-issue-latest.json` - latest GitHub issue update result
 - `logs/github-release-latest.json` - latest GitHub release update result
 
-## Payment Milestone
+## Optional Support
 
 - Network: TRON
 - Token: USDT TRC20
 - Address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
-- Required first receipt: at least 5 USDT
+- Support target: at least 5 USDT
 
 ## Commands
 
@@ -92,13 +92,13 @@ npm run scheduler:status
 npm run scheduler:uninstall
 ```
 
-`run:daily` checks payment before building the public site so `site/payment-status.json` and the visible funding status reflect the latest chain lookup.
+`run:daily` checks the public receive address before building the public site so `site/payment-status.json` and the visible support status reflect the latest chain lookup.
 
 `update:readme` refreshes the live status block on this README so the GitHub repository homepage reflects the latest payment check and product links.
 
-`update:issue` maintains one public GitHub issue with the current funding status and top opportunity links when `GITHUB_TOKEN`/`GH_TOKEN` and `GITHUB_REPOSITORY` are available. Without those variables it writes a skipped log and exits successfully.
+`update:issue` maintains one public GitHub issue with the current support status and top opportunity links when `GITHUB_TOKEN`/`GH_TOKEN` and `GITHUB_REPOSITORY` are available. Without those variables it writes a skipped log and exits successfully.
 
-`update:release` maintains one public GitHub release tagged `five-dollar-status` with the same milestone and product links. It updates the existing release instead of creating daily releases.
+`update:release` maintains one public GitHub release tagged `five-dollar-status` with the same support status and product links. It updates the existing release instead of creating daily releases.
 
 `verify` runs the payment-core test fixture, checks generated site artifacts, and validates repo-level automation metadata such as the Sponsor button funding URL and daily issue/release update commands.
 
@@ -108,7 +108,7 @@ See `DEPLOYMENT.md`.
 
 The GitHub Actions workflow can run daily automation and deploy `site/` to GitHub Pages after the repository is pushed and Pages is configured to use GitHub Actions.
 
-It also maintains a single public issue named `Five dollar milestone status` and one stable release tagged `five-dollar-status` as non-spam public status surfaces for the payment request and latest scan.
+It also maintains a single public issue and one stable release tagged `five-dollar-status` as non-spam public status surfaces for the optional support request and latest shortlist.
 
 Optional secrets improve coverage:
 

@@ -164,21 +164,21 @@ function renderReleaseBody({ project: projectConfig, niche: activeNiche, payment
   return `${releaseMarker}
 # Five dollar status
 
-This release is updated automatically from the daily workflow. It is a stable, non-spam public status surface for the Government Opportunity Radar and the first 5 USDT milestone.
+This release is updated automatically from the daily workflow. It is a stable, non-spam public status surface for the Government Opportunity Radar and the optional 5 USDT support target.
 
 ## Who it helps
 
-Grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups can use the radar as a daily shortlist of relevant U.S. government grants and contracts.
+Grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups can use this as a daily shortlist of relevant U.S. government grants and contracts.
 
-## Payment milestone
+## Optional support
 
-- Status: ${paymentReceived ? "received" : "waiting for first qualifying transfer"}
-- Required first receipt: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
+- Status: ${paymentReceived ? "received" : "not received yet"}
+- Support target: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
 - Network: ${projectConfig.network} / ${projectConfig.token.standard}
 - Receive address: \`${projectConfig.payout.address}\`
 - Matching transfers: ${currentPaymentStatus?.matchingTransferCount ?? 0}
 - Last checked: ${checked}
-- Public payment page: ${absoluteUrl(baseUrl, "payment.html") || "site/payment.html"}
+- Public support page: ${absoluteUrl(baseUrl, "payment.html") || "site/payment.html"}
 - Public status JSON: ${absoluteUrl(baseUrl, "payment-status.json") || "site/payment-status.json"}
 
 ## Product links

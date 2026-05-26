@@ -20,7 +20,7 @@ const paymentStatus = await readJsonIfExists(paymentLogPath);
 const publicSiteUrl = normalizeSiteUrl(process.env.PUBLIC_SITE_URL ?? project.site?.publicUrl ?? "");
 const siteTitle = "Government Opportunity Radar";
 const siteDescription =
-  "Daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.";
+  "Searchable daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.";
 const db = new DatabaseSync(dbPath);
 const opportunities = db
   .prepare(`
@@ -125,11 +125,9 @@ console.log(
 
 function renderPage({ project: projectConfig, niche: activeNiche, opportunities: items, topics: topicItems, paymentStatus: currentPaymentStatus }) {
   const visibleItems = items.slice(0, 30);
-  const topScore = Math.max(...items.map((item) => item.score), 0);
   const nextDeadline = findNextDeadline(items);
   const generatedAt = new Date().toISOString();
   const paymentReceived = Boolean(currentPaymentStatus?.received);
-  const paymentCheckedAt = currentPaymentStatus?.checkedAt ?? "not checked yet";
 
   return `<!doctype html>
 <html lang="en">
@@ -148,17 +146,17 @@ ${renderHead({
       ${renderTopNav(".", "index")}
       <section class="masthead" aria-labelledby="page-title">
         <div class="masthead-copy">
-          <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
-          <h1 id="page-title">Government Opportunity Radar</h1>
-          <p class="summary">A daily shortlist for software companies, AI labs, grant writers, proposal teams, and research groups that need to spot relevant U.S. government funding opportunities without checking multiple portals by hand.</p>
+          <p class="eyebrow">Government Opportunity Radar</p>
+          <h1 id="page-title">Government funding opportunities, shortlisted daily.</h1>
+          <p class="summary">Search current U.S. grant and contract opportunities for software, AI, cybersecurity, data, automation, and cloud work without checking multiple government portals by hand.</p>
         </div>
         <div class="status-panel" aria-label="Current scan status">
           <div>
-            <span>Current listings</span>
+            <span>Listings found</span>
             <strong>${items.length}</strong>
           </div>
           <div>
-            <span>Topic pages</span>
+            <span>Topics</span>
             <strong>${topicItems.length}</strong>
           </div>
           <div>
@@ -170,20 +168,20 @@ ${renderHead({
 
       <section class="audience-section" aria-labelledby="audience-title">
         <div>
-          <h2 id="audience-title">Built for teams that need funding signals, not another portal.</h2>
-          <p>Each run turns public Grants.gov and optional SAM.gov data into a smaller set of searchable matches, topic pages, RSS, JSON, and source links.</p>
+          <h2 id="audience-title">Built for teams that need a shorter research list.</h2>
+          <p>Each run turns public Grants.gov records, plus SAM.gov records when available, into searchable matches, topic pages, RSS, JSON, and direct source links.</p>
         </div>
         <ul class="audience-list">
-          <li><strong>BD and proposal teams</strong><span>Find relevant grant and contract leads before writing a bid.</span></li>
-          <li><strong>Software and AI operators</strong><span>Track public-sector demand for AI, data, cybersecurity, automation, and cloud work.</span></li>
+          <li><strong>Business development and proposal teams</strong><span>Find relevant grant and contract leads before writing a bid.</span></li>
+          <li><strong>Software, AI, cyber, data, and cloud teams</strong><span>Track public-sector demand in areas your team can serve.</span></li>
           <li><strong>Grant writers and researchers</strong><span>Start from a ranked shortlist instead of a broad keyword search.</span></li>
         </ul>
       </section>
 
       <section class="topic-section" aria-labelledby="topics-title">
         <div class="section-heading">
-          <h2 id="topics-title">Coverage</h2>
-          <span>${topicItems.length} pages</span>
+          <h2 id="topics-title">Topics covered</h2>
+          <span>${topicItems.length} topics</span>
         </div>
         <div class="topic-grid">
           ${topicItems.map(renderTopicCard).join("\n")}
@@ -192,8 +190,8 @@ ${renderHead({
 
       <section class="search-section" aria-labelledby="search-title">
         <div class="section-heading">
-          <h2 id="search-title">Search the current scan</h2>
-          <span id="search-count">${items.length} records</span>
+          <h2 id="search-title">Search this shortlist</h2>
+          <span id="search-count">${items.length} opportunities</span>
         </div>
         <div class="search-controls">
           <label>
@@ -213,20 +211,20 @@ ${renderHead({
 
       <section class="opportunity-list" aria-labelledby="opportunities-title">
         <div class="section-heading">
-          <h2 id="opportunities-title">Today's Shortlist</h2>
-          <span>${visibleItems.length} records</span>
+          <h2 id="opportunities-title">Today's opportunity shortlist</h2>
+          <span>${visibleItems.length} opportunities</span>
         </div>
         ${visibleItems.map(renderOpportunity).join("\n")}
       </section>
 
       <section class="support-inline" aria-labelledby="support-inline-title">
         <div>
-          <h2 id="support-inline-title">${paymentReceived ? "First scan milestone funded." : "If this shortlist saved time, support the next run."}</h2>
-          <p>${paymentReceived ? "The first 5 USDT milestone has been received and recorded by the automated checker." : "The radar is free to inspect. A 5 USDT contribution keeps the daily scan running and is verified automatically on-chain."}</p>
+          <h2 id="support-inline-title">${paymentReceived ? "Support target received." : "If this shortlist saved research time, support the next run."}</h2>
+          <p>${paymentReceived ? "The 5 USDT support target has been received and recorded by the automated checker." : "Use the shortlist for free. A 5 USDT contribution helps keep the daily scan running and is verified automatically on-chain."}</p>
         </div>
         <div class="support-inline-actions">
-          <a class="primary-link" href="payment.html">${paymentReceived ? "View receipt status" : "Support with 5 USDT"}</a>
-          <a class="text-link" href="payment.html">Payment status</a>
+          <a class="primary-link" href="payment.html">${paymentReceived ? "View receipt status" : "Support this scan"}</a>
+          <a class="text-link" href="payment.html">Support status</a>
           <a class="text-link" href="feed.xml">RSS</a>
           <a class="text-link" href="opportunities.json">JSON</a>
         </div>
@@ -250,7 +248,7 @@ function renderAboutPage({ project: projectConfig, niche: activeNiche, opportuni
 ${renderHead({
   title: `About | ${siteTitle}`,
   description:
-    "Who Government Opportunity Radar helps, how the daily shortlist is generated, and how the five-dollar milestone is verified.",
+    "Who Government Opportunity Radar helps, what the daily shortlist includes, and how support receipts are verified.",
   cssPath: "styles.css",
   feedPath: "feed.xml",
   canonicalPath: "about.html",
@@ -273,13 +271,13 @@ ${renderHead({
       ${renderTopNav(".", "about")}
       <section class="masthead compact-masthead" aria-labelledby="about-title">
         <div class="masthead-copy">
-          <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
-          <h1 id="about-title">About the radar</h1>
-          <p class="summary">A daily static data product for teams that need a fast shortlist of software, AI, automation, cybersecurity, data, and cloud opportunities from public U.S. government sources.</p>
+          <p class="eyebrow">Government Opportunity Radar</p>
+          <h1 id="about-title">What this shortlist does</h1>
+          <p class="summary">A daily public data product for teams that need a faster way to review software, AI, automation, cybersecurity, data, and cloud opportunities from U.S. government sources.</p>
         </div>
         <div class="status-panel" aria-label="Product status">
           <div>
-            <span>Pages</span>
+            <span>Opportunity pages</span>
             <strong>${items.length}</strong>
           </div>
           <div>
@@ -287,37 +285,37 @@ ${renderHead({
             <strong>${topicItems.length}</strong>
           </div>
           <div>
-            <span>Milestone</span>
-            <strong>${paymentReceived ? "Funded" : "Open"}</strong>
+            <span>Support</span>
+            <strong>${paymentReceived ? "Received" : "Not yet"}</strong>
           </div>
         </div>
       </section>
 
       <section class="content-section" aria-labelledby="product-title">
-        <h2 id="product-title">Product</h2>
-        <p>Government Opportunity Radar converts broad public opportunity records into a focused, searchable shortlist for grant writers, business development teams, proposal teams, software operators, AI labs, and research groups.</p>
+        <h2 id="product-title">What you can use it for</h2>
+        <p>Government Opportunity Radar converts broad public opportunity records into a focused, searchable shortlist for grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.</p>
       </section>
 
       <section class="content-section" aria-labelledby="value-title">
         <h2 id="value-title">What it saves</h2>
-        <p>The radar is meant to reduce daily manual checking across government portals. It publishes topic pages, individual opportunity pages, RSS, JSON, sitemap, source links, and a visible payment milestone from the same automated run.</p>
+        <p>The shortlist reduces daily manual checking across government portals. It publishes topic pages, individual opportunity pages, RSS, JSON, sitemap, source links, and a public support status from the same automated run.</p>
       </section>
 
       <section class="content-section" aria-labelledby="automation-title">
         <h2 id="automation-title">Automation</h2>
         <ul class="plain-list">
-          <li>Fetches public opportunity data and stores it in SQLite.</li>
-          <li>Builds the static site, feed, sitemap, JSON exports, and QR payment asset.</li>
-          <li>Checks the public TRON address for an inbound ${escapeHtml(projectConfig.token.symbol)} transfer of at least ${escapeHtml(projectConfig.payout.minimumReceipt)}.</li>
-          <li>Runs locally through the macOS scheduler or remotely through GitHub Actions after deployment.</li>
+          <li>Collects public opportunity data for the selected topics.</li>
+          <li>Builds the static site, feed, sitemap, JSON exports, and support QR code.</li>
+          <li>Checks the public TRON address for an inbound transfer of at least ${escapeHtml(projectConfig.payout.minimumReceipt)} ${escapeHtml(projectConfig.token.symbol)}.</li>
+          <li>Runs locally through the macOS scheduler or remotely through GitHub Actions.</li>
         </ul>
       </section>
 
       <section class="content-section" aria-labelledby="limits-title">
         <h2 id="limits-title">Operating rules</h2>
-        <p>The project does not use fake traffic, ad-click automation, spam, private keys, seed phrases, login-wall scraping, or revenue guarantees. The first milestone is considered complete only when the public chain check finds a qualifying inbound transfer.</p>
+        <p>The project does not use fake traffic, ad-click automation, spam, private keys, seed phrases, login-wall scraping, or revenue guarantees. Support is optional, and the public status changes only after the chain checker sees an inbound transfer of at least ${escapeHtml(projectConfig.payout.minimumReceipt)} ${escapeHtml(projectConfig.token.symbol)}.</p>
         <div class="resource-links">
-          <a href="payment.html">Payment status</a>
+          <a href="payment.html">Support status</a>
           <a href="opportunities.json">Opportunity JSON</a>
           <a href="llms.txt">LLM summary</a>
         </div>
@@ -337,8 +335,8 @@ function renderPaymentPage({ project: projectConfig, niche: activeNiche, opportu
 <html lang="en">
   <head>
 ${renderHead({
-  title: `Payment | ${siteTitle}`,
-  description: `Public ${projectConfig.token.symbol} ${projectConfig.token.standard} payment request and latest automated receipt status.`,
+  title: `Support | ${siteTitle}`,
+  description: `Optional ${projectConfig.token.symbol} ${projectConfig.token.standard} support request and latest automated receipt status.`,
   cssPath: "styles.css",
   feedPath: "feed.xml",
   canonicalPath: "payment.html",
@@ -350,17 +348,17 @@ ${renderHead({
       ${renderTopNav(".", "payment")}
       <section class="masthead compact-masthead" aria-labelledby="payment-title">
         <div class="masthead-copy">
-          <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
-          <h1 id="payment-title">Payment status</h1>
-          <p class="summary">Support the daily shortlist if it helps source grants, contracts, or public-sector demand signals. The first milestone is 5 USDT on TRON / TRC20, verified by an automated chain check.</p>
+          <p class="eyebrow">Optional support</p>
+          <h1 id="payment-title">Support this daily shortlist</h1>
+          <p class="summary">Use the opportunity shortlist for free. If it saves research time, you can support the next automated run with 5 USDT on TRON / TRC20. The receipt status is checked automatically on-chain.</p>
         </div>
         <div class="status-panel" aria-label="Payment status">
           <div>
-            <span>Status</span>
-            <strong>${paymentReceived ? "Funded" : "Open"}</strong>
+            <span>Receipt status</span>
+            <strong>${paymentReceived ? "Received" : "Not yet"}</strong>
           </div>
           <div>
-            <span>Matches</span>
+            <span>Transfers found</span>
             <strong>${matchingTransferCount}</strong>
           </div>
           <div>
@@ -373,7 +371,7 @@ ${renderHead({
       <section class="payment-page-grid" aria-label="Payment request">
         ${renderPaymentCard({ project: projectConfig, paymentStatus: currentPaymentStatus })}
         <div class="content-section">
-          <h2>Latest check</h2>
+          <h2>Receipt check</h2>
           <dl class="detail-grid">
             <div>
               <dt>Received</dt>
@@ -384,11 +382,11 @@ ${renderHead({
               <dd>${escapeHtml(checkedAt)}</dd>
             </div>
             <div>
-              <dt>Required minimum</dt>
+              <dt>Support target</dt>
               <dd>${escapeHtml(projectConfig.payout.minimumReceipt)} ${escapeHtml(projectConfig.token.symbol)}</dd>
             </div>
             <div>
-              <dt>Payment JSON</dt>
+              <dt>Request JSON</dt>
               <dd><a href="payment-request.json">payment-request.json</a></dd>
             </div>
             <div>
@@ -400,7 +398,7 @@ ${renderHead({
               <dd><a href="${escapeAttribute(tronScanAddressUrl(projectConfig.payout.address))}">TronScan</a></dd>
             </div>
           </dl>
-          <p class="payment-note">Send only ${escapeHtml(projectConfig.token.symbol)} on ${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}. The checker watches this public receive address only and marks the milestone funded after a qualifying inbound transfer.</p>
+          <p class="payment-note">Send only ${escapeHtml(projectConfig.token.symbol)} on ${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}. The checker watches this public receive address only and updates the status after an inbound transfer of at least ${escapeHtml(projectConfig.payout.minimumReceipt)} ${escapeHtml(projectConfig.token.symbol)}.</p>
         </div>
       </section>
     </main>
@@ -418,7 +416,7 @@ function renderOpportunity(item, index) {
     <div class="opportunity-meta">
       <span>${escapeHtml(item.source)}</span>
       <span>${escapeHtml(item.status || "Unknown status")}</span>
-      <span>Score ${escapeHtml(String(item.score))}</span>
+      <span>Fit score ${escapeHtml(String(item.score))}</span>
     </div>
     <h3><a href="${escapeAttribute(detailUrl)}">${escapeHtml(item.title)}</a></h3>
     <dl>
@@ -437,7 +435,7 @@ function renderOpportunity(item, index) {
     </dl>
     <p>${escapeHtml(trimText(item.summary, 360))}</p>
     <div class="resource-links">
-      <a href="${escapeAttribute(detailUrl)}">Read scan page</a>
+      <a href="${escapeAttribute(detailUrl)}">View details</a>
       <a href="${escapeAttribute(item.officialUrl)}">Official source</a>
     </div>
   </div>
@@ -469,7 +467,7 @@ ${renderHead({
         <div class="opportunity-meta detail-meta">
           <span>${escapeHtml(opportunity.source)}</span>
           <span>${escapeHtml(opportunity.status || "Unknown status")}</span>
-          <span>Score ${escapeHtml(String(opportunity.score))}</span>
+          <span>Fit score ${escapeHtml(String(opportunity.score))}</span>
         </div>
         <dl class="detail-grid">
           <div>
@@ -498,18 +496,18 @@ ${renderHead({
           </div>
         </dl>
         <section class="detail-summary" aria-labelledby="summary-title">
-          <h2 id="summary-title">Source Summary</h2>
+          <h2 id="summary-title">Source summary</h2>
           <p>${escapeHtml(trimText(opportunity.summary, 1800))}</p>
         </section>
         <div class="resource-links detail-links">
           <a href="${escapeAttribute(opportunity.officialUrl)}">Open official source</a>
-          <a href="../index.html">Back to radar</a>
-          <a href="../payment.html">Payment status</a>
+          <a href="../index.html">Back to opportunities</a>
+          <a href="../payment.html">Support status</a>
         </div>
       </article>
-      <section class="payment-strip detail-payment" aria-label="Payment milestone">
+      <section class="payment-strip detail-payment" aria-label="Optional support">
         <div>
-          <span>${paymentReceived ? "First milestone funded" : "Fund the first run"}</span>
+          <span>${paymentReceived ? "Support target received" : "Useful? Support the scan"}</span>
           <strong>${paymentReceived ? "Received" : "5 USDT"}</strong>
         </div>
         <code>${escapeHtml(projectConfig.payout.address)}</code>
@@ -529,7 +527,7 @@ function renderTopicPage({ project: projectConfig, niche: activeNiche, topic, pa
   <head>
 ${renderHead({
   title: `${topic.name} | ${siteTitle}`,
-  description: `Daily ${topic.name} grant and contract scan from public U.S. government sources.`,
+  description: `Daily ${topic.name} grant and contract shortlist from public U.S. government sources.`,
   cssPath: "../styles.css",
   feedPath: "../feed.xml",
   canonicalPath: `topics/${topic.slug}.html`,
@@ -541,9 +539,9 @@ ${renderHead({
       ${renderTopNav("..", "topic")}
       <section class="masthead compact-masthead" aria-labelledby="topic-title">
         <div class="masthead-copy">
-          <p class="eyebrow">${escapeHtml(activeNiche.name)}</p>
+          <p class="eyebrow">Topic shortlist</p>
           <h1 id="topic-title">${escapeHtml(topic.name)}</h1>
-          <p class="summary">${escapeHtml(topic.items.length)} current public opportunities matched this topic in the latest scan.</p>
+          <p class="summary">${escapeHtml(topic.items.length)} current public opportunities matched this topic in the latest shortlist.</p>
         </div>
         <div class="status-panel" aria-label="Topic status">
           <div>
@@ -551,19 +549,19 @@ ${renderHead({
             <strong>${topic.items.length}</strong>
           </div>
           <div>
-            <span>Status</span>
-            <strong>${paymentReceived ? "Funded" : "Open"}</strong>
+            <span>Support</span>
+            <strong>${paymentReceived ? "Received" : "Not yet"}</strong>
           </div>
           <div>
-            <span>Token</span>
-            <strong>${escapeHtml(projectConfig.token.symbol)}</strong>
+            <span>Source links</span>
+            <strong>Yes</strong>
           </div>
         </div>
       </section>
       <section class="opportunity-list" aria-labelledby="topic-opportunities">
         <div class="section-heading">
-          <h2 id="topic-opportunities">Topic Matches</h2>
-          <span>${topic.items.length} records</span>
+          <h2 id="topic-opportunities">Topic matches</h2>
+          <span>${topic.items.length} opportunities</span>
         </div>
         ${topic.items.map((item, index) => renderTopicOpportunity(item, index)).join("\n")}
       </section>
@@ -580,7 +578,7 @@ function renderTopicOpportunity(item, index) {
     <div class="opportunity-meta">
       <span>${escapeHtml(item.source)}</span>
       <span>${escapeHtml(item.status || "Unknown status")}</span>
-      <span>Score ${escapeHtml(String(item.score))}</span>
+      <span>Fit score ${escapeHtml(String(item.score))}</span>
     </div>
     <h3><a href="../opportunities/${escapeAttribute(item.slug)}.html">${escapeHtml(item.title)}</a></h3>
     <dl>
@@ -615,7 +613,7 @@ function renderPaymentCard({ project: projectConfig, paymentStatus: currentPayme
   return `<div class="payment-card">
   <dl>
     <div>
-      <dt>Amount</dt>
+      <dt>Support target</dt>
       <dd>${escapeHtml(projectConfig.payout.minimumReceipt)} ${escapeHtml(projectConfig.token.symbol)}</dd>
     </div>
     <div>
@@ -628,7 +626,7 @@ function renderPaymentCard({ project: projectConfig, paymentStatus: currentPayme
     </div>
     <div>
       <dt>Status</dt>
-      <dd>${paymentReceived ? "Funded" : "Waiting for first qualifying transfer"}</dd>
+      <dd>${paymentReceived ? "Received" : "Not received yet"}</dd>
     </div>
     <div>
       <dt>Last checked</dt>
@@ -637,12 +635,12 @@ function renderPaymentCard({ project: projectConfig, paymentStatus: currentPayme
   </dl>
   <figure class="payment-qr">
     <img src="${escapeAttribute(qrPath)}" width="160" height="160" alt="QR code for the USDT TRC20 receive address" />
-    <figcaption>Scan address only. Confirm ${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)} before sending.</figcaption>
+    <figcaption>Scan or copy this receive address only. Confirm ${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)} before sending.</figcaption>
   </figure>
   <div class="payment-actions">
     <button class="copy-button" type="button" data-copy="${escapeAttribute(projectConfig.payout.address)}">Copy address</button>
     <a class="text-link" href="${escapeAttribute(tronScanAddressUrl(projectConfig.payout.address))}">View on TronScan</a>
-    <a class="text-link" href="payment-request.json">Payment JSON</a>
+    <a class="text-link" href="payment-request.json">Request JSON</a>
   </div>
   <p class="payment-note">This is a receive-only public address. Do not send private keys, seed phrases, exchange credentials, or non-TRC20 assets.</p>
 </div>`;
@@ -677,8 +675,8 @@ function renderOpportunityDataScript({ opportunities: items, topics: topicItems 
 
 function renderTopNav(rootPath, current) {
   return `<nav class="top-nav" aria-label="Site">
-  <a class="${current === "index" ? "active" : ""}" href="${escapeAttribute(`${rootPath}/index.html`)}">Radar</a>
-  <a class="${current === "payment" ? "active" : ""}" href="${escapeAttribute(`${rootPath}/payment.html`)}">Payment</a>
+  <a class="${current === "index" ? "active" : ""}" href="${escapeAttribute(`${rootPath}/index.html`)}">Opportunities</a>
+  <a class="${current === "payment" ? "active" : ""}" href="${escapeAttribute(`${rootPath}/payment.html`)}">Support</a>
   <a class="${current === "about" ? "active" : ""}" href="${escapeAttribute(`${rootPath}/about.html`)}">About</a>
   <a href="${escapeAttribute(`${rootPath}/feed.xml`)}">RSS</a>
   <a href="${escapeAttribute(`${rootPath}/opportunities.json`)}">JSON</a>
@@ -793,7 +791,7 @@ function renderTopicStructuredData(topic) {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: `${topic.name} | ${siteTitle}`,
-    description: `Daily ${topic.name} grant and contract scan from public U.S. government sources.`,
+    description: `Daily ${topic.name} grant and contract shortlist from public U.S. government sources.`,
     url: absoluteUrl(publicSiteUrl, `topics/${topic.slug}.html`) || `topics/${topic.slug}.html`,
     mainEntity: {
       "@type": "ItemList",
@@ -812,8 +810,8 @@ function renderPaymentStructuredData({ project: projectConfig, paymentStatus: cu
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `Payment | ${siteTitle}`,
-    description: `${projectConfig.token.symbol} ${projectConfig.token.standard} payment request and receipt status.`,
+    name: `Support | ${siteTitle}`,
+    description: `Optional ${projectConfig.token.symbol} ${projectConfig.token.standard} support request and receipt status.`,
     url: absoluteUrl(publicSiteUrl, "payment.html") || "payment.html",
     dateModified: currentPaymentStatus?.checkedAt ?? new Date().toISOString(),
     potentialAction: {
@@ -911,21 +909,21 @@ function renderLlmsTxt({ project: projectConfig, niche: activeNiche, opportuniti
 
 ${siteDescription}
 
-Audience: grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that need a faster shortlist of public-sector opportunities.
+Audience: grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that need a faster shortlist of public-sector opportunities.
 
 ## Canonical resources
 
 - Site: ${siteUrl}
-- Payment status: ${paymentUrl}
+- Support status: ${paymentUrl}
 - JSON data: ${dataUrl}
 - RSS feed: ${feedUrl}
 
-## Payment milestone
+## Optional support
 
 - Network: ${projectConfig.network}
 - Token: ${projectConfig.token.symbol} ${projectConfig.token.standard}
 - Receive address: ${projectConfig.payout.address}
-- Required first inbound receipt: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
+- Support target: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
 - Current status: ${paymentReceived ? "received" : "not received"}
 - Last checked: ${checkedAt}
 
@@ -1711,7 +1709,7 @@ function renderAppScript() {
       return matchesTopic && (!query || haystack.includes(query));
     });
 
-    count.textContent = filtered.length + " records";
+    count.textContent = filtered.length + " opportunities";
     results.innerHTML = filtered.slice(0, 12).map(renderResult).join("") || '<p class="empty-state">No matches</p>';
   }
 
@@ -1722,7 +1720,7 @@ function renderAppScript() {
       '<div class="opportunity-meta">' +
       '<span>' + escapeHtml(item.source || "Source") + '</span>' +
       '<span>' + escapeHtml(item.status || "Unknown status") + '</span>' +
-      '<span>Score ' + escapeHtml(String(item.score || 0)) + '</span>' +
+      '<span>Fit score ' + escapeHtml(String(item.score || 0)) + '</span>' +
       '</div>' +
       '<h3><a href="' + escapeAttribute(item.url) + '">' + escapeHtml(item.title || "Untitled") + '</a></h3>' +
       '<dl>' +

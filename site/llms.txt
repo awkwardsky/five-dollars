@@ -1,22 +1,22 @@
 # Government Opportunity Radar
 
-Daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
+Searchable daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
 
-Audience: grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that need a faster shortlist of public-sector opportunities.
+Audience: grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that need a faster shortlist of public-sector opportunities.
 
 ## Canonical resources
 
 - Site: https://awkwardsky.github.io/five-dollars/
-- Payment status: https://awkwardsky.github.io/five-dollars/payment.html
+- Support status: https://awkwardsky.github.io/five-dollars/payment.html
 - JSON data: https://awkwardsky.github.io/five-dollars/opportunities.json
 - RSS feed: https://awkwardsky.github.io/five-dollars/feed.xml
 
-## Payment milestone
+## Optional support
 
 - Network: TRON
 - Token: USDT TRC20
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
-- Required first inbound receipt: 5 USDT
+- Support target: 5 USDT
 - Current status: not received
 - Last checked: 2026-05-26T19:11:55.968Z
 

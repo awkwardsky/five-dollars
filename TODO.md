@@ -24,9 +24,10 @@
 20. Done: add automated GitHub status release updates under one stable tag.
 21. Done: add GitHub funding metadata that points the repository Sponsor button to the payment page.
 22. Done: add automated README live status updates for the GitHub repository homepage.
-23. Done: clarify product positioning for the target users: grant writers, BD teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
+23. Done: clarify product positioning for the target users: grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
 24. Done: remove the non-actionable signal map and move the support request after the useful shortlist and search surfaces.
 25. Done: add a lightweight Pages deploy workflow so checked-in site updates publish on push without rerunning the daily scan.
+26. Done: rewrite confusing user-facing copy around radar, scan, payment, milestone, and support language.
 
 ## Non-Negotiable Constraints
 

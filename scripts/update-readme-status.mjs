@@ -55,7 +55,7 @@ console.log(
 
 function renderStatusBlock({ project: projectConfig, niche: activeNiche, paymentStatus: currentPaymentStatus, runLog: currentRunLog, issueLog: currentIssueLog, releaseLog: currentReleaseLog, opportunities: items, publicSiteUrl: baseUrl, repository: repo }) {
   const paymentReceived = Boolean(currentPaymentStatus?.received);
-  const status = paymentReceived ? "Received" : "Waiting for first qualifying transfer";
+  const status = paymentReceived ? "Received" : "Not received yet";
   const issueUrl = currentIssueLog?.issueUrl || (repo ? `https://github.com/${repo}/issues/1` : "");
   const releaseUrl = currentReleaseLog?.releaseUrl || (repo ? `https://github.com/${repo}/releases/tag/five-dollar-status` : "");
   const topItems = Array.isArray(items) ? items.slice(0, 5) : [];
@@ -70,20 +70,20 @@ function renderStatusBlock({ project: projectConfig, niche: activeNiche, payment
 ## Live Status
 
 - Product: ${activeNiche.name}
-- What it is: Daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
-- Who it helps: Grant writers, BD teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
+- What it is: Searchable daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
+- Who it helps: Grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
 - Public site: ${absoluteUrl(baseUrl, "") || "https://awkwardsky.github.io/five-dollars/"}
-- Payment page: ${absoluteUrl(baseUrl, "payment.html") || "https://awkwardsky.github.io/five-dollars/payment.html"}
-- Payment status JSON: ${absoluteUrl(baseUrl, "payment-status.json") || "https://awkwardsky.github.io/five-dollars/payment-status.json"}
+- Support page: ${absoluteUrl(baseUrl, "payment.html") || "https://awkwardsky.github.io/five-dollars/payment.html"}
+- Support status JSON: ${absoluteUrl(baseUrl, "payment-status.json") || "https://awkwardsky.github.io/five-dollars/payment-status.json"}
 - GitHub status issue: ${issueUrl || "not configured"}
 - GitHub status release: ${releaseUrl || "not configured"}
 - RSS feed: ${absoluteUrl(baseUrl, "feed.xml") || "https://awkwardsky.github.io/five-dollars/feed.xml"}
 - Funding metadata: \`.github/FUNDING.yml\`
 
-### Payment
+### Optional Support
 
 - Status: ${status}
-- Required first receipt: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
+- Support target: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
 - Network: ${projectConfig.network} / ${projectConfig.token.standard}
 - Receive address: \`${projectConfig.payout.address}\`
 - Matching transfers: ${currentPaymentStatus?.matchingTransferCount ?? 0}

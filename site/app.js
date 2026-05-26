@@ -32,7 +32,7 @@
       return matchesTopic && (!query || haystack.includes(query));
     });
 
-    count.textContent = filtered.length + " records";
+    count.textContent = filtered.length + " opportunities";
     results.innerHTML = filtered.slice(0, 12).map(renderResult).join("") || '<p class="empty-state">No matches</p>';
   }
 
@@ -43,7 +43,7 @@
       '<div class="opportunity-meta">' +
       '<span>' + escapeHtml(item.source || "Source") + '</span>' +
       '<span>' + escapeHtml(item.status || "Unknown status") + '</span>' +
-      '<span>Score ' + escapeHtml(String(item.score || 0)) + '</span>' +
+      '<span>Fit score ' + escapeHtml(String(item.score || 0)) + '</span>' +
       '</div>' +
       '<h3><a href="' + escapeAttribute(item.url) + '">' + escapeHtml(item.title || "Untitled") + '</a></h3>' +
       '<dl>' +

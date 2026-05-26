@@ -10,7 +10,7 @@ const paymentLogPath = resolve(rootDir, "logs/payment-check-latest.json");
 const runLogPath = resolve(rootDir, "logs/run-latest.json");
 const opportunitiesPath = resolve(rootDir, "site/opportunities.json");
 const issueLogPath = resolve(rootDir, "logs/github-issue-latest.json");
-const issueTitle = "Five dollar milestone status";
+const issueTitle = "Five dollar support status";
 const issueMarker = "<!-- five-dollars-status-issue -->";
 
 const checkedAt = new Date().toISOString();
@@ -162,24 +162,24 @@ function renderIssueBody({ project: projectConfig, niche: activeNiche, paymentSt
     .join("\n");
 
   return `${issueMarker}
-# Five dollar milestone status
+# Five dollar support status
 
-This issue is maintained automatically by the daily workflow. It keeps the public funding request and the latest opportunity shortlist visible in one stable GitHub surface.
+This issue is maintained automatically by the daily workflow. It keeps the optional support request and the latest opportunity shortlist visible in one stable GitHub surface.
 
 ## Who it helps
 
-Grant writers, business development teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups can use the radar as a daily shortlist of relevant U.S. government grants and contracts.
+Grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups can use this as a daily shortlist of relevant U.S. government grants and contracts.
 
-## Payment
+## Optional support
 
-- Status: ${paymentReceived ? "received" : "waiting for first qualifying transfer"}
-- Required first receipt: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
+- Status: ${paymentReceived ? "received" : "not received yet"}
+- Support target: ${projectConfig.payout.minimumReceipt} ${projectConfig.token.symbol}
 - Network: ${projectConfig.network} / ${projectConfig.token.standard}
 - Receive address: \`${projectConfig.payout.address}\`
 - Matching transfers: ${currentPaymentStatus?.matchingTransferCount ?? 0}
 - Last checked: ${checked}
 - Public status JSON: ${absoluteUrl(baseUrl, "payment-status.json") || "site/payment-status.json"}
-- Payment request JSON: ${absoluteUrl(baseUrl, "payment-request.json") || "site/payment-request.json"}
+- Support request JSON: ${absoluteUrl(baseUrl, "payment-request.json") || "site/payment-request.json"}
 
 ## Product
 
