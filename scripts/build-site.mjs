@@ -352,7 +352,7 @@ ${renderHead({
           <h1 id="payment-title">Support this daily shortlist</h1>
           <p class="summary">Use the opportunity shortlist for free. If it saves research time, you can support the next automated run with 5 USDT on TRON / TRC20. The receipt status is checked automatically on-chain.</p>
         </div>
-        <div class="status-panel" aria-label="Payment status">
+        <div class="status-panel" aria-label="Support status">
           <div>
             <span>Receipt status</span>
             <strong>${paymentReceived ? "Received" : "Not yet"}</strong>
@@ -368,7 +368,7 @@ ${renderHead({
         </div>
       </section>
 
-      <section class="payment-page-grid" aria-label="Payment request">
+      <section class="payment-page-grid" aria-label="Support request">
         ${renderPaymentCard({ project: projectConfig, paymentStatus: currentPaymentStatus })}
         <div class="content-section">
           <h2>Receipt check</h2>
