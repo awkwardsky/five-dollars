@@ -25,6 +25,7 @@
 21. Done: add GitHub funding metadata that points the repository Sponsor button to the payment page.
 22. Done: add automated README live status updates for the GitHub repository homepage.
 23. Done: clarify product positioning for the target users: grant writers, BD teams, proposal teams, software operators, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
+24. Done: remove the non-actionable signal map and move the support request after the useful shortlist and search surfaces.
 
 ## Non-Negotiable Constraints
 

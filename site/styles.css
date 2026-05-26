@@ -127,7 +127,6 @@ h1 {
 .status-panel span,
 .payment-strip span,
 .section-heading span,
-.signal-section p,
 dt {
   color: var(--muted);
   font-size: 0.82rem;
@@ -136,16 +135,6 @@ dt {
 
 .status-panel strong {
   font-size: 1.7rem;
-}
-
-.signal-section {
-  min-height: 190px;
-  padding: 26px 0;
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
-  border-bottom: 1px solid var(--line);
 }
 
 .audience-section {
@@ -199,21 +188,8 @@ dt {
   line-height: 1.5;
 }
 
-.signal-section h2,
 .section-heading h2 {
   font-size: 1.25rem;
-}
-
-.signal-section p {
-  margin-top: 8px;
-}
-
-.signal-map {
-  width: 100%;
-  min-height: 140px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: linear-gradient(180deg, #ffffff, #f7fafb);
 }
 
 .payment-strip {
@@ -228,28 +204,49 @@ dt {
   background: #fff8e8;
 }
 
-.offer-section {
-  margin: 22px 0;
-  padding: 28px 0;
+.support-inline {
+  margin: 24px 0;
+  padding: 18px;
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
-  gap: 24px;
-  align-items: start;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  background: #fff8e8;
 }
 
-.offer-copy h2 {
-  max-width: 460px;
-  font-size: 2rem;
-  line-height: 1.08;
+.support-inline h2 {
+  font-size: 1.2rem;
 }
 
-.offer-copy p:last-child {
-  max-width: 520px;
-  margin-top: 14px;
+.support-inline p {
+  margin-top: 6px;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.55;
+}
+
+.support-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.primary-link {
+  min-height: 38px;
+  padding: 9px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 780;
+  text-decoration: none;
 }
 
 .payment-card {
@@ -574,9 +571,8 @@ dd {
 @media (max-width: 820px) {
   .masthead,
   .audience-section,
-  .signal-section,
   .payment-strip,
-  .offer-section,
+  .support-inline,
   .payment-page-grid {
     grid-template-columns: 1fr;
   }
@@ -616,6 +612,10 @@ dd {
   .search-controls,
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .support-inline-actions {
+    justify-content: flex-start;
   }
 }
 

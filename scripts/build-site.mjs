@@ -180,32 +180,6 @@ ${renderHead({
         </ul>
       </section>
 
-      <section class="signal-section" aria-labelledby="signal-title">
-        <div>
-          <h2 id="signal-title">Current signal map</h2>
-          <p>Generated ${escapeHtml(generatedAt)}</p>
-        </div>
-        ${renderSignalMap(visibleItems)}
-      </section>
-
-      <section class="payment-strip" aria-label="Payment milestone">
-        <div>
-          <span>${paymentReceived ? "First milestone funded" : "Support the radar"}</span>
-          <strong>${paymentReceived ? "Received" : "5 USDT"}</strong>
-        </div>
-        <code>${escapeHtml(projectConfig.payout.address)}</code>
-        <span>${escapeHtml(projectConfig.network)} / ${escapeHtml(projectConfig.token.standard)}</span>
-      </section>
-
-      <section class="offer-section" aria-labelledby="offer-title">
-        <div class="offer-copy">
-          <p class="eyebrow">Support option</p>
-          <h2 id="offer-title">Fund the first daily shortlist.</h2>
-          <p>If this saves time for sourcing public-sector opportunities, send 5 USDT on TRON to support the automated scan. The system checks the public address automatically and records when the milestone is reached.</p>
-        </div>
-        ${renderPaymentCard({ project: projectConfig, paymentStatus: currentPaymentStatus })}
-      </section>
-
       <section class="topic-section" aria-labelledby="topics-title">
         <div class="section-heading">
           <h2 id="topics-title">Coverage</h2>
@@ -243,6 +217,19 @@ ${renderHead({
           <span>${visibleItems.length} records</span>
         </div>
         ${visibleItems.map(renderOpportunity).join("\n")}
+      </section>
+
+      <section class="support-inline" aria-labelledby="support-inline-title">
+        <div>
+          <h2 id="support-inline-title">${paymentReceived ? "First scan milestone funded." : "If this shortlist saved time, support the next run."}</h2>
+          <p>${paymentReceived ? "The first 5 USDT milestone has been received and recorded by the automated checker." : "The radar is free to inspect. A 5 USDT contribution keeps the daily scan running and is verified automatically on-chain."}</p>
+        </div>
+        <div class="support-inline-actions">
+          <a class="primary-link" href="payment.html">${paymentReceived ? "View receipt status" : "Support with 5 USDT"}</a>
+          <a class="text-link" href="payment.html">Payment status</a>
+          <a class="text-link" href="feed.xml">RSS</a>
+          <a class="text-link" href="opportunities.json">JSON</a>
+        </div>
       </section>
     </main>
     ${renderOpportunityDataScript({ opportunities: items, topics: topicItems })}
@@ -696,24 +683,6 @@ function renderTopNav(rootPath, current) {
   <a href="${escapeAttribute(`${rootPath}/feed.xml`)}">RSS</a>
   <a href="${escapeAttribute(`${rootPath}/opportunities.json`)}">JSON</a>
 </nav>`;
-}
-
-function renderSignalMap(items) {
-  const points = items.slice(0, 24);
-  const maxScore = Math.max(...points.map((item) => item.score), 1);
-  const circles = points
-    .map((item, index) => {
-      const column = index % 8;
-      const row = Math.floor(index / 8);
-      const cx = 26 + column * 54;
-      const cy = 24 + row * 46;
-      const radius = 7 + Math.round((item.score / maxScore) * 12);
-      const fill = item.source === "SAM.gov" ? "#246b8f" : "#1f7f5d";
-      return `<circle cx="${cx}" cy="${cy}" r="${radius}" fill="${fill}"><title>${escapeHtml(item.title)} (${item.score})</title></circle>`;
-    })
-    .join("");
-
-  return `<svg class="signal-map" viewBox="0 0 430 140" role="img" aria-label="Opportunity score signal map">${circles}</svg>`;
 }
 
 function renderHead({ title, description, cssPath, feedPath, canonicalPath, type = "website", jsonLd }) {
@@ -1198,7 +1167,6 @@ h1 {
 .status-panel span,
 .payment-strip span,
 .section-heading span,
-.signal-section p,
 dt {
   color: var(--muted);
   font-size: 0.82rem;
@@ -1207,16 +1175,6 @@ dt {
 
 .status-panel strong {
   font-size: 1.7rem;
-}
-
-.signal-section {
-  min-height: 190px;
-  padding: 26px 0;
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
-  border-bottom: 1px solid var(--line);
 }
 
 .audience-section {
@@ -1270,21 +1228,8 @@ dt {
   line-height: 1.5;
 }
 
-.signal-section h2,
 .section-heading h2 {
   font-size: 1.25rem;
-}
-
-.signal-section p {
-  margin-top: 8px;
-}
-
-.signal-map {
-  width: 100%;
-  min-height: 140px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: linear-gradient(180deg, #ffffff, #f7fafb);
 }
 
 .payment-strip {
@@ -1299,28 +1244,49 @@ dt {
   background: #fff8e8;
 }
 
-.offer-section {
-  margin: 22px 0;
-  padding: 28px 0;
+.support-inline {
+  margin: 24px 0;
+  padding: 18px;
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
-  gap: 24px;
-  align-items: start;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--gold);
+  border-radius: 8px;
+  background: #fff8e8;
 }
 
-.offer-copy h2 {
-  max-width: 460px;
-  font-size: 2rem;
-  line-height: 1.08;
+.support-inline h2 {
+  font-size: 1.2rem;
 }
 
-.offer-copy p:last-child {
-  max-width: 520px;
-  margin-top: 14px;
+.support-inline p {
+  margin-top: 6px;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.55;
+}
+
+.support-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.primary-link {
+  min-height: 38px;
+  padding: 9px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 780;
+  text-decoration: none;
 }
 
 .payment-card {
@@ -1645,9 +1611,8 @@ dd {
 @media (max-width: 820px) {
   .masthead,
   .audience-section,
-  .signal-section,
   .payment-strip,
-  .offer-section,
+  .support-inline,
   .payment-page-grid {
     grid-template-columns: 1fr;
   }
@@ -1687,6 +1652,10 @@ dd {
   .search-controls,
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .support-inline-actions {
+    justify-content: flex-start;
   }
 }
 
