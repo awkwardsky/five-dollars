@@ -16,7 +16,7 @@ Daily public scan of U.S. grants and contracts for software, AI, automation, cyb
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Required first inbound receipt: 5 USDT
 - Current status: not received
-- Last checked: 2026-05-26T19:03:55.371Z
+- Last checked: 2026-05-26T19:05:00.870Z
 
 ## Topics
 
