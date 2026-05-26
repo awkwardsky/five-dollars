@@ -24,6 +24,7 @@ Outputs:
 
 - `data/opportunities.sqlite`
 - `digests/latest.md`
+- `README.md` live status block
 - `site/index.html`
 - `site/about.html`
 - `site/payment.html`

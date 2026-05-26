@@ -2,6 +2,37 @@
 
 Automated project for building a small public data product and verifying the first inbound USDT-TRC20 payment of at least 5 USDT.
 
+<!-- five-dollars-status:start -->
+## Live Status
+
+- Product: Software, AI, and Automation Opportunities
+- Public site: https://awkwardsky.github.io/five-dollars/
+- Payment page: https://awkwardsky.github.io/five-dollars/payment.html
+- Payment status JSON: https://awkwardsky.github.io/five-dollars/payment-status.json
+- GitHub status issue: https://github.com/awkwardsky/five-dollars/issues/1
+- GitHub status release: https://github.com/awkwardsky/five-dollars/releases/tag/five-dollar-status
+- RSS feed: https://awkwardsky.github.io/five-dollars/feed.xml
+- Funding metadata: `.github/FUNDING.yml`
+
+### Payment
+
+- Status: Waiting for first qualifying transfer
+- Required first receipt: 5 USDT
+- Network: TRON / TRC20
+- Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
+- Matching transfers: 0
+- Last checked: 2026-05-26T19:08:45.293Z
+- Latest run: 2026-05-26T19:08:45.156Z
+
+### Current Top Opportunities
+
+1. [Pathways to Enable Secure Open-Source Ecosystems](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-361333-pathways-to-enable-secure-open-source-ecosystems.html) - U.S. National Science Foundation - deadline 09/01/2026
+2. [Tech Innovation Lab](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362392-tech-innovation-lab.html) - U.S. Mission to Morocco - deadline 07/13/2026
+3. [Condensed Matter and Materials Theory](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-349654-condensed-matter-and-materials-theory.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
+4. [Energy, Power, Control, and Networks](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-348258-energy-power-control-and-networks.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
+5. [Cybersecurity Innovation for Cyberinfrastructure](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-358004-cybersecurity-innovation-for-cyberinfrastructure.html) - U.S. National Science Foundation - deadline 01/20/2027
+<!-- five-dollars-status:end -->
+
 ## Current Product
 
 Government Opportunity Radar scans public U.S. government opportunity sources for software, AI, automation, cybersecurity, data, and cloud-related grants/contracts.
@@ -47,6 +78,7 @@ npm ci
 npm run fetch:opportunities
 npm run build:site
 npm run deliver:digest
+npm run update:readme
 npm run update:issue
 npm run update:release
 npm run check:payment
@@ -59,6 +91,8 @@ npm run scheduler:uninstall
 ```
 
 `run:daily` checks payment before building the public site so `site/payment-status.json` and the visible funding status reflect the latest chain lookup.
+
+`update:readme` refreshes the live status block on this README so the GitHub repository homepage reflects the latest payment check and product links.
 
 `update:issue` maintains one public GitHub issue with the current funding status and top opportunity links when `GITHUB_TOKEN`/`GH_TOKEN` and `GITHUB_REPOSITORY` are available. Without those variables it writes a skipped log and exits successfully.
 

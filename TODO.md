@@ -23,6 +23,7 @@
 19. Done: add automated GitHub milestone issue updates for one stable public status surface.
 20. Done: add automated GitHub status release updates under one stable tag.
 21. Done: add GitHub funding metadata that points the repository Sponsor button to the payment page.
+22. Done: add automated README live status updates for the GitHub repository homepage.
 
 ## Non-Negotiable Constraints
 
