@@ -20,6 +20,7 @@
 16. Done: add offline payment QR generation and machine-readable payment request.
 17. Done: add dedicated public payment/about pages, share metadata, structured data, and `llms.txt`.
 18. Done: add a static search/filter interface over generated opportunity data.
+19. Done: add automated GitHub milestone issue updates for one stable public status surface.
 
 ## Non-Negotiable Constraints
 

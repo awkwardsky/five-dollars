@@ -14,6 +14,7 @@ Use this when the project is pushed as a GitHub repository.
    - `TRONSCAN_API_KEY`
    - `RESEND_API_KEY`
    - `DIGEST_FROM_EMAIL`
+   The workflow automatically uses the built-in `GITHUB_TOKEN` to maintain one public milestone issue.
 4. Add optional repository variable:
    - `PUBLIC_SITE_URL`, for example `https://owner.github.io/repo`
 5. In GitHub Pages settings, set the source to GitHub Actions.
@@ -37,6 +38,7 @@ Outputs:
 - `site/payment-request.json`
 - `site/payment-qr.svg`
 - `logs/*.json`
+- GitHub issue: `Five dollar milestone status`
 
 ## Option B: Local macOS Scheduler
 

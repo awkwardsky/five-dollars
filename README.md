@@ -24,6 +24,7 @@ Generated outputs:
 - `digests/latest.md` - email-ready digest
 - `data/opportunities.sqlite` - local opportunity database
 - `logs/payment-check-latest.json` - latest USDT receipt check
+- `logs/github-issue-latest.json` - latest GitHub issue update result
 
 ## Payment Milestone
 
@@ -44,6 +45,7 @@ npm ci
 npm run fetch:opportunities
 npm run build:site
 npm run deliver:digest
+npm run update:issue
 npm run check:payment
 npm run verify
 npm run run:daily
@@ -55,6 +57,8 @@ npm run scheduler:uninstall
 
 `run:daily` checks payment before building the public site so `site/payment-status.json` and the visible funding status reflect the latest chain lookup.
 
+`update:issue` maintains one public GitHub issue with the current funding status and top opportunity links when `GITHUB_TOKEN`/`GH_TOKEN` and `GITHUB_REPOSITORY` are available. Without those variables it writes a skipped log and exits successfully.
+
 `verify` runs the payment-core test fixture and checks the generated site for required files, local links, clean generated HTML, opportunity pages, topic pages, metadata, machine-readable payment artifacts, and payment-status synchronization.
 
 ## Deployment
@@ -62,6 +66,8 @@ npm run scheduler:uninstall
 See `DEPLOYMENT.md`.
 
 The GitHub Actions workflow can run daily automation and deploy `site/` to GitHub Pages after the repository is pushed and Pages is configured to use GitHub Actions.
+
+It also maintains a single public issue named `Five dollar milestone status` as a non-spam public status surface for the payment request and latest scan.
 
 Optional secrets improve coverage:
 
