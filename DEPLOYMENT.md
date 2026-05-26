@@ -40,6 +40,7 @@ Outputs:
 - `logs/*.json`
 - GitHub issue: `Five dollar milestone status`
 - GitHub release: `five-dollar-status`
+- GitHub Sponsor button: `.github/FUNDING.yml`
 
 ## Option B: Local macOS Scheduler
 

@@ -22,6 +22,7 @@
 18. Done: add a static search/filter interface over generated opportunity data.
 19. Done: add automated GitHub milestone issue updates for one stable public status surface.
 20. Done: add automated GitHub status release updates under one stable tag.
+21. Done: add GitHub funding metadata that points the repository Sponsor button to the payment page.
 
 ## Non-Negotiable Constraints
 

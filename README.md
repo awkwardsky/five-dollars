@@ -8,6 +8,7 @@ Government Opportunity Radar scans public U.S. government opportunity sources fo
 
 Generated outputs:
 
+- `.github/FUNDING.yml` - GitHub Sponsor button metadata pointing to the public payment page
 - `site/index.html` - public product page
 - `site/about.html` - product and automation explanation
 - `site/payment.html` - public payment request and latest milestone status
@@ -63,7 +64,7 @@ npm run scheduler:uninstall
 
 `update:release` maintains one public GitHub release tagged `five-dollar-status` with the same milestone and product links. It updates the existing release instead of creating daily releases.
 
-`verify` runs the payment-core test fixture and checks the generated site for required files, local links, clean generated HTML, opportunity pages, topic pages, metadata, machine-readable payment artifacts, and payment-status synchronization.
+`verify` runs the payment-core test fixture, checks generated site artifacts, and validates repo-level automation metadata such as the Sponsor button funding URL and daily issue/release update commands.
 
 ## Deployment
 

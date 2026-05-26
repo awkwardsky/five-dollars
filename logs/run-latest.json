@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-05-26T19:00:38.372Z",
-  "finishedAt": "2026-05-26T19:00:44.762Z",
+  "startedAt": "2026-05-26T19:03:28.737Z",
+  "finishedAt": "2026-05-26T19:03:55.236Z",
   "niche": "software-ai-automation",
   "fetched": {
     "grants": 68,
@@ -8,8 +8,8 @@
     "total": 68
   },
   "matched": 67,
-  "savedDigest": "/home/runner/work/five-dollars/five-dollars/digests/latest.md",
-  "savedDatabase": "/home/runner/work/five-dollars/five-dollars/data/opportunities.sqlite",
+  "savedDigest": "/Users/haru/Project/claude-code/five dollars/digests/latest.md",
+  "savedDatabase": "/Users/haru/Project/claude-code/five dollars/data/opportunities.sqlite",
   "notes": [
     "SAM.gov skipped because SAM_API_KEY is not set."
   ]
