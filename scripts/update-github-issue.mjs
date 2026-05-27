@@ -184,6 +184,7 @@ Grant writers, business development teams, proposal teams, software companies, A
 ## Product
 
 - Public site: ${absoluteUrl(baseUrl, "") || "not configured"}
+- Homepage priority picks: explain why the best leads are worth reviewing first.
 - RSS feed: ${absoluteUrl(baseUrl, "feed.xml") || "site/feed.xml"}
 - Opportunity JSON: ${absoluteUrl(baseUrl, "opportunities.json") || "site/opportunities.json"}
 - Niche: ${activeNiche.name}

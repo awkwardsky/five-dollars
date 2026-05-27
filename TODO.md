@@ -28,6 +28,7 @@
 24. Done: remove the non-actionable signal map and move the support request after the useful shortlist and search surfaces.
 25. Done: add a lightweight Pages deploy workflow so checked-in site updates publish on push without rerunning the daily scan.
 26. Done: rewrite confusing user-facing copy around radar, scan, payment, milestone, and support language.
+27. Done: add homepage priority picks that explain why the best leads are worth reviewing first.
 
 ## Non-Negotiable Constraints
 

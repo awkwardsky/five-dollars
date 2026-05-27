@@ -1,9 +1,6 @@
 {
-  "checkedAt": "2026-05-26T19:11:57.771Z",
-  "skipped": false,
-  "action": "updated",
-  "issueNumber": 1,
-  "issueUrl": "https://github.com/awkwardsky/five-dollars/issues/1",
-  "paymentReceived": false,
-  "matchingTransferCount": 0
+  "checkedAt": "2026-05-27T00:17:36.717Z",
+  "skipped": true,
+  "reason": "GITHUB_TOKEN or GH_TOKEN is not set.",
+  "issueUrl": null
 }

@@ -71,6 +71,7 @@ function renderStatusBlock({ project: projectConfig, niche: activeNiche, payment
 
 - Product: ${activeNiche.name}
 - What it is: Searchable daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
+- Best use: Start with the homepage priority picks; each lead explains why it is worth reviewing before the full list.
 - Who it helps: Grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
 - Public site: ${absoluteUrl(baseUrl, "") || "https://awkwardsky.github.io/five-dollars/"}
 - Support page: ${absoluteUrl(baseUrl, "payment.html") || "https://awkwardsky.github.io/five-dollars/payment.html"}

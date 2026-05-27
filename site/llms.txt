@@ -4,6 +4,8 @@ Searchable daily shortlist of U.S. government grants and contracts for software,
 
 Audience: grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that need a faster shortlist of public-sector opportunities.
 
+Homepage use: start with the priority picks. Each pick explains fit, deadline, topic match, and whether a funding amount is listed before the full opportunity list.
+
 ## Canonical resources
 
 - Site: https://awkwardsky.github.io/five-dollars/
@@ -18,7 +20,7 @@ Audience: grant writers, business development teams, proposal teams, software co
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: not received
-- Last checked: 2026-05-26T19:11:55.968Z
+- Last checked: 2026-05-27T00:17:33.707Z
 
 ## Topics
 

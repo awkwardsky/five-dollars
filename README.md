@@ -7,6 +7,7 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 
 - Product: Software, AI, and Automation Opportunities
 - What it is: Searchable daily shortlist of U.S. government grants and contracts for software, AI, data, cybersecurity, automation, and cloud teams.
+- Best use: Start with the homepage priority picks; each lead explains why it is worth reviewing before the full list.
 - Who it helps: Grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups.
 - Public site: https://awkwardsky.github.io/five-dollars/
 - Support page: https://awkwardsky.github.io/five-dollars/payment.html
@@ -23,8 +24,8 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 - Network: TRON / TRC20
 - Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
 - Matching transfers: 0
-- Last checked: 2026-05-26T19:11:55.968Z
-- Latest run: 2026-05-26T19:11:55.817Z
+- Last checked: 2026-05-27T00:17:33.707Z
+- Latest run: 2026-05-27T00:17:33.574Z
 
 ### Current Top Opportunities
 
@@ -38,6 +39,8 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 ## Current Product
 
 Government Opportunity Radar scans public U.S. government opportunity sources for software, AI, automation, cybersecurity, data, and cloud-related grants/contracts. It is built for grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that want a daily shortlist instead of a broad manual search.
+
+The homepage now starts with priority picks: a smaller set of leads ranked by fit, deadline, topic match, and usable details such as listed funding amount. Each pick explains why it is worth reviewing before the full list.
 
 Generated outputs:
 

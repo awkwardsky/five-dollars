@@ -188,6 +188,78 @@ dt {
   line-height: 1.5;
 }
 
+.priority-section {
+  margin: 28px 0;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-note {
+  max-width: 740px;
+  margin: 8px 0 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.priority-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.priority-card {
+  min-height: 318px;
+  padding: 18px;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.priority-card-header {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.priority-rank {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #e5edf5;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.priority-card .eyebrow {
+  margin-bottom: 6px;
+}
+
+.priority-card h3 {
+  margin-top: 0;
+}
+
+.priority-details {
+  margin: 0;
+  grid-template-columns: 1.1fr 0.8fr 1fr;
+}
+
+.priority-reasons {
+  margin: 0;
+  padding-left: 18px;
+  color: #344653;
+  line-height: 1.55;
+}
+
+.priority-reasons li + li {
+  margin-top: 6px;
+}
+
 .section-heading h2 {
   font-size: 1.25rem;
 }
@@ -573,6 +645,7 @@ dd {
   .audience-section,
   .payment-strip,
   .support-inline,
+  .priority-grid,
   .payment-page-grid {
     grid-template-columns: 1fr;
   }

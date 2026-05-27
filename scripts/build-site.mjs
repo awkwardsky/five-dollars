@@ -125,6 +125,7 @@ console.log(
 
 function renderPage({ project: projectConfig, niche: activeNiche, opportunities: items, topics: topicItems, paymentStatus: currentPaymentStatus }) {
   const visibleItems = items.slice(0, 30);
+  const priorityPicks = buildPriorityPicks(items, topicItems);
   const nextDeadline = findNextDeadline(items);
   const generatedAt = new Date().toISOString();
   const paymentReceived = Boolean(currentPaymentStatus?.received);
@@ -176,6 +177,17 @@ ${renderHead({
           <li><strong>Software, AI, cyber, data, and cloud teams</strong><span>Track public-sector demand in areas your team can serve.</span></li>
           <li><strong>Grant writers and researchers</strong><span>Start from a ranked shortlist instead of a broad keyword search.</span></li>
         </ul>
+      </section>
+
+      <section class="priority-section" aria-labelledby="priority-title">
+        <div class="section-heading">
+          <h2 id="priority-title">Start with these ${priorityPicks.length} leads</h2>
+          <span>ranked by fit, deadline, and useful details</span>
+        </div>
+        <p class="section-note">These are not guaranteed wins. They are the current opportunities with the clearest reasons to inspect first.</p>
+        <div class="priority-grid">
+          ${priorityPicks.map(renderPriorityPick).join("\n")}
+        </div>
       </section>
 
       <section class="topic-section" aria-labelledby="topics-title">
@@ -406,6 +418,42 @@ ${renderHead({
   </body>
 </html>
 `;
+}
+
+function renderPriorityPick(pick, index) {
+  const detailUrl = `opportunities/${pick.slug}.html`;
+  const topics = pick.topics.length > 0 ? pick.topics.join(", ") : "General match";
+
+  return `<article class="priority-card">
+  <div class="priority-card-header">
+    <span class="priority-rank">${index + 1}</span>
+    <div>
+      <p class="eyebrow">${escapeHtml(pick.priorityLabel)}</p>
+      <h3><a href="${escapeAttribute(detailUrl)}">${escapeHtml(pick.title)}</a></h3>
+    </div>
+  </div>
+  <dl class="priority-details">
+    <div>
+      <dt>Agency</dt>
+      <dd>${escapeHtml(pick.agency || "Unknown")}</dd>
+    </div>
+    <div>
+      <dt>Deadline</dt>
+      <dd>${escapeHtml(pick.closeDate || "Not listed")}</dd>
+    </div>
+    <div>
+      <dt>Topics</dt>
+      <dd>${escapeHtml(topics)}</dd>
+    </div>
+  </dl>
+  <ul class="priority-reasons">
+    ${pick.reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join("\n")}
+  </ul>
+  <div class="resource-links">
+    <a href="${escapeAttribute(detailUrl)}">View details</a>
+    <a href="${escapeAttribute(pick.officialUrl)}">Official source</a>
+  </div>
+</article>`;
 }
 
 function renderOpportunity(item, index) {
@@ -911,6 +959,8 @@ ${siteDescription}
 
 Audience: grant writers, business development teams, proposal teams, software companies, AI labs, cybersecurity teams, data teams, cloud teams, and research groups that need a faster shortlist of public-sector opportunities.
 
+Homepage use: start with the priority picks. Each pick explains fit, deadline, topic match, and whether a funding amount is listed before the full opportunity list.
+
 ## Canonical resources
 
 - Site: ${siteUrl}
@@ -982,6 +1032,153 @@ function buildTopics(items, activeNiche) {
       };
     })
     .filter((topic) => topic.items.length > 0 || activeNiche.keywords.includes(topic.name.toLowerCase()));
+}
+
+function buildPriorityPicks(items, topicItems) {
+  const topicMap = buildTopicMap(topicItems);
+
+  return items
+    .map((item) => {
+      const topics = topicMap.get(item.slug) ?? [];
+      const deadline = deadlineSignal(item.closeDate);
+      const priorityScore = calculatePriorityScore(item, topics, deadline);
+      const reasons = buildPriorityReasons(item, topics, deadline);
+
+      return {
+        ...item,
+        topics,
+        priorityScore,
+        priorityLabel: priorityLabel(item, deadline),
+        reasons,
+      };
+    })
+    .sort((left, right) => right.priorityScore - left.priorityScore)
+    .slice(0, 8);
+}
+
+function buildTopicMap(topicItems) {
+  const topicMap = new Map();
+
+  for (const topic of topicItems) {
+    for (const item of topic.items) {
+      const topics = topicMap.get(item.slug) ?? [];
+      topics.push(topic.name);
+      topicMap.set(item.slug, topics);
+    }
+  }
+
+  return topicMap;
+}
+
+function calculatePriorityScore(item, topics, deadline) {
+  let score = Number(item.score || 0) * 10;
+
+  score += Math.min(topics.length, 4) * 5;
+
+  if (item.amount) {
+    score += 8;
+  }
+
+  if (/posted|forecasted/i.test(item.status)) {
+    score += 4;
+  }
+
+  if (deadline.type === "soon") {
+    score += 18;
+  } else if (deadline.type === "scheduled") {
+    score += 10;
+  } else if (deadline.type === "rolling") {
+    score += 6;
+  } else if (deadline.type === "past") {
+    score -= 25;
+  }
+
+  return score;
+}
+
+function buildPriorityReasons(item, topics, deadline) {
+  const reasons = [];
+
+  if (item.score >= 9) {
+    reasons.push(`Strong fit score for the ${siteTitle} scan.`);
+  } else {
+    reasons.push("Relevant match for the selected software, AI, data, cyber, automation, or cloud topics.");
+  }
+
+  if (topics.length > 0) {
+    reasons.push(`Matched topic${topics.length > 1 ? "s" : ""}: ${topics.slice(0, 3).join(", ")}.`);
+  }
+
+  if (deadline.message) {
+    reasons.push(deadline.message);
+  }
+
+  if (item.amount) {
+    reasons.push(`Funding amount listed: ${item.amount}.`);
+  }
+
+  reasons.push("Direct official source link is available.");
+
+  return reasons.slice(0, 4);
+}
+
+function priorityLabel(item, deadline) {
+  if (deadline.type === "soon") {
+    return "Time-sensitive lead";
+  }
+
+  if (item.amount) {
+    return "Funding amount listed";
+  }
+
+  if (item.score >= 9) {
+    return "Strong fit";
+  }
+
+  return "Worth reviewing";
+}
+
+function deadlineSignal(value) {
+  const text = String(value ?? "").trim();
+
+  if (!text) {
+    return { type: "unknown", message: "Deadline is not listed; check the official source before planning." };
+  }
+
+  if (/rolling|anytime|accepted anytime/i.test(text)) {
+    return { type: "rolling", message: "Rolling or anytime deadline means it can be reviewed without a fixed date." };
+  }
+
+  const date = parseUsDate(text);
+
+  if (!date) {
+    return { type: "unknown", message: `Deadline needs review: ${text}.` };
+  }
+
+  const now = new Date();
+  const todayUtc = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const days = Math.ceil((date.getTime() - todayUtc) / 86400000);
+
+  if (days < 0) {
+    return { type: "past", message: `Listed deadline passed ${Math.abs(days)} days ago; verify status before using.` };
+  }
+
+  if (days <= 14) {
+    return { type: "soon", message: `Deadline is in ${days} day${days === 1 ? "" : "s"}; review quickly.` };
+  }
+
+  return { type: "scheduled", message: `Deadline is in ${days} days.` };
+}
+
+function parseUsDate(value) {
+  const match = String(value ?? "").match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+
+  if (!match) {
+    return null;
+  }
+
+  const [, month, day, year] = match;
+  return new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)));
 }
 
 function opportunityContains(item, term) {
@@ -1224,6 +1421,78 @@ dt {
 .audience-list span {
   color: var(--muted);
   line-height: 1.5;
+}
+
+.priority-section {
+  margin: 28px 0;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-note {
+  max-width: 740px;
+  margin: 8px 0 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.priority-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.priority-card {
+  min-height: 318px;
+  padding: 18px;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.priority-card-header {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.priority-rank {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #e5edf5;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.priority-card .eyebrow {
+  margin-bottom: 6px;
+}
+
+.priority-card h3 {
+  margin-top: 0;
+}
+
+.priority-details {
+  margin: 0;
+  grid-template-columns: 1.1fr 0.8fr 1fr;
+}
+
+.priority-reasons {
+  margin: 0;
+  padding-left: 18px;
+  color: #344653;
+  line-height: 1.55;
+}
+
+.priority-reasons li + li {
+  margin-top: 6px;
 }
 
 .section-heading h2 {
@@ -1611,6 +1880,7 @@ dd {
   .audience-section,
   .payment-strip,
   .support-inline,
+  .priority-grid,
   .payment-page-grid {
     grid-template-columns: 1fr;
   }

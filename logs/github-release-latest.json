@@ -1,10 +1,6 @@
 {
-  "checkedAt": "2026-05-26T19:11:59.458Z",
-  "skipped": false,
-  "action": "updated",
-  "releaseId": 329632375,
-  "releaseUrl": "https://github.com/awkwardsky/five-dollars/releases/tag/five-dollar-status",
-  "tagName": "five-dollar-status",
-  "paymentReceived": false,
-  "matchingTransferCount": 0
+  "checkedAt": "2026-05-27T00:17:36.839Z",
+  "skipped": true,
+  "reason": "GITHUB_TOKEN or GH_TOKEN is not set.",
+  "releaseUrl": null
 }
