@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-05-29T04:46:14.615Z
+Generated: 2026-05-30T04:29:07.424Z
 
 Sources checked: Grants.gov 68, SAM.gov 0
 
@@ -222,7 +222,19 @@ UPDATE APRIL 14, 2026: Proposals for the FY26 Small Grants Program will be revie
 
 The Pipeline and Hazardous Materials Safety Administration's (PHMSA) FY 2026 CAAP NOFO solicits research proposals from nonprofit institutions of higher education for the Pipeline Safety Research and Development (R&D) Program. This program is authorized by section 12 of the Pipeline Safety Improvement Act of 2002 (Pub. L. 107-355) and 49 U.S.C. § 60117(l). The CAAP competitive research announcement will focus on the following objectives: - Early corrosion prediction for pipelines and implementing appropriate mitigation measures. - Economical and novel agents to mitigate internal or external pipeline corrosion due to microbial-induced corrosion.- Artificial intelligence (AI)-assisted softw...
 
-### 19. CyberAICorps Scholarship for Service
+### 19. Mass Market Solutions for Leveraging Robotics and AI Technologies for Home Construction Demonstration
+
+- Source: Grants.gov
+- Agency: Department of Housing and Urban Development
+- Status: posted
+- Close date: 07/13/2026
+- Amount: $3,000,000 - $10,000,000
+- Fit score: 7
+- Official link: https://www.grants.gov/search-results-detail/362360
+
+The U.S. Department of Housing and Urban Development"s Office of Policy Development and Research (PD&R) expects to release a Notice of Funding Opportunity for the Mass Market Solutions for Leveraging Robotics and AI Technologies for Home Construction Demonstration. This anticipated NOFO is intended to fund demonstration projects that test and scale the use of automation, robotics, and artificial intelligence in factory-built housing to help build homes faster, at lower cost, and in ways that can meaningfully increase housing supply.Awards are expected to be made as cooperative agreements, which means HUD will be actively involved throughout the project period. PD&R will provide technical...
+
+### 20. CyberAICorps Scholarship for Service
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -234,7 +246,7 @@ The Pipeline and Hazardous Materials Safety Administration's (PHMSA) FY 2026 CAA
 
 Government and the nation face a talent shortfall in artificial intelligence (AI) and cybersecurity. The CyberAICorps Scholarship for Service (CyberAI SFS) program welcomes proposals that address AI and cybersecurity education and workforce development. CyberAI refers to using AI in cybersecurity as well as providing security and resilience for AI systems. The Scholarship Track provides funding to establish, or to continue, scholarship for service programs with integrated AI and cybersecurity components (CyberAI). Scholarship recipients must be U.S. citizens or lawful permanent residents and work after graduation in the AI or cybersecurity mission of a government organization for a period...
 
-### 20. Mathematical Foundations of Artificial Intelligence
+### 21. Mathematical Foundations of Artificial Intelligence
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -246,7 +258,7 @@ Government and the nation face a talent shortfall in artificial intelligence (AI
 
 Machine Learning and Artificial Intelligence (AI) are enabling extraordinary scientific breakthroughs in fields ranging from protein folding, natural language processing, drug synthesis, and recommender systems to the discovery of novel engineering materials and products. These achievements lie at the confluence of mathematics, statistics, engineering and computer science, yet a clear explanation of the remarkable power and also the limitations of such AI systems has eluded scientists from all disciplines. Critical foundational gaps remain that, if not properly addressed, will soon limit advances in machine learning, curbing progress in artificial intelligence. It appears increasingly unl...
 
-### 21. Communications, Circuits, and Sensing-Systems
+### 22. Communications, Circuits, and Sensing-Systems
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -258,7 +270,7 @@ Machine Learning and Artificial Intelligence (AI) are enabling extraordinary sci
 
 The Communications, Circuits, and Sensing-Systems (CCSS) Program supports innovative research in circuit and system hardware and signal processing techniques. CCSS also supports system and network architectures for communications and sensing to enable the next-generation cyber-physical systems (CPS) that leverage computation, communication, and sensing integrated with physical domains. CCSS invests in micro- and nano-electromechanical systems (MEMS/NEMS), physical, chemical, and biological sensing systems, neurotechnologies, and communication & sensing circuits and systems. The goal is to create new complex and hybrid systems ranging from nano- to macro-scale with innovative engineering p...
 
-### 22. Collaboratory to Advance Mathematics Education and Learning (CAMEL) for K-12
+### 23. Collaboratory to Advance Mathematics Education and Learning (CAMEL) for K-12
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -270,7 +282,7 @@ The Communications, Circuits, and Sensing-Systems (CCSS) Program supports innova
 
 The Collaboratory to Advance Mathematics Education and Learning (CAMEL) for K-12 initiative aims to advance mathematics learning and education through purposeful collaboration that draws on the interdisciplinary Science of Learning (including neuroscience; cognitive, developmental, and social sciences; computer science; machine learning; engineering; and education research), deep experiences in education practice and teaching, and innovations in the use of data science, AI and technology. Through an agreement with philanthropic partners, including the Walton Family Foundation (WFF), CAMEL consists of two phases. Phase I invites proposals for the creation of new research networks to suppor...
 
-### 23. Computational and Data-Enabled Science and Engineering
+### 24. Computational and Data-Enabled Science and Engineering
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -282,7 +294,7 @@ The Collaboratory to Advance Mathematics Education and Learning (CAMEL) for K-12
 
 Large-scale simulations and the ability to accumulate massive amounts of data have revolutionized science and engineering. The goal of the Computational and Data-enabled Science and Engineering (CDS&E) meta-program is to identify and capitalize on opportunities for major scientific and engineering breakthroughs through new computational and data-analysis approaches and best practices. The CDS&E meta-program supports projects that harness computation and data to advance knowledge and accelerate discovery above and beyond the goals of the participating individual programs. The intellectual drivers may be in an individual discipline or cut across more than one discipline in various Divisions...
 
-### 24. Research Infrastructure in the Social and Behavioral Sciences
+### 25. Research Infrastructure in the Social and Behavioral Sciences
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -293,15 +305,3 @@ Large-scale simulations and the ability to accumulate massive amounts of data ha
 - Official link: https://www.grants.gov/search-results-detail/350469
 
 The Research Infrastructure in the Social and Behavioral Sciences Program (RISBS) supports projects that create computational tools and data to facilitate basic research in the social and behavioral sciences that can lead to improved health, prosperity and security. Projects should be aimed at creating computational tools and data to enable research by social scientists. Examples include, but are not limited to, data collection or assembly efforts that result in new resources for a community of researchers or software platforms that facilitate data collection efforts by others. RISBS does not support research by PIs except in service of creation of the infrastructure. Innovation is especi...
-
-### 25. Atmosphere Cluster
-
-- Source: Grants.gov
-- Agency: U.S. National Science Foundation
-- Status: posted
-- Close date: Proposals accepted anytime
-- Amount: Not listed
-- Fit score: 7
-- Official link: https://www.grants.gov/search-results-detail/356538
-
-The Atmosphere Cluster (AC)in the Division of Atmospheric and Geospace Sciences (AGS)supportsfundamental studies of atmospheric processes from the Earth's surface to thestratosphere, and from timescales of nanoseconds to millennia. Core areas of research include the chemical, physical, and dynamical processes in the atmosphere thatimpactclouds, weather, climate, air quality, and the water cycle.Research methods include modeling, collecting observations, conducting experiments in the laboratory and field, and advancing analytical measurement techniques. General research topics that are supported by the AC include, andare not limited to: Chemical processes and mechanisms that explain how at...

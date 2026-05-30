@@ -271,6 +271,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "362360",
+    "title": "Mass Market Solutions for Leveraging Robotics and AI Technologies for Home Construction Demonstration",
+    "agency": "Department of Housing and Urban Development",
+    "opportunityNumber": "PDR-2600-DC-029Q",
+    "status": "posted",
+    "openDate": "05/29/2026",
+    "closeDate": "07/13/2026",
+    "amount": "$3,000,000 - $10,000,000",
+    "score": 7,
+    "summary": "The U.S. Department of Housing and Urban Development\"s Office of Policy Development and Research (PD&R) expects to release a Notice of Funding Opportunity for the Mass Market Solutions for Leveraging Robotics and AI Technologies for Home Construction Demonstration. This anticipated NOFO is intended to fund demonstration projects that test and scale the use of automation, robotics, and artificial intelligence in factory-built housing to help build homes faster, at lower cost, and in ways that can meaningfully increase housing supply.Awards are expected to be made as cooperative agreements, which means HUD will be actively involved throughout the project period. PD&R will provide technical guidance and oversight to help ensure projects are well designed, aligned with program goals, and able to generate lessons that can be applied more broadly across the housing industry.HUD is especially interested in projects that use automation, robotics, or AI at specific stages of the factory-built housing process, whether onsite or offsite. Eligible approaches may include panelized systems, modular construction, or fully volumetric homes. Projects must show that the proposed technology can produce housing components at a scale sufficient to deliver a defined number of homes and clearly explain how the technology improves construction speed, labor efficiency, quality, or cost.The overall goal of this NOFO is to support technologies that can move beyond a single pilot and be scaled for wider use, contributing to long-term increases in housing supply. Applicants should explain how their project bridges the gap between early development and commercial use and should quantify expected affordability benefits, such as reduced construction time or labor needs. The program supports Administration priorities to lower housing costs and expand housing supply and requires projects to follow principles of Gold Standard Science.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/362360",
+    "slug": "grants-gov-362360-mass-market-solutions-for-leveraging-robotics-and-ai-technologies-for"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "361238",
     "title": "CyberAICorps Scholarship for Service",
     "agency": "U.S. National Science Foundation",
@@ -853,21 +868,6 @@
     "summary": "Matched Grants.gov keyword: software.",
     "officialUrl": "https://www.grants.gov/search-results-detail/361239",
     "slug": "grants-gov-361239-building-sustainable-software-tools-for-open-science-r03-clinical-tria"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "362360",
-    "title": "Mass Market Solutions for Leveraging Robotics and AI Technologies for Home Construction Demonstration",
-    "agency": "Department of Housing and Urban Development",
-    "opportunityNumber": "PDR-2600-DC-029Q",
-    "status": "forecasted",
-    "openDate": "05/12/2026",
-    "closeDate": "",
-    "amount": "",
-    "score": 3,
-    "summary": "Matched Grants.gov keyword: automation.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/362360",
-    "slug": "grants-gov-362360-mass-market-solutions-for-leveraging-robotics-and-ai-technologies-for"
   },
   {
     "source": "Grants.gov",
