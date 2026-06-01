@@ -451,6 +451,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "362406",
+    "title": "NIJ FY25 Research and Evaluation of Artificial Intelligence for Criminal Justice Purposes",
+    "agency": "National Institute of Justice",
+    "opportunityNumber": "O-NIJ-2025-172615",
+    "status": "posted",
+    "openDate": "05/14/2026",
+    "closeDate": "06/15/2026",
+    "amount": "Up to $2,500,000",
+    "score": 5,
+    "summary": "This NOFO seeks to support research and evaluation that advances the use of artificial intelligence (AI) in the criminal justice system. The goal of this NOFO is to enhance lawful decision-making and help improve its accuracy and effectiveness through AI applications supporting crime prevention, public safety, and criminal justice systems. Research should explore both the benefits and limitations of AI, addressing potential risks and downstream impacts. NIJ expects to fund studies that explore use cases in policing, corrections, courts, or other criminal justice adjacent areas to examine the suitability of using AI to solve operational problems, as well as evaluate the impacts and outcomes when integrated into criminal justice practice. Applying for this funding opportunity involves a two-stage process that begins with submission of a concept paper. Based on the merits of the concept paper, NIJ may request that the applicant submit a full proposal. Applicants should not submit a full proposal unless invited. For information on the concept paper format, please see the General Purpose of the Funding section of this NOFO.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/362406",
+    "slug": "grants-gov-362406-nij-fy25-research-and-evaluation-of-artificial-intelligence-for-crimin"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "357733",
     "title": "D-START: Data Science Track Award for Research Transition (D/START) (R03-Clinical Trial Optional)",
     "agency": "National Institutes of Health",
@@ -883,20 +898,5 @@
     "summary": "Matched Grants.gov keyword: software.",
     "officialUrl": "https://www.grants.gov/search-results-detail/361239",
     "slug": "grants-gov-361239-building-sustainable-software-tools-for-open-science-r03-clinical-tria"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "362270",
-    "title": "AI3 Action Institute - Artificial Intelligence for American Indians",
-    "agency": "Administration for Children and Families - ANA",
-    "opportunityNumber": "HHS-2026-ACF-ANA-NAI-0035",
-    "status": "forecasted",
-    "openDate": "05/06/2026",
-    "closeDate": "",
-    "amount": "",
-    "score": 3,
-    "summary": "Matched Grants.gov keyword: artificial intelligence.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/362270",
-    "slug": "grants-gov-362270-ai3-action-institute-artificial-intelligence-for-american-indians"
   }
 ]
