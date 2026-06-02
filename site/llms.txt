@@ -20,14 +20,14 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: not received
-- Last checked: 2026-06-01T05:19:18.749Z
+- Last checked: 2026-06-02T05:02:44.431Z
 
 ## Topics
 
-- Software: 14 current matches
+- Software: 13 current matches
 - Artificial Intelligence: 20 current matches
 - Automation: 2 current matches
-- Cybersecurity: 10 current matches
+- Cybersecurity: 12 current matches
 - Data Science: 14 current matches
 - Cloud: 7 current matches
 
@@ -42,9 +42,9 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 7. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU) - Geological Survey - deadline 05/30/2026
 8. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina - U.S. Mission to Argentina - deadline 05/31/2026
 9. Public Diplomacy Section Praia: Small Grants Program - U.S. Mission to Cape Verde - deadline 06/19/2026
-10. Science of Learning and Augmented Intelligence - U.S. National Science Foundation - deadline 08/05/2026
-11. Postdoctoral Research Fellowships in Biology - U.S. National Science Foundation - deadline 09/29/2026
-12. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed) - National Institutes of Health - deadline 10/19/2026
+10. U.S. Mission UAE PDS Annual Program Statement - U.S. Mission to United Arab Emirates - deadline 07/15/2026
+11. Science of Learning and Augmented Intelligence - U.S. National Science Foundation - deadline 08/05/2026
+12. Postdoctoral Research Fellowships in Biology - U.S. National Science Foundation - deadline 09/29/2026
 
 ## Operating rules
 
