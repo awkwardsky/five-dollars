@@ -346,6 +346,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "361604",
+    "title": "National Science Foundation Fostering Interdisciplinary Networks to Develop Emergent and Responsive Solutions Foundry",
+    "agency": "U.S. National Science Foundation",
+    "opportunityNumber": "26-507",
+    "status": "posted",
+    "openDate": "03/23/2026",
+    "closeDate": "11/18/2026",
+    "amount": "",
+    "score": 7,
+    "summary": "The NSF FINDERS FOUNDRY program supports collaboration among K-12 educators, technologists, and researchers to develop innovative solutions to persistent challenges in learning and workforce development. These challenges are identified by K-12 students, families, and educators. The program aims to create and scale evidence-based practices, tools, and technologies that improve learning outcomes and prepare students for a digital, Artificial Intelligence (AI)-driven future. A key focus is early exposure to AI to build curiosity, understanding, and readiness for future careers. The program encourages partnerships across sectors - schools, universities, industry, government, and nonprofits - to co-design responsive, technology-based solutions. NSF FINDERS FOUNDRY program includes two phases: Planning and Development. Planning proposals help teams explore one of several focus areas. Only teams awarded Planning grants may submit Development proposals, which support the growth and implementation of promising ideas. The program aligns with national priorities, including the Executive Order 14277, \"Advancing Artificial Intelligence Education for American Youth \" (April 23, 2025), and the CHIPS and Science Act of 2022, Public Law 117-167 , Sections 10381-10383 and 10395.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/361604",
+    "slug": "grants-gov-361604-national-science-foundation-fostering-interdisciplinary-networks-to-de"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "346204",
     "title": "Communications, Circuits, and Sensing-Systems",
     "agency": "U.S. National Science Foundation",
@@ -883,20 +898,5 @@
     "summary": "The Office of Science (SC) of the Department of Energy (DOE) hereby announces its continuing interest in receiving applications for support of work in the following program areas: Advanced Scientific Computing Research, Basic Energy Sciences, Biological and Environmental Research, Fusion Energy Sciences, High Energy Physics, Nuclear Physics, and Isotope R&D and Production. On September 3, 1992, DOE published in the Federal Register the Office of Energy Research Financial Assistance Program (now called the Office of Science Financial Assistance Program), 10 CFR 605, as a Final Rule, which contained a solicitation for this program. Information about submission of applications, eligibility, limitations, evaluation and selection processes and other policies and procedures are specified in 10 CFR 605. This NOFO is our annual open solicitation that covers all research areas in SC and is open throughout the Fiscal Year. Any research within SC’s Congressionally authorized mission may be proposed under this NOFO. This NOFO will remain open until September 30, 2026, 11:59 PM Eastern Time, or until it is succeeded by another issuance, whichever occurs first. This NOFO succeeds DE-FOA-0003432, which was published September 30, 2024.",
     "officialUrl": "https://www.grants.gov/search-results-detail/360678",
     "slug": "grants-gov-360678-fy-2026-continuation-of-solicitation-for-the-office-of-science-financi"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "360205",
-    "title": "Agriculture and Food Research Initiative Competitive Grants Program Foundational and Applied Science Program",
-    "agency": "National Institute of Food and Agriculture",
-    "opportunityNumber": "USDA-NIFA-AFRI-011134",
-    "status": "posted",
-    "openDate": "08/01/2025",
-    "closeDate": "12/31/2026",
-    "amount": "$10,000 - $10,000,000",
-    "score": 3,
-    "summary": "The AFRI Foundational and Applied Science Program supports grants in six AFRI priority areas to advance knowledge in both fundamental and applied sciences important to agriculture. The six priority areas are: Plant Health and Production and Plant Products; Animal Health and Production and Animal Products; Food Safety, Nutrition, and Health; Bioenergy, Natural Resources, and Environment; Agriculture Systems and Technology; and Agriculture Economics and Rural Communities. Research-only, extension-only, and integrated research, education and/or extension projects are solicited in this Request for Applications (RFA). See Foundational and Applied Science RFA for specific detail.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/360205",
-    "slug": "grants-gov-360205-agriculture-and-food-research-initiative-competitive-grants-program-fo"
   }
 ]

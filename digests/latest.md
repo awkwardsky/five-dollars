@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-06-04T05:12:28.432Z
+Generated: 2026-06-05T04:49:44.765Z
 
 Sources checked: Grants.gov 69, SAM.gov 0
 
@@ -282,7 +282,19 @@ Government and the nation face a talent shortfall in artificial intelligence (AI
 
 Machine Learning and Artificial Intelligence (AI) are enabling extraordinary scientific breakthroughs in fields ranging from protein folding, natural language processing, drug synthesis, and recommender systems to the discovery of novel engineering materials and products. These achievements lie at the confluence of mathematics, statistics, engineering and computer science, yet a clear explanation of the remarkable power and also the limitations of such AI systems has eluded scientists from all disciplines. Critical foundational gaps remain that, if not properly addressed, will soon limit advances in machine learning, curbing progress in artificial intelligence. It appears increasingly unl...
 
-### 24. Communications, Circuits, and Sensing-Systems
+### 24. National Science Foundation Fostering Interdisciplinary Networks to Develop Emergent and Responsive Solutions Foundry
+
+- Source: Grants.gov
+- Agency: U.S. National Science Foundation
+- Status: posted
+- Close date: 11/18/2026
+- Amount: Not listed
+- Fit score: 7
+- Official link: https://www.grants.gov/search-results-detail/361604
+
+The NSF FINDERS FOUNDRY program supports collaboration among K-12 educators, technologists, and researchers to develop innovative solutions to persistent challenges in learning and workforce development. These challenges are identified by K-12 students, families, and educators. The program aims to create and scale evidence-based practices, tools, and technologies that improve learning outcomes and prepare students for a digital, Artificial Intelligence (AI)-driven future. A key focus is early exposure to AI to build curiosity, understanding, and readiness for future careers. The program encourages partnerships across sectors - schools, universities, industry, government, and nonprofits -...
+
+### 25. Communications, Circuits, and Sensing-Systems
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -293,15 +305,3 @@ Machine Learning and Artificial Intelligence (AI) are enabling extraordinary sci
 - Official link: https://www.grants.gov/search-results-detail/346204
 
 The Communications, Circuits, and Sensing-Systems (CCSS) Program supports innovative research in circuit and system hardware and signal processing techniques. CCSS also supports system and network architectures for communications and sensing to enable the next-generation cyber-physical systems (CPS) that leverage computation, communication, and sensing integrated with physical domains. CCSS invests in micro- and nano-electromechanical systems (MEMS/NEMS), physical, chemical, and biological sensing systems, neurotechnologies, and communication & sensing circuits and systems. The goal is to create new complex and hybrid systems ranging from nano- to macro-scale with innovative engineering p...
-
-### 25. Collaboratory to Advance Mathematics Education and Learning (CAMEL) for K-12
-
-- Source: Grants.gov
-- Agency: U.S. National Science Foundation
-- Status: posted
-- Close date: Proposals accepted anytime
-- Amount: $1,000,000 - $1,500,000
-- Fit score: 7
-- Official link: https://www.grants.gov/search-results-detail/361008
-
-The Collaboratory to Advance Mathematics Education and Learning (CAMEL) for K-12 initiative aims to advance mathematics learning and education through purposeful collaboration that draws on the interdisciplinary Science of Learning (including neuroscience; cognitive, developmental, and social sciences; computer science; machine learning; engineering; and education research), deep experiences in education practice and teaching, and innovations in the use of data science, AI and technology. Through an agreement with philanthropic partners, including the Walton Family Foundation (WFF), CAMEL consists of two phases. Phase I invites proposals for the creation of new research networks to suppor...
