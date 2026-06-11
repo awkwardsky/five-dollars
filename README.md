@@ -24,16 +24,16 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 - Network: TRON / TRC20
 - Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
 - Matching transfers: 0
-- Last checked: 2026-06-10T04:51:46.877Z
-- Latest run: 2026-06-10T04:51:46.734Z
+- Last checked: 2026-06-11T05:01:00.025Z
+- Latest run: 2026-06-11T05:00:59.882Z
 
 ### Current Top Opportunities
 
 1. [Pathways to Enable Secure Open-Source Ecosystems](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-361333-pathways-to-enable-secure-open-source-ecosystems.html) - U.S. National Science Foundation - deadline 09/01/2026
 2. [Tech Innovation Lab](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362392-tech-innovation-lab.html) - U.S. Mission to Morocco - deadline 07/13/2026
-3. [Condensed Matter and Materials Theory](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-349654-condensed-matter-and-materials-theory.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
-4. [Energy, Power, Control, and Networks](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-348258-energy-power-control-and-networks.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
-5. [Cybersecurity Innovation for Cyberinfrastructure](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-358004-cybersecurity-innovation-for-cyberinfrastructure.html) - U.S. National Science Foundation - deadline 01/20/2027
+3. [Prosperity Stack Fellowship](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362757-prosperity-stack-fellowship.html) - U.S. Mission to South Korea - deadline 07/13/2026
+4. [Condensed Matter and Materials Theory](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-349654-condensed-matter-and-materials-theory.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
+5. [Energy, Power, Control, and Networks](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-348258-energy-power-control-and-networks.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
 <!-- five-dollars-status:end -->
 
 ## Current Product

@@ -20,7 +20,7 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: not received
-- Last checked: 2026-06-10T04:51:46.877Z
+- Last checked: 2026-06-11T05:01:00.025Z
 
 ## Topics
 
@@ -28,23 +28,23 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Artificial Intelligence: 20 current matches
 - Automation: 2 current matches
 - Cybersecurity: 12 current matches
-- Data Science: 14 current matches
+- Data Science: 15 current matches
 - Cloud: 7 current matches
 
 ## Current top opportunities
 
 1. Pathways to Enable Secure Open-Source Ecosystems - U.S. National Science Foundation - deadline 09/01/2026
 2. Tech Innovation Lab - U.S. Mission to Morocco - deadline 07/13/2026
-3. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
-4. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
-5. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
-6. UNITED STATES MILITARY ACADEMY Broad Agency Announcement - Dept of the Army -- Materiel Command - deadline 03/31/2027
-7. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU) - Geological Survey - deadline 05/30/2026
-8. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina - U.S. Mission to Argentina - deadline 05/31/2026
-9. Public Diplomacy Section Praia: Small Grants Program - U.S. Mission to Cape Verde - deadline 06/19/2026
-10. U.S. Mission UAE PDS Annual Program Statement - U.S. Mission to United Arab Emirates - deadline 07/15/2026
-11. Science of Learning and Augmented Intelligence - U.S. National Science Foundation - deadline 08/05/2026
-12. Postdoctoral Research Fellowships in Biology - U.S. National Science Foundation - deadline 09/29/2026
+3. Prosperity Stack Fellowship - U.S. Mission to South Korea - deadline 07/13/2026
+4. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
+5. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
+6. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
+7. UNITED STATES MILITARY ACADEMY Broad Agency Announcement - Dept of the Army -- Materiel Command - deadline 03/31/2027
+8. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU) - Geological Survey - deadline 05/30/2026
+9. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina - U.S. Mission to Argentina - deadline 05/31/2026
+10. Public Diplomacy Section Praia: Small Grants Program - U.S. Mission to Cape Verde - deadline 06/19/2026
+11. U.S. Mission UAE PDS Annual Program Statement - U.S. Mission to United Arab Emirates - deadline 07/15/2026
+12. Science of Learning and Augmented Intelligence - U.S. National Science Foundation - deadline 08/05/2026
 
 ## Operating rules
 
