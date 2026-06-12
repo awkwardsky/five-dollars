@@ -24,16 +24,16 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 - Network: TRON / TRC20
 - Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
 - Matching transfers: 0
-- Last checked: 2026-06-11T05:01:00.025Z
-- Latest run: 2026-06-11T05:00:59.882Z
+- Last checked: 2026-06-12T05:08:35.208Z
+- Latest run: 2026-06-12T05:08:35.063Z
 
 ### Current Top Opportunities
 
 1. [Pathways to Enable Secure Open-Source Ecosystems](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-361333-pathways-to-enable-secure-open-source-ecosystems.html) - U.S. National Science Foundation - deadline 09/01/2026
-2. [Tech Innovation Lab](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362392-tech-innovation-lab.html) - U.S. Mission to Morocco - deadline 07/13/2026
-3. [Prosperity Stack Fellowship](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362757-prosperity-stack-fellowship.html) - U.S. Mission to South Korea - deadline 07/13/2026
-4. [Condensed Matter and Materials Theory](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-349654-condensed-matter-and-materials-theory.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
-5. [Energy, Power, Control, and Networks](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-348258-energy-power-control-and-networks.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
+2. [U.S.-D.R. Technology and Science Fair](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362758-u-s-d-r-technology-and-science-fair.html) - U.S. Mission to the Dominican Republic - deadline 07/10/2026
+3. [Tech Innovation Lab](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362392-tech-innovation-lab.html) - U.S. Mission to Morocco - deadline 07/13/2026
+4. [Prosperity Stack Fellowship](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362757-prosperity-stack-fellowship.html) - U.S. Mission to South Korea - deadline 07/13/2026
+5. [Condensed Matter and Materials Theory](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-349654-condensed-matter-and-materials-theory.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
 <!-- five-dollars-status:end -->
 
 ## Current Product
