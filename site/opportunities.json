@@ -541,6 +541,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "358934",
+    "title": "NIGMS National and Regional Resources (R24 - Clinical Trial Not Allowed)",
+    "agency": "National Institutes of Health",
+    "opportunityNumber": "PAR-25-416",
+    "status": "posted",
+    "openDate": "06/11/2025",
+    "closeDate": "06/14/2027",
+    "amount": "",
+    "score": 5,
+    "summary": "This Notice of Funding Opportunity (NOFO) encourages applications for support of resources that will provide access to state-of-the-art equipment, technologies, research tools, materials, organisms, software, and/or services to a substantial regional (multi-state) or national user base. Only those resources with technical capabilities that fall within the NIGMS-supported program areas are eligible for awards. The resources should already be established or may be formed through consolidation of existing local or regional facilities. The intent is to provide resource access to investigators without regard to the specific biomedical focus of their research, while not duplicating or replacing resources supported by sources such as other NIH Institutes and Centers (ICs) or host institutions. The resource is expected to be maintained or upgraded to current best practices, make its capabilities and availability known to the biomedical research community through a robust web presence and outreach activities, and provide user training and support.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/358934",
+    "slug": "grants-gov-358934-nigms-national-and-regional-resources-r24-clinical-trial-not-allowed"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "362406",
     "title": "NIJ FY25 Research and Evaluation of Artificial Intelligence for Criminal Justice Purposes",
     "agency": "National Institute of Justice",
@@ -883,20 +898,5 @@
     "summary": "The purpose of this Notice of Funding Opportunity (NOFO) is to encourage applications seeking to develop the next generation of brain stimulation devices for treating mental health disorders. Applications are sought that will either 1) develop novel brain stimulation devices or 2) significantly enhance, by means of hardware/software improvements, the effectiveness of brain stimulation devices that are currently U.S. Food and Drug Administration (FDA)-approved or cleared. Novel devices should move beyond existing electrical/magnetic stimulation and develop new stimulation techniques capable of increased spatiotemporal precision as well as multi-focal, closed-loop approaches. Applications seeking to develop new capabilities should focus on significant enhancement of the spatial resolution, depth of delivery, and/or precision of the device. Incremental changes to existing devices (e.g., software updates)are not within the scope of this announcement. Applications should be submitted by multi-disciplinary teams with a variety of expertise including systems neuroscience, engineering, clinical, and regulatory affairs.",
     "officialUrl": "https://www.grants.gov/search-results-detail/357308",
     "slug": "grants-gov-357308-neuromodulation-neurostimulation-device-development-for-mental-health"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "361873",
-    "title": "Specialty Crop Research Initiative",
-    "agency": "National Institute of Food and Agriculture",
-    "opportunityNumber": "USDA-NIFA-SCRI-011676",
-    "status": "posted",
-    "openDate": "04/13/2026",
-    "closeDate": "06/15/2026",
-    "amount": "$50,000 - $10,000,000",
-    "score": 3,
-    "summary": "The purpose of the SCRI program is to address the critical needs of the specialty crops industries (as defined in Appendix III) by awarding grants to support research and extension that address key challenges of national, regional, and multi-state importance in sustaining all components of food and agriculture, including conventional and organic food production systems. The program recognizes that for some specialty crops that are grown in a limited number of states, the multi-state nature of projects can be difficult to address. Except for Research and Extension Planning Projects, the SCRI program only considers projects that integrate research and extension activities. Applicants are strongly encouraged to propose a unique approach to solving problems facing the specialty crop industry using a systems approach.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/361873",
-    "slug": "grants-gov-361873-specialty-crop-research-initiative"
   }
 ]
