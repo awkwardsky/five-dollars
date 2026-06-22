@@ -24,8 +24,8 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 - Network: TRON / TRC20
 - Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
 - Matching transfers: 0
-- Last checked: 2026-06-21T05:20:46.727Z
-- Latest run: 2026-06-21T05:20:46.584Z
+- Last checked: 2026-06-22T05:33:59.421Z
+- Latest run: 2026-06-22T05:33:59.287Z
 
 ### Current Top Opportunities
 
