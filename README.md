@@ -24,8 +24,8 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 - Network: TRON / TRC20
 - Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
 - Matching transfers: 0
-- Last checked: 2026-06-22T05:33:59.421Z
-- Latest run: 2026-06-22T05:33:59.287Z
+- Last checked: 2026-06-23T04:32:21.590Z
+- Latest run: 2026-06-23T04:32:21.447Z
 
 ### Current Top Opportunities
 
@@ -33,7 +33,7 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 2. [U.S.-D.R. Technology and Science Fair](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362758-u-s-d-r-technology-and-science-fair.html) - U.S. Mission to the Dominican Republic - deadline 07/10/2026
 3. [Tech Innovation Lab](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362392-tech-innovation-lab.html) - U.S. Mission to Morocco - deadline 07/13/2026
 4. [Prosperity Stack Fellowship](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362757-prosperity-stack-fellowship.html) - U.S. Mission to South Korea - deadline 07/13/2026
-5. [Condensed Matter and Materials Theory](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-349654-condensed-matter-and-materials-theory.html) - U.S. National Science Foundation - deadline Proposals accepted anytime
+5. [The 2027 YSEALI Regional Workshop: Securing Supply Chains](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362900-the-2027-yseali-regional-workshop-securing-supply-chains.html) - U.S. Mission to Indonesia - deadline 08/31/2026
 <!-- five-dollars-status:end -->
 
 ## Current Product

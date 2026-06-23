@@ -20,16 +20,16 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: not received
-- Last checked: 2026-06-22T05:33:59.421Z
+- Last checked: 2026-06-23T04:32:21.590Z
 
 ## Topics
 
-- Software: 14 current matches
+- Software: 13 current matches
 - Artificial Intelligence: 20 current matches
 - Automation: 2 current matches
-- Cybersecurity: 14 current matches
+- Cybersecurity: 15 current matches
 - Data Science: 15 current matches
-- Cloud: 7 current matches
+- Cloud: 6 current matches
 
 ## Current top opportunities
 
@@ -37,14 +37,14 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 2. U.S.-D.R. Technology and Science Fair - U.S. Mission to the Dominican Republic - deadline 07/10/2026
 3. Tech Innovation Lab - U.S. Mission to Morocco - deadline 07/13/2026
 4. Prosperity Stack Fellowship - U.S. Mission to South Korea - deadline 07/13/2026
-5. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
-6. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
-7. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
-8. UNITED STATES MILITARY ACADEMY Broad Agency Announcement - Dept of the Army -- Materiel Command - deadline 03/31/2027
-9. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU) - Geological Survey - deadline 05/30/2026
-10. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina - U.S. Mission to Argentina - deadline 05/31/2026
-11. Public Diplomacy Section Praia: Small Grants Program - U.S. Mission to Cape Verde - deadline 06/19/2026
-12. U.S. Mission UAE PDS Annual Program Statement - U.S. Mission to United Arab Emirates - deadline 07/15/2026
+5. The 2027 YSEALI Regional Workshop: Securing Supply Chains - U.S. Mission to Indonesia - deadline 08/31/2026
+6. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
+7. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
+8. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
+9. UNITED STATES MILITARY ACADEMY Broad Agency Announcement - Dept of the Army -- Materiel Command - deadline 03/31/2027
+10. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU) - Geological Survey - deadline 05/30/2026
+11. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina - U.S. Mission to Argentina - deadline 05/31/2026
+12. Public Diplomacy Section Praia: Small Grants Program - U.S. Mission to Cape Verde - deadline 06/19/2026
 
 ## Operating rules
 

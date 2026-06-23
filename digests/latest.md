@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-06-22T05:33:59.283Z
+Generated: 2026-06-23T04:32:21.444Z
 
 Sources checked: Grants.gov 69, SAM.gov 0
 
@@ -54,7 +54,19 @@ Funding Opportunity Title : Tech Innovation Lab Funding Opportunity Number : PAS
 
 Funding Opportunity Title: Prosperity Stack Fellowship Funding Opportunity Number: PD-SEOUL-FY26-03 Deadline for Applications : Monday, July 13, 2026, 11:59 p.m. (GMT+9) CFDA Number: 19.441 Type of Funding: FY26 Fulbright-Hays, American Spaces Support Funds Total Amount Available: $108,000 This notice is subject to availability of funding. Executive Summary The U.S. Embassy Seoul Public Diplomacy Section invites proposals to implement the Prosperity Stack Fellowship, a strategic accelerator program designed to promote American AI technology with Korean early-stage entrepreneurs by connecting them with U.S. expertise in artificial intelligence, business development, and innovation. The pro...
 
-### 5. Condensed Matter and Materials Theory
+### 5. The 2027 YSEALI Regional Workshop: Securing Supply Chains
+
+- Source: Grants.gov
+- Agency: U.S. Mission to Indonesia
+- Status: posted
+- Close date: 08/31/2026
+- Amount: $200,000 - $300,000
+- Fit score: 11
+- Official link: https://www.grants.gov/search-results-detail/362900
+
+Project Background, Goals, and Objectives In an era of global disruption and rapid technological change, secure and resilient supply chains are more critical than ever. This workshop will bring together early-stage professionals from across Southeast Asia to explore how supply chains operate, the impact of advanced technologies, and the critical minerals that power modern economies. They will leave equipped with tools to increase advocacy efforts that support national-level policy, encouraging the expansion of U.S.- ASEAN commercial opportunities and prioritizing secure supply chains that strengthen U.S. - ASEAN economic and regional security. Workshop Objectives • Enhance understanding o...
+
+### 6. Condensed Matter and Materials Theory
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -66,7 +78,7 @@ Funding Opportunity Title: Prosperity Stack Fellowship Funding Opportunity Numbe
 
 CMMT supports theoretical and computational materials research in the topical areas represented in DMR's other Topical Materials Research Programs (these are also variously known as Individual Investigator Award (IIA) Programs, or Core Programs, or Disciplinary Programs), which are: Condensed Matter Physics (CMP), Biomaterials (BMAT), Ceramics (CER), Electronic and Photonic Materials (EPM), Metals and Metallic Nanostructures (MMN), Polymers (POL), and Solid State and Materials Chemistry (SSMC). The CMMT program supports fundamental research that advances conceptual understanding of hard and soft materials, and materials-related phenomena; the development of associated analytical, computat...
 
-### 6. Energy, Power, Control, and Networks
+### 7. Energy, Power, Control, and Networks
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -78,7 +90,7 @@ CMMT supports theoretical and computational materials research in the topical ar
 
 The Energy, Power, Control, andNetworks (EPCN) Program supports innovative research in modeling, optimization, learning, adaptation, and control of networked multi-agent systems, higher-level decision making, and dynamic resource allocation, as well as risk management in the presence of uncertainty, sub-system failures, and stochastic disturbances. EPCN also invests in novel machine learning algorithms and analysis, adaptive dynamic programming, brain-like networked architectures performing real-time learning, and neuromorphic engineering. EPCN's goal is to encourage research on emerging technologies and applications including energy, transportation, robotics, and biomedical devices & sys...
 
-### 7. Cybersecurity Innovation for Cyberinfrastructure
+### 8. Cybersecurity Innovation for Cyberinfrastructure
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -90,7 +102,7 @@ The Energy, Power, Control, andNetworks (EPCN) Program supports innovative resea
 
 The objective of the Cybersecurity Innovation for Cyberinfrastructure (CICI) program is to advance scientific discovery and innovation by enhancing the security and privacy of cyberinfrastructure. CICI supports efforts to develop, deploy and integrate cybersecurity that will benefit the broader scientific community by securing science data, computation, collaborations workflows, and infrastructure. CICI recognizes the unique nature of modern, complex, data-driven, distributed, rapid, and collaborative science and the breadth of infrastructure and requirements across scientific disciplines, practitioners, researchers, and projects. CICI seeks proposals in four program areas: 1. Usable and...
 
-### 8. UNITED STATES MILITARY ACADEMY Broad Agency Announcement
+### 9. UNITED STATES MILITARY ACADEMY Broad Agency Announcement
 
 - Source: Grants.gov
 - Agency: Dept of the Army -- Materiel Command
@@ -102,7 +114,7 @@ The objective of the Cybersecurity Innovation for Cyberinfrastructure (CICI) pro
 
 The U.S. Military Academy at West Point's mission is "to educate, train, and inspire the Corps of Cadets so that each graduate is a commissioned leader of character committed to the values of Duty, Honor, Country and prepared for a career of professional excellence and service to the Nation as an officer in the United States Army." The United States Military Academy is located at West Point, New York. USMA executes research to enhance the education of cadets, develop the faculty professionally, and address important issues facing the Army and the Nation. In addition, the Academy conducts research and analysis in emerging fields that may realize novel or vastly improved Army capabilities....
 
-### 9. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU)
+### 10. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU)
 
 - Source: Grants.gov
 - Agency: Geological Survey
@@ -114,7 +126,7 @@ The U.S. Military Academy at West Point's mission is "to educate, train, and ins
 
 The USGS is offering a funding opportunity to a CESU partner for research on the utility of the Skydio Dock for X10 to (1) fly remotely beyond visual line of site (BVLOS), (2) collect image velocimetry (IV) data, (3) upload IV data via the Skydio Cloud and satellite communications (SatComms), and (4) develop a workflow for processing camera imagery to compute IV-derived discharge.The cost to operate stream gages in gage-poor or hard-to-access basins is both costly and a potential safety risk. The Next Generation Water Observing System (NGWOS) is seeking to trial and develop a workflow that is reliable and capable of transmitting camera imagery via SatComms and compute IV-derived discrete...
 
-### 10. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina
+### 11. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Argentina
@@ -126,7 +138,7 @@ The USGS is offering a funding opportunity to a CESU partner for research on the
 
 U.S. Embassy Buenos Aires announces an open competition to promote innovation, cybersecurity, and responsible Artificial Intelligence (AI) adoption in Argentina. This program will equip entrepreneurs, students, and small businesses with practical tools and knowledge based on U.S. technological standards, strengthening economic resilience, protecting intellectual property, and fostering open and secure digital ecosystems. Applicants are encouraged to propose scalable models and sustainable partnerships that can extend program impact beyond the initial funding period. 1. Project Background, Goals, and Objectives Artificial intelligence and digital technologies are reshaping economies and go...
 
-### 11. Public Diplomacy Section Praia: Small Grants Program
+### 12. Public Diplomacy Section Praia: Small Grants Program
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Cape Verde
@@ -138,7 +150,7 @@ U.S. Embassy Buenos Aires announces an open competition to promote innovation, c
 
 As the United States commemorates 250 years of independence through the America250 and Freedom250 initiatives, the U.S. Department of State's U.S. Embassy Praia announces an open competition to celebrate this historic milestone while advancing core U.S. foreign policy priorities in Cabo Verde. This initiative promotes democratic governance, inclusive economic growth, and strengthened bilateral partnerships through interactive programming highlighting American excellence in innovation, education, culture, and democratic institutions. In alignment with the U.S. Strategy for Sub-Saharan Africa, this program seeks proposals from eligible organizations and individuals to engage youth, emerging...
 
-### 12. U.S. Mission UAE PDS Annual Program Statement
+### 13. U.S. Mission UAE PDS Annual Program Statement
 
 - Source: Grants.gov
 - Agency: U.S. Mission to United Arab Emirates
@@ -150,7 +162,7 @@ As the United States commemorates 250 years of independence through the America2
 
 The Public Diplomacy Section (PDS) at U.S. Mission UAE invites results-oriented proposals for programs that foster economic opportunities for U.S. businesses, investors, and innovators, and showcase American leadership and excellence in science, technology, culture, arts, sports, culinary diplomacy, artificial intelligence (AI), and health. The purpose is to strengthen ties between the United States and the United Arab Emirates in ways that make America safer, stronger, and more prosperous and advance the interests of the American people as we commemorate the 250th anniversary of U.S. independence (2026) and celebrate the enduring U.S.-UAE partnership. See Section C, Program Description f...
 
-### 13. Science of Learning and Augmented Intelligence
+### 14. Science of Learning and Augmented Intelligence
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -162,7 +174,7 @@ The Public Diplomacy Section (PDS) at U.S. Mission UAE invites results-oriented 
 
 Science of Learning and Augmented Intelligence (SL) supports potentially transformative research that develops basic theoretical insights and fundamental knowledge about principles, processes and mechanisms of learning, and about augmented intelligence - how human cognitive function can be augmented through interactions with others or with technology, or through variations in context. The program supportsresearch addressing learning in individuals and in groups, across a wide range of domains at one or more levels of analysis, including molecular and cellular mechanisms; brain systems; cognitive, affective and behavioral processes; and social and cultural influences. The program also supp...
 
-### 14. Escape The Hack: Countering Cyber Scams with an Immersive Experience for Everyday Indonesians
+### 15. Escape The Hack: Countering Cyber Scams with an Immersive Experience for Everyday Indonesians
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Indonesia
@@ -174,7 +186,19 @@ Science of Learning and Augmented Intelligence (SL) supports potentially transfo
 
 Indonesia faces a pervasive and evolving cybercrime threat, with online scams growing in number and sophistication – while U.S. families continue to lose their life’s savings to international cybercrime, totaling over $12 billions in financial losses in 2023 alone. Unlike scam compounds in mainland Southeast Asia, criminal scam operations in Indonesia are decentralized and embedded within transnational networks. Thousands of Indonesian nationals have worked in scam compounds in Cambodia, Burma, and Laos, and there is now concern crackdowns in other countries prompting a wave of experienced Indonesian scammers to return home to establish new operations in collaboration with Chinese and oth...
 
-### 15. Postdoctoral Research Fellowships in Biology
+### 16. Prosperity through Partnership:  Catalyzing U.S.-Algerian Collaboration in Innovation, Commerce and English Language
+
+- Source: Grants.gov
+- Agency: U.S. Mission to Algeria
+- Status: posted
+- Close date: 08/08/2026
+- Amount: $5,000 - $100,000
+- Fit score: 9
+- Official link: https://www.grants.gov/search-results-detail/362903
+
+1. Executive Summary The U.S. Department of State’s Embassy Algiers is launching a competitive program to catalyze innovation and commerce between the United States and Algeria and advance key U.S. foreign policy priorities. The initiative aims to strengthen commercial ties, expand market access for American companies, and promote American business models and technology, particularly in entrepreneurship and artificial intelligence as well as English language development. Target audiences include Algerian students and young leaders (ages 18-35), entrepreneurs, and mid-career professionals, with a focus on building partnerships between U.S. and Algerian institutions and improving knowledge...
+
+### 17. Postdoctoral Research Fellowships in Biology
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -186,7 +210,7 @@ Indonesia faces a pervasive and evolving cybercrime threat, with online scams gr
 
 The integration of Artificial Intelligence (AI) and Biological Research has the potential to pave the way for breakthroughs in biotechnology and bio-system design that will create innovations, new industries, and jobs. To capitalize on this promise, the Directorate for Biological Sciences (BIO) will make awards for Postdoctoral Research Fellowships in Biology (PRFB) to recent doctoral degree recipients, for proposals with a research and training focus at the Intersection of Artificial Intelligence and Biological Sciences to Strengthen and Safeguard Biotechnology Innovations. Applying AI to highly complex biological systems will reveal unknown mechanisms in the natural world that hold prom...
 
-### 16. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
+### 18. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
 
 - Source: Grants.gov
 - Agency: National Institutes of Health
@@ -198,7 +222,7 @@ The integration of Artificial Intelligence (AI) and Biological Research has the 
 
 The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications for a Community Engagement Evaluation and Data coordination hub (CEED) for the Community-Based Participatory Research (CBPR) consortium: Advancing Data and Practice Transformation (ADAPT) for Optimizing Oral Health for All. In addition to CEED, the ADAPT consortium will include separately funded CBPR projects, which will receive consultative services from the NIH Community Engagement Alliance Consultative Resource (CEACR) and join in the Science Collaborative for Health and Artificial Intelligence Reduction of Errors (SCHARE) platform for the overarching goal of promoting data use and transformational communi...
 
-### 17. The Genesis Mission:  Transforming Science and Energy with AI
+### 19. The Genesis Mission:  Transforming Science and Energy with AI
 
 - Source: Grants.gov
 - Agency: Office of Science
@@ -210,7 +234,7 @@ The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications
 
 The DOE Office of Science (SC), Office of Critical Minerals and Energy Innovation (CMEI), Office of Environmental Management (EM), Office of Nuclear Energy (NE), Office of Electricity (OE), and Hydrocarbons and Geothermal Office (HGEO) hereby announce interest in receiving applications from interdisciplinary teams addressing the Genesis Mission National Science and Technology Challenges to accelerate scientific discovery and research and development (R&D) workflows using novel artificial intelligence (AI) models and frameworks. By achieving AI advantage, these teams will advance the DOE's mission and ensure America’s security and prosperity by addressing energy, environmental, and nuclear...
 
-### 18. Manufacturing Systems Integration
+### 20. Manufacturing Systems Integration
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -222,7 +246,7 @@ The DOE Office of Science (SC), Office of Critical Minerals and Energy Innovatio
 
 The Manufacturing Systems Integration (MSI) Program supports fundamental research addressing the opportunities and challenges that digital technologies present for the next industrial revolution, with particular emphasis on the digital integration of design and manufacturing within the larger life cycle ecosystem. Manufacturing Systems Integration proposals should address underlying principles and advances that are generalizable for globally competitive and world leading industries. Connectivity, automation, and secure collaboration are examples of areas that are integral to digital environments capable of supporting the innovation, realization and sustainment of manufactured products and...
 
-### 19. Research in the Formation of Engineers
+### 21. Research in the Formation of Engineers
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -234,7 +258,7 @@ The Manufacturing Systems Integration (MSI) Program supports fundamental researc
 
 The NSF Engineering Directorate (ENG) has launched a multi-year initiative, theProfessional Formation of Engineers, to create and support an innovative and inclusive engineering profession for the 21 st century. Professional Formation of Engineers (PFE) refers to the formal and informal processes and value systems by which people become engineers. It also includes the ethical responsibility of practicing engineers to sustain and grow the profession in order to improve quality of life for all peoples. The engineering profession must be responsive to national priorities, grand challenges, and dynamic workforce needs; it must be equally open and accessible to all. Professional Formation of E...
 
-### 20. Findable Accessible Interoperable Reusable Open Science
+### 22. Findable Accessible Interoperable Reusable Open Science
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -246,7 +270,7 @@ The NSF Engineering Directorate (ENG) has launched a multi-year initiative, theP
 
 The FAIROS Program seeks to support a broad range of transformative open science activities including but not limited to i.) Research, education, and socio-technical cyberinfrastructure development capacities that advance sustainable multi-disciplinary findable, accessible, interoperable, reusable (FAIR) research data management (RDM) and open science capabilities, ii.) Piloting new models of scientific communication and publication that improve efficiency and accessibility, iii.) Developing FAIROS data portals, research data commons, RDM as a national service, and iv.) Lowering barriers to accessing, curating, integrating, linking, managing, sharing, and storing data across many discipli...
 
-### 21. U.S. Embassy Sofia PDS Annual Program Statement
+### 23. U.S. Embassy Sofia PDS Annual Program Statement
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Bulgaria
@@ -258,7 +282,7 @@ The FAIROS Program seeks to support a broad range of transformative open science
 
 UPDATE APRIL 14, 2026: Proposals for the FY26 Small Grants Program will be reviewed on a rolling basis based on funding availability. Please follow all instructions in the Annual Program Statement (see Related Documents tab), which includes instructions on required forms and recommended templates and submit proposals to SofiaGrants@state.gov no later than June 15, 2026 with "FY26 APS" in the subject line of the email. EXECUTIVE SUMMARY The U.S. Department of State, U.S. Embassy Sofia Public Diplomacy Section (PDS), announces an open competition for programs that strengthen the U.S.-Bulgaria partnership and advance U.S. administration priorities to make the United States safer, stronger, a...
 
-### 22. FY 2026 Competitive Academic Agreement Program (CAAP)
+### 24. FY 2026 Competitive Academic Agreement Program (CAAP)
 
 - Source: Grants.gov
 - Agency: Pipeline and Hazardous Materials Safety Admin
@@ -270,7 +294,7 @@ UPDATE APRIL 14, 2026: Proposals for the FY26 Small Grants Program will be revie
 
 The Pipeline and Hazardous Materials Safety Administration's (PHMSA) FY 2026 CAAP NOFO solicits research proposals from nonprofit institutions of higher education for the Pipeline Safety Research and Development (R&D) Program. This program is authorized by section 12 of the Pipeline Safety Improvement Act of 2002 (Pub. L. 107-355) and 49 U.S.C. § 60117(l). The CAAP competitive research announcement will focus on the following objectives: - Early corrosion prediction for pipelines and implementing appropriate mitigation measures. - Economical and novel agents to mitigate internal or external pipeline corrosion due to microbial-induced corrosion.- Artificial intelligence (AI)-assisted softw...
 
-### 23. EnglishxSTEM
+### 25. EnglishxSTEM
 
 - Source: Grants.gov
 - Agency: U.S. Mission to the Dominican Republic
@@ -281,27 +305,3 @@ The Pipeline and Hazardous Materials Safety Administration's (PHMSA) FY 2026 CAA
 - Official link: https://www.grants.gov/search-results-detail/362626
 
 The EnglishxSTEM initiative advances U.S. economic and technological interests by partnering with Dominican public and private sector stakeholders to deliver high-impact English for Specific Purposes (ESP) training in strategically relevant productive sectors. Implemented through collaboration with universities, INFOTEP, AIRD, CONEP, the National English Working Group, and other institutions, the initiative will strengthen workforce readiness and support U.S.-Dominican collaboration in STEM, semiconductors, cybersecurity, biotechnology, energy, artificial intelligence, and research and innovation. Over a three-year period, the proposed $100, 000 program will design and implement at least...
-
-### 24. Mass Market Solutions for Leveraging Robotics and AI Technologies for Home Construction Demonstration
-
-- Source: Grants.gov
-- Agency: Department of Housing and Urban Development
-- Status: posted
-- Close date: 07/13/2026
-- Amount: $3,000,000 - $10,000,000
-- Fit score: 7
-- Official link: https://www.grants.gov/search-results-detail/362360
-
-The U.S. Department of Housing and Urban Development"s Office of Policy Development and Research (PD&R) expects to release a Notice of Funding Opportunity for the Mass Market Solutions for Leveraging Robotics and AI Technologies for Home Construction Demonstration. This anticipated NOFO is intended to fund demonstration projects that test and scale the use of automation, robotics, and artificial intelligence in factory-built housing to help build homes faster, at lower cost, and in ways that can meaningfully increase housing supply.Awards are expected to be made as cooperative agreements, which means HUD will be actively involved throughout the project period. PD&R will provide technical...
-
-### 25. CyberAICorps Scholarship for Service
-
-- Source: Grants.gov
-- Agency: U.S. National Science Foundation
-- Status: posted
-- Close date: 07/21/2026
-- Amount: $300,000 - $2,500,000
-- Fit score: 7
-- Official link: https://www.grants.gov/search-results-detail/361238
-
-Government and the nation face a talent shortfall in artificial intelligence (AI) and cybersecurity. The CyberAICorps Scholarship for Service (CyberAI SFS) program welcomes proposals that address AI and cybersecurity education and workforce development. CyberAI refers to using AI in cybersecurity as well as providing security and resilience for AI systems. The Scholarship Track provides funding to establish, or to continue, scholarship for service programs with integrated AI and cybersecurity components (CyberAI). Scholarship recipients must be U.S. citizens or lawful permanent residents and work after graduation in the AI or cybersecurity mission of a government organization for a period...
