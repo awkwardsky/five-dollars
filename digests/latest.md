@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-06-24T04:40:07.145Z
+Generated: 2026-06-25T04:36:18.718Z
 
 Sources checked: Grants.gov 69, SAM.gov 0
 
@@ -186,7 +186,19 @@ Science of Learning and Augmented Intelligence (SL) supports potentially transfo
 
 Indonesia faces a pervasive and evolving cybercrime threat, with online scams growing in number and sophistication – while U.S. families continue to lose their life’s savings to international cybercrime, totaling over $12 billions in financial losses in 2023 alone. Unlike scam compounds in mainland Southeast Asia, criminal scam operations in Indonesia are decentralized and embedded within transnational networks. Thousands of Indonesian nationals have worked in scam compounds in Cambodia, Burma, and Laos, and there is now concern crackdowns in other countries prompting a wave of experienced Indonesian scammers to return home to establish new operations in collaboration with Chinese and oth...
 
-### 16. Prosperity through Partnership:  Catalyzing U.S.-Algerian Collaboration in Innovation, Commerce and English Language
+### 16. Creative Industries Film Lab and Residency - American Film Showcase 2026
+
+- Source: Grants.gov
+- Agency: U.S. Mission to Indonesia
+- Status: posted
+- Close date: 08/07/2026
+- Amount: $25,000 - $35,000
+- Fit score: 9
+- Official link: https://www.grants.gov/search-results-detail/362939
+
+Project Background, Goals, and Objectives The Creative Industries Film Lab and Residency – American Film Showcase 2026 is a five-day public diplomacy program aligned with the American Film Showcase 2026 Envoy visit and scheduled during the Jogja-NETPAC Asian Film Festival Market 2026. The program includes two main components: Exhibition Booth: In partnership with Jogja-NETPAC, the program will secure and construct an 81m² (9m x 9m) professionally designed, interactive exhibition booth featuring American Film Showcase and Freedom 250 branding. The booth will showcase American film, U.S. technological innovation, American contributions to cinematic arts, and U.S. companies and industry stan...
+
+### 17. Prosperity through Partnership:  Catalyzing U.S.-Algerian Collaboration in Innovation, Commerce and English Language
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Algeria
@@ -198,7 +210,7 @@ Indonesia faces a pervasive and evolving cybercrime threat, with online scams gr
 
 1. Executive Summary The U.S. Department of State’s Embassy Algiers is launching a competitive program to catalyze innovation and commerce between the United States and Algeria and advance key U.S. foreign policy priorities. The initiative aims to strengthen commercial ties, expand market access for American companies, and promote American business models and technology, particularly in entrepreneurship and artificial intelligence as well as English language development. Target audiences include Algerian students and young leaders (ages 18-35), entrepreneurs, and mid-career professionals, with a focus on building partnerships between U.S. and Algerian institutions and improving knowledge...
 
-### 17. Postdoctoral Research Fellowships in Biology
+### 18. Postdoctoral Research Fellowships in Biology
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -210,7 +222,7 @@ Indonesia faces a pervasive and evolving cybercrime threat, with online scams gr
 
 The integration of Artificial Intelligence (AI) and Biological Research has the potential to pave the way for breakthroughs in biotechnology and bio-system design that will create innovations, new industries, and jobs. To capitalize on this promise, the Directorate for Biological Sciences (BIO) will make awards for Postdoctoral Research Fellowships in Biology (PRFB) to recent doctoral degree recipients, for proposals with a research and training focus at the Intersection of Artificial Intelligence and Biological Sciences to Strengthen and Safeguard Biotechnology Innovations. Applying AI to highly complex biological systems will reveal unknown mechanisms in the natural world that hold prom...
 
-### 18. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
+### 19. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
 
 - Source: Grants.gov
 - Agency: National Institutes of Health
@@ -222,7 +234,7 @@ The integration of Artificial Intelligence (AI) and Biological Research has the 
 
 The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications for a Community Engagement Evaluation and Data coordination hub (CEED) for the Community-Based Participatory Research (CBPR) consortium: Advancing Data and Practice Transformation (ADAPT) for Optimizing Oral Health for All. In addition to CEED, the ADAPT consortium will include separately funded CBPR projects, which will receive consultative services from the NIH Community Engagement Alliance Consultative Resource (CEACR) and join in the Science Collaborative for Health and Artificial Intelligence Reduction of Errors (SCHARE) platform for the overarching goal of promoting data use and transformational communi...
 
-### 19. The Genesis Mission:  Transforming Science and Energy with AI
+### 20. The Genesis Mission:  Transforming Science and Energy with AI
 
 - Source: Grants.gov
 - Agency: Office of Science
@@ -234,7 +246,7 @@ The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications
 
 The DOE Office of Science (SC), Office of Critical Minerals and Energy Innovation (CMEI), Office of Environmental Management (EM), Office of Nuclear Energy (NE), Office of Electricity (OE), and Hydrocarbons and Geothermal Office (HGEO) hereby announce interest in receiving applications from interdisciplinary teams addressing the Genesis Mission National Science and Technology Challenges to accelerate scientific discovery and research and development (R&D) workflows using novel artificial intelligence (AI) models and frameworks. By achieving AI advantage, these teams will advance the DOE's mission and ensure America’s security and prosperity by addressing energy, environmental, and nuclear...
 
-### 20. Manufacturing Systems Integration
+### 21. Manufacturing Systems Integration
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -246,7 +258,7 @@ The DOE Office of Science (SC), Office of Critical Minerals and Energy Innovatio
 
 The Manufacturing Systems Integration (MSI) Program supports fundamental research addressing the opportunities and challenges that digital technologies present for the next industrial revolution, with particular emphasis on the digital integration of design and manufacturing within the larger life cycle ecosystem. Manufacturing Systems Integration proposals should address underlying principles and advances that are generalizable for globally competitive and world leading industries. Connectivity, automation, and secure collaboration are examples of areas that are integral to digital environments capable of supporting the innovation, realization and sustainment of manufactured products and...
 
-### 21. Research in the Formation of Engineers
+### 22. Research in the Formation of Engineers
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -258,7 +270,7 @@ The Manufacturing Systems Integration (MSI) Program supports fundamental researc
 
 The NSF Engineering Directorate (ENG) has launched a multi-year initiative, theProfessional Formation of Engineers, to create and support an innovative and inclusive engineering profession for the 21 st century. Professional Formation of Engineers (PFE) refers to the formal and informal processes and value systems by which people become engineers. It also includes the ethical responsibility of practicing engineers to sustain and grow the profession in order to improve quality of life for all peoples. The engineering profession must be responsive to national priorities, grand challenges, and dynamic workforce needs; it must be equally open and accessible to all. Professional Formation of E...
 
-### 22. Findable Accessible Interoperable Reusable Open Science
+### 23. Findable Accessible Interoperable Reusable Open Science
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -270,7 +282,7 @@ The NSF Engineering Directorate (ENG) has launched a multi-year initiative, theP
 
 The FAIROS Program seeks to support a broad range of transformative open science activities including but not limited to i.) Research, education, and socio-technical cyberinfrastructure development capacities that advance sustainable multi-disciplinary findable, accessible, interoperable, reusable (FAIR) research data management (RDM) and open science capabilities, ii.) Piloting new models of scientific communication and publication that improve efficiency and accessibility, iii.) Developing FAIROS data portals, research data commons, RDM as a national service, and iv.) Lowering barriers to accessing, curating, integrating, linking, managing, sharing, and storing data across many discipli...
 
-### 23. U.S. Embassy Sofia PDS Annual Program Statement
+### 24. U.S. Embassy Sofia PDS Annual Program Statement
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Bulgaria
@@ -282,7 +294,7 @@ The FAIROS Program seeks to support a broad range of transformative open science
 
 UPDATE APRIL 14, 2026: Proposals for the FY26 Small Grants Program will be reviewed on a rolling basis based on funding availability. Please follow all instructions in the Annual Program Statement (see Related Documents tab), which includes instructions on required forms and recommended templates and submit proposals to SofiaGrants@state.gov no later than June 15, 2026 with "FY26 APS" in the subject line of the email. EXECUTIVE SUMMARY The U.S. Department of State, U.S. Embassy Sofia Public Diplomacy Section (PDS), announces an open competition for programs that strengthen the U.S.-Bulgaria partnership and advance U.S. administration priorities to make the United States safer, stronger, a...
 
-### 24. FY 2026 Competitive Academic Agreement Program (CAAP)
+### 25. FY 2026 Competitive Academic Agreement Program (CAAP)
 
 - Source: Grants.gov
 - Agency: Pipeline and Hazardous Materials Safety Admin
@@ -293,15 +305,3 @@ UPDATE APRIL 14, 2026: Proposals for the FY26 Small Grants Program will be revie
 - Official link: https://www.grants.gov/search-results-detail/362444
 
 The Pipeline and Hazardous Materials Safety Administration's (PHMSA) FY 2026 CAAP NOFO solicits research proposals from nonprofit institutions of higher education for the Pipeline Safety Research and Development (R&D) Program. This program is authorized by section 12 of the Pipeline Safety Improvement Act of 2002 (Pub. L. 107-355) and 49 U.S.C. § 60117(l). The CAAP competitive research announcement will focus on the following objectives: - Early corrosion prediction for pipelines and implementing appropriate mitigation measures. - Economical and novel agents to mitigate internal or external pipeline corrosion due to microbial-induced corrosion.- Artificial intelligence (AI)-assisted softw...
-
-### 25. EnglishxSTEM
-
-- Source: Grants.gov
-- Agency: U.S. Mission to the Dominican Republic
-- Status: posted
-- Close date: 06/30/2026
-- Amount: $50,000 - $100,000
-- Fit score: 7
-- Official link: https://www.grants.gov/search-results-detail/362626
-
-The EnglishxSTEM initiative advances U.S. economic and technological interests by partnering with Dominican public and private sector stakeholders to deliver high-impact English for Specific Purposes (ESP) training in strategically relevant productive sectors. Implemented through collaboration with universities, INFOTEP, AIRD, CONEP, the National English Working Group, and other institutions, the initiative will strengthen workforce readiness and support U.S.-Dominican collaboration in STEM, semiconductors, cybersecurity, biotechnology, energy, artificial intelligence, and research and innovation. Over a three-year period, the proposed $100, 000 program will design and implement at least...
