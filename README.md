@@ -24,8 +24,8 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 - Network: TRON / TRC20
 - Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
 - Matching transfers: 0
-- Last checked: 2026-06-26T04:42:53.840Z
-- Latest run: 2026-06-26T04:42:53.692Z
+- Last checked: 2026-06-27T04:18:49.618Z
+- Latest run: 2026-06-27T04:18:49.479Z
 
 ### Current Top Opportunities
 
@@ -33,7 +33,7 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 2. [U.S.-D.R. Technology and Science Fair](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362758-u-s-d-r-technology-and-science-fair.html) - U.S. Mission to the Dominican Republic - deadline 07/10/2026
 3. [Tech Innovation Lab](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362392-tech-innovation-lab.html) - U.S. Mission to Morocco - deadline 07/13/2026
 4. [Prosperity Stack Fellowship](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362757-prosperity-stack-fellowship.html) - U.S. Mission to South Korea - deadline 07/13/2026
-5. [FY 2026 CN Technology Innovation Grant](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362971-fy-2026-cn-technology-innovation-grant.html) - Food and Nutrition Service - deadline 07/31/2026
+5. [FY 2026 CN Technology Innovation Grant for Child and Adult Care Food Program Integrity](https://awkwardsky.github.io/five-dollars/opportunities/grants-gov-362971-fy-2026-cn-technology-innovation-grant-for-child-and-adult-care-food-p.html) - Food and Nutrition Service - deadline 07/31/2026
 <!-- five-dollars-status:end -->
 
 ## Current Product

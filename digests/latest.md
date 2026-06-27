@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-06-26T04:42:53.688Z
+Generated: 2026-06-27T04:18:49.476Z
 
 Sources checked: Grants.gov 68, SAM.gov 0
 
@@ -54,7 +54,7 @@ Funding Opportunity Title : Tech Innovation Lab Funding Opportunity Number : PAS
 
 Funding Opportunity Title: Prosperity Stack Fellowship Funding Opportunity Number: PD-SEOUL-FY26-03 Deadline for Applications : Monday, July 13, 2026, 11:59 p.m. (GMT+9) CFDA Number: 19.441 Type of Funding: FY26 Fulbright-Hays, American Spaces Support Funds Total Amount Available: $108,000 This notice is subject to availability of funding. Executive Summary The U.S. Embassy Seoul Public Diplomacy Section invites proposals to implement the Prosperity Stack Fellowship, a strategic accelerator program designed to promote American AI technology with Korean early-stage entrepreneurs by connecting them with U.S. expertise in artificial intelligence, business development, and innovation. The pro...
 
-### 5. FY 2026 CN Technology Innovation Grant
+### 5. FY 2026 CN Technology Innovation Grant for Child and Adult Care Food Program Integrity
 
 - Source: Grants.gov
 - Agency: Food and Nutrition Service

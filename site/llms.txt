@@ -20,7 +20,7 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: not received
-- Last checked: 2026-06-26T04:42:53.840Z
+- Last checked: 2026-06-27T04:18:49.618Z
 
 ## Topics
 
@@ -37,7 +37,7 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 2. U.S.-D.R. Technology and Science Fair - U.S. Mission to the Dominican Republic - deadline 07/10/2026
 3. Tech Innovation Lab - U.S. Mission to Morocco - deadline 07/13/2026
 4. Prosperity Stack Fellowship - U.S. Mission to South Korea - deadline 07/13/2026
-5. FY 2026 CN Technology Innovation Grant - Food and Nutrition Service - deadline 07/31/2026
+5. FY 2026 CN Technology Innovation Grant for Child and Adult Care Food Program Integrity - Food and Nutrition Service - deadline 07/31/2026
 6. The 2027 YSEALI Regional Workshop: Securing Supply Chains - U.S. Mission to Indonesia - deadline 08/31/2026
 7. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
 8. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
