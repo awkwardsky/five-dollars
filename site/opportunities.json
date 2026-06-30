@@ -271,6 +271,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "362960",
+    "title": "Interdisciplinary Transportation Law and Policy Technology Training Development",
+    "agency": "69A355 Research and Technology",
+    "opportunityNumber": "LAWPOLICY-OSTR24",
+    "status": "posted",
+    "openDate": "06/30/2026",
+    "closeDate": "08/28/2026",
+    "amount": "$600,000 - $600,000",
+    "score": 9,
+    "summary": "The U.S. Department of Transportation’s Office of the Assistant Secretary for Research and Technology (OST-R) is announcing a Notice of Funding Opportunity (NOFO) for the Interdisciplinary Transportation Law and Policy Technology Training Development program. This 24-month cooperative agreement aims to bridge the critical knowledge gap between fast-changing transportation technologies and our Nation's policymakers, lawmakers, and legal counsel. The primary objective of this program is to research, prioritize, and provide instructional materials on rapidly developing transportation technologies, specifically artificial intelligence (AI), automated vehicles (AV), and the digital infrastructure supporting automation. The selected applicant will be responsible for developing three distinct educational tools: a one-day training course for congressional and support staff, a one-hour Executive Briefing for busy elected leaders and policymakers, and a full-semester curriculum for law students planning to work in transportation policy. The project will culminate in regional pilot training sessions and the transfer of materials for future use.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/362960",
+    "slug": "grants-gov-362960-interdisciplinary-transportation-law-and-policy-technology-training-de"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "361249",
     "title": "Postdoctoral Research Fellowships in Biology",
     "agency": "U.S. National Science Foundation",
@@ -883,20 +898,5 @@
     "summary": "Matched Grants.gov keyword: data science.",
     "officialUrl": "https://www.grants.gov/search-results-detail/361318",
     "slug": "grants-gov-361318-nlm-institutional-grants-for-research-training-in-biomedical-informati"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "360835",
-    "title": "Strengthening and modernizing Uganda's sustainable public health systems and workforce in data science, informatics, and surveillance to produce timely, accurate, and integrated data for action",
-    "agency": "Centers for Disease Control-GHC",
-    "opportunityNumber": "CDC-RFA-JG-26-0156",
-    "status": "forecasted",
-    "openDate": "11/06/2025",
-    "closeDate": "",
-    "amount": "",
-    "score": 5,
-    "summary": "Matched Grants.gov keyword: digital transformation.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/360835",
-    "slug": "grants-gov-360835-strengthening-and-modernizing-uganda-s-sustainable-public-health-syste"
   }
 ]
