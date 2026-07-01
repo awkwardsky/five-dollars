@@ -466,6 +466,36 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "359270",
+    "title": "PRIMED-AI: Data-to-Model Academic-Industrial Partnerships (D2M-AIP) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (UG3/UH3 Clinical Trial Optional)",
+    "agency": "National Institutes of Health",
+    "opportunityNumber": "RFA-RM-27-012",
+    "status": "posted",
+    "openDate": "06/30/2026",
+    "closeDate": "10/19/2026",
+    "amount": "",
+    "score": 7,
+    "summary": "The overarching goal of this notice of funding opportunity (NOFO) and its companion opportunities is to establish the Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) Program to support development of innovative, reliable, cost-effective, and sustainable multimodal AI-based clinical decision support (CDS) tools. PRIMED-AI CDS tools are based on the integration of clinical imaging with other types of multimodal health data to enhance care for patients with a wide range of health conditions. The PRIMED-AI Program seeks to catalyze the adoption of AI-based CDS tools into clinical workflows to enable novel personalized medicine strategies that address significant health challenges. The purpose of this Notice of Funding Opportunity (NOFO) is to catalyze the development and testing of Artificial Intelligence (AI)-enabled, image-centered, multimodal Clinical Decision Support (CDS) tools, developed in pursuance as Software as a Medical Device (SaMD). These projects are expected to have high potential for demonstrable, positive impact on patient outcomes and/or healthcare processes.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/359270",
+    "slug": "grants-gov-359270-primed-ai-data-to-model-academic-industrial-partnerships-d2m-aip-for-p"
+  },
+  {
+    "source": "Grants.gov",
+    "sourceId": "359666",
+    "title": "Model-to-Clinic (M2C) for Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) (UG3/UH3, Clinical Trial Optional)",
+    "agency": "National Institutes of Health",
+    "opportunityNumber": "RFA-RM-27-013",
+    "status": "posted",
+    "openDate": "06/30/2026",
+    "closeDate": "10/19/2026",
+    "amount": "",
+    "score": 7,
+    "summary": "The overarching goal of this notice of funding opportunity (NOFO) and its companion opportunities is to establish the Precision Medicine with AI: Integrating Imaging with Multimodal Data (PRIMED-AI) Program to support development of innovative, reliable, cost-effective, and sustainable multimodal AI-based clinical decision support (CDS) tools. PRIMED-AI CDS tools are based on the integration of clinical imaging with other types of multimodal health data to enhance care for patients with a wide range of health conditions. The PRIMED-AI Program seeks to catalyze the adoption of AI-based CDS tools into clinical workflows to enable novel personalized medicine strategies that address significant health challenges.The purpose of this NOFO is to catalyze the translation of Artificial Intelligence (AI)-enabled, image-centered, multimodal CDS tools, developed as Software as a Medical Device, from training and testing of prototypes towards clinical applications that address unmet health challenges in precision medicine. These projects are expected to have high potential for demonstrable, positive impact on patient outcomes and/or healthcare processes.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/359666",
+    "slug": "grants-gov-359666-model-to-clinic-m2c-for-precision-medicine-with-ai-integrating-imaging"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "361604",
     "title": "National Science Foundation Fostering Interdisciplinary Networks to Develop Emergent and Responsive Solutions Foundry",
     "agency": "U.S. National Science Foundation",
@@ -868,35 +898,5 @@
     "summary": "The Science of Science:Discovery, Communication and Impact (SoS:DCI) program is designed to advance theory and knowledge about increasing the public value of scientific activity. Science of Science draws from multiple disciplinary and field perspectives to advance theory and research about scientific discovery, communication and impact. SoS:DCI welcomes proposals applying rigorous empirical research methods to advance theory and knowledge on: The social and structural mechanisms of scientific discovery. Theories, frameworks, models and data that improve our understanding of scientific communication and outcomes. The societal benefits of scientific activity and how science advances evidence-based policy making and the creation of public value. The SoS:DCI program, which expands upon the formerScience of Science and Innovation Policy (SciSIP)program, funds research that builds theoretical and empirical understanding of the social science of science. SoS:DCI welcomes proposals to conduct research at the individual, organizational and institutional levels or from micro, meso and macro scales and complex system levels. SoS:DCI encourages multiple disciplinary perspectives, interdisciplinary research and diverse methodological approaches in the pursuit of new knowledge to advance the science of science and evidence-based policy making. With these goals in mind, proposals should: Draw from and advance theory, knowledge and frameworks on the science of science. Develop models, data, indicators and associated analytical tools that constitute and enable transformative advances rather than incremental change. Provide credible rigorous assessments of the proposed project's impact and social and policy implications. Include robust data management plans with the goal of advancing open science and increasing public access to usable, valid and reliable scientific materials. Of particular interest are proposals with the potential to strengthen America's global leadership in science and increase national competitiveness across a broad range of domains. These include proposals that analyze strategies for strengthening and expanding the scientific workforce, as well as ways to cultivate high-impact discovery across sectors.The program strongly encourages convergent research and collaboration. In addition to intellectual merit, the program strongly encourages potential PIs to carefully consider the broader impacts of their work. The broader impacts criterion encompasses the potential to benefit society and contribute to the achievement of specific, desired policy outcomes.The Social, Behavioral and Economic Sciences Directorate has released additional guidance on broader impacts for SBE proposals . The SoS:DCI program places a high priority on broadening participation in the sciences. It encourages proposals from early-career researchers and from researchers who represent groups and regions that have historically participated at disproportionately low rates in science, mathematics, and engineering. SoS:DCI supports the following types of proposals: Standard Research Grants and Grants for Collaborative Research A Science of Science Approach to Analyzing and Innovating the Biomedical Research Enterprise (SoS:BIO) Conference Grants SoS:DCI also participates in certain specialized funding opportunities through NSF's cross-cutting and cross-directorate activities .",
     "officialUrl": "https://www.grants.gov/search-results-detail/358882",
     "slug": "grants-gov-358882-science-of-science-discovery-communication-and-impact"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "360657",
-    "title": "Single Source for Establishing Pilot/Opportunity program for AI Models to Accelerate Diabetes Research (U24- Clinical Trials not allowed)",
-    "agency": "National Institutes of Health",
-    "opportunityNumber": "RFA-DK-26-314",
-    "status": "forecasted",
-    "openDate": "09/25/2025",
-    "closeDate": "",
-    "amount": "",
-    "score": 5,
-    "summary": "Matched Grants.gov keyword: data science.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/360657",
-    "slug": "grants-gov-360657-single-source-for-establishing-pilot-opportunity-program-for-ai-models"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "361318",
-    "title": "NLM Institutional Grants for Research Training in Biomedical Informatics, Data Science, and AI",
-    "agency": "National Institutes of Health",
-    "opportunityNumber": "RFA-LM-26-004",
-    "status": "forecasted",
-    "openDate": "02/18/2026",
-    "closeDate": "",
-    "amount": "",
-    "score": 5,
-    "summary": "Matched Grants.gov keyword: data science.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/361318",
-    "slug": "grants-gov-361318-nlm-institutional-grants-for-research-training-in-biomedical-informati"
   }
 ]
