@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-07-07T04:18:43.461Z
+Generated: 2026-07-08T03:48:35.613Z
 
 Sources checked: Grants.gov 69, SAM.gov 0
 
@@ -210,7 +210,19 @@ Indonesia faces a pervasive and evolving cybercrime threat, with online scams gr
 
 Project Background, Goals, and Objectives The Creative Industries Film Lab and Residency – American Film Showcase 2026 is a five-day public diplomacy program aligned with the American Film Showcase 2026 Envoy visit and scheduled during the Jogja-NETPAC Asian Film Festival Market 2026. The program includes two main components: Exhibition Booth: In partnership with Jogja-NETPAC, the program will secure and construct an 81m² (9m x 9m) professionally designed, interactive exhibition booth featuring American Film Showcase and Freedom 250 branding. The booth will showcase American film, U.S. technological innovation, American contributions to cinematic arts, and U.S. companies and industry stan...
 
-### 18. Prosperity through Partnership:  Catalyzing U.S.-Algerian Collaboration in Innovation, Commerce and English Language
+### 18. Notice of Funding Opportunity 2026 &ndash; Lebanon
+
+- Source: Grants.gov
+- Agency: U.S. Mission to Lebanon
+- Status: posted
+- Close date: 08/07/2026
+- Amount: $100,000 - $250,000
+- Fit score: 9
+- Official link: https://www.grants.gov/search-results-detail/363090
+
+Executive Summary: The U.S. Department of State’s Embassy Beirut, Lebanon announces an open competition to implement programs that promote U.S. priorities and strengthen ties between the United States and Lebanon. U.S. priorities include highlighting U.S.-led peace and stabilization efforts and advancing digital literacy to identify and counter false adversarial narratives and claims. All programs must include an American element, or connection with American expert(s), organization(s), or institution(s) that will promote increased understanding of U.S. policy and perspectives. Please follow all instructions below. Project Background, Goals, and Objectives The Public Diplomacy Section (PDS...
+
+### 19. Prosperity through Partnership:  Catalyzing U.S.-Algerian Collaboration in Innovation, Commerce and English Language
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Algeria
@@ -222,7 +234,7 @@ Project Background, Goals, and Objectives The Creative Industries Film Lab and R
 
 1. Executive Summary The U.S. Department of State’s Embassy Algiers is launching a competitive program to catalyze innovation and commerce between the United States and Algeria and advance key U.S. foreign policy priorities. The initiative aims to strengthen commercial ties, expand market access for American companies, and promote American business models and technology, particularly in entrepreneurship and artificial intelligence as well as English language development. Target audiences include Algerian students and young leaders (ages 18-35), entrepreneurs, and mid-career professionals, with a focus on building partnerships between U.S. and Algerian institutions and improving knowledge...
 
-### 19. Interdisciplinary Transportation Law and Policy Technology Training Development
+### 20. Interdisciplinary Transportation Law and Policy Technology Training Development
 
 - Source: Grants.gov
 - Agency: 69A355 Research and Technology
@@ -234,7 +246,7 @@ Project Background, Goals, and Objectives The Creative Industries Film Lab and R
 
 The U.S. Department of Transportation’s Office of the Assistant Secretary for Research and Technology (OST-R) is announcing a Notice of Funding Opportunity (NOFO) for the Interdisciplinary Transportation Law and Policy Technology Training Development program. This 24-month cooperative agreement aims to bridge the critical knowledge gap between fast-changing transportation technologies and our Nation's policymakers, lawmakers, and legal counsel. The primary objective of this program is to research, prioritize, and provide instructional materials on rapidly developing transportation technologies, specifically artificial intelligence (AI), automated vehicles (AV), and the digital infrastruct...
 
-### 20. Postdoctoral Research Fellowships in Biology
+### 21. Postdoctoral Research Fellowships in Biology
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -246,7 +258,7 @@ The U.S. Department of Transportation’s Office of the Assistant Secretary for 
 
 The integration of Artificial Intelligence (AI) and Biological Research has the potential to pave the way for breakthroughs in biotechnology and bio-system design that will create innovations, new industries, and jobs. To capitalize on this promise, the Directorate for Biological Sciences (BIO) will make awards for Postdoctoral Research Fellowships in Biology (PRFB) to recent doctoral degree recipients, for proposals with a research and training focus at the Intersection of Artificial Intelligence and Biological Sciences to Strengthen and Safeguard Biotechnology Innovations. Applying AI to highly complex biological systems will reveal unknown mechanisms in the natural world that hold prom...
 
-### 21. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
+### 22. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
 
 - Source: Grants.gov
 - Agency: National Institutes of Health
@@ -258,7 +270,7 @@ The integration of Artificial Intelligence (AI) and Biological Research has the 
 
 The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications for a Community Engagement Evaluation and Data coordination hub (CEED) for the Community-Based Participatory Research (CBPR) consortium: Advancing Data and Practice Transformation (ADAPT) for Optimizing Oral Health for All. In addition to CEED, the ADAPT consortium will include separately funded CBPR projects, which will receive consultative services from the NIH Community Engagement Alliance Consultative Resource (CEACR) and join in the Science Collaborative for Health and Artificial Intelligence Reduction of Errors (SCHARE) platform for the overarching goal of promoting data use and transformational communi...
 
-### 22. The Genesis Mission:  Transforming Science and Energy with AI
+### 23. The Genesis Mission:  Transforming Science and Energy with AI
 
 - Source: Grants.gov
 - Agency: Office of Science
@@ -270,7 +282,7 @@ The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications
 
 The DOE Office of Science (SC), Office of Critical Minerals and Energy Innovation (CMEI), Office of Environmental Management (EM), Office of Nuclear Energy (NE), Office of Electricity (OE), and Hydrocarbons and Geothermal Office (HGEO) hereby announce interest in receiving applications from interdisciplinary teams addressing the Genesis Mission National Science and Technology Challenges to accelerate scientific discovery and research and development (R&D) workflows using novel artificial intelligence (AI) models and frameworks. By achieving AI advantage, these teams will advance the DOE's mission and ensure America’s security and prosperity by addressing energy, environmental, and nuclear...
 
-### 23. Manufacturing Systems Integration
+### 24. Manufacturing Systems Integration
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -282,7 +294,7 @@ The DOE Office of Science (SC), Office of Critical Minerals and Energy Innovatio
 
 The Manufacturing Systems Integration (MSI) Program supports fundamental research addressing the opportunities and challenges that digital technologies present for the next industrial revolution, with particular emphasis on the digital integration of design and manufacturing within the larger life cycle ecosystem. Manufacturing Systems Integration proposals should address underlying principles and advances that are generalizable for globally competitive and world leading industries. Connectivity, automation, and secure collaboration are examples of areas that are integral to digital environments capable of supporting the innovation, realization and sustainment of manufactured products and...
 
-### 24. Research in the Formation of Engineers
+### 25. Research in the Formation of Engineers
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -293,15 +305,3 @@ The Manufacturing Systems Integration (MSI) Program supports fundamental researc
 - Official link: https://www.grants.gov/search-results-detail/350230
 
 The NSF Engineering Directorate (ENG) has launched a multi-year initiative, theProfessional Formation of Engineers, to create and support an innovative and inclusive engineering profession for the 21 st century. Professional Formation of Engineers (PFE) refers to the formal and informal processes and value systems by which people become engineers. It also includes the ethical responsibility of practicing engineers to sustain and grow the profession in order to improve quality of life for all peoples. The engineering profession must be responsive to national priorities, grand challenges, and dynamic workforce needs; it must be equally open and accessible to all. Professional Formation of E...
-
-### 25. Findable Accessible Interoperable Reusable Open Science
-
-- Source: Grants.gov
-- Agency: U.S. National Science Foundation
-- Status: posted
-- Close date: 04/14/2027
-- Amount: Not listed
-- Fit score: 7
-- Official link: https://www.grants.gov/search-results-detail/358036
-
-The FAIROS Program seeks to support a broad range of transformative open science activities including but not limited to i.) Research, education, and socio-technical cyberinfrastructure development capacities that advance sustainable multi-disciplinary findable, accessible, interoperable, reusable (FAIR) research data management (RDM) and open science capabilities, ii.) Piloting new models of scientific communication and publication that improve efficiency and accessibility, iii.) Developing FAIROS data portals, research data commons, RDM as a national service, and iv.) Lowering barriers to accessing, curating, integrating, linking, managing, sharing, and storing data across many discipli...
