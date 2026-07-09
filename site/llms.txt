@@ -20,15 +20,15 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: not received
-- Last checked: 2026-07-08T03:48:35.724Z
+- Last checked: 2026-07-09T04:16:02.485Z
 
 ## Topics
 
 - Software: 16 current matches
 - Artificial Intelligence: 20 current matches
 - Automation: 4 current matches
-- Cybersecurity: 14 current matches
-- Data Science: 12 current matches
+- Cybersecurity: 15 current matches
+- Data Science: 13 current matches
 - Cloud: 5 current matches
 
 ## Current top opportunities
@@ -38,13 +38,13 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 3. Tech Innovation Lab - U.S. Mission to Morocco - deadline 07/13/2026
 4. Prosperity Stack Fellowship - U.S. Mission to South Korea - deadline 07/13/2026
 5. FY 2026 CN Technology Innovation Grant for Child and Adult Care Food Program Integrity - Food and Nutrition Service - deadline 07/31/2026
-6. The 2027 YSEALI Regional Workshop: Securing Supply Chains - U.S. Mission to Indonesia - deadline 08/31/2026
-7. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
-8. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
-9. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
-10. UNITED STATES MILITARY ACADEMY Broad Agency Announcement - Dept of the Army -- Materiel Command - deadline 03/31/2027
-11. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU) - Geological Survey - deadline 05/30/2026
-12. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina - U.S. Mission to Argentina - deadline 05/31/2026
+6. Muscat - Annual Program Statement (APS)- PD Small Grants Program - U.S. Mission to Oman - deadline 08/09/2026
+7. The 2027 YSEALI Regional Workshop: Securing Supply Chains - U.S. Mission to Indonesia - deadline 08/31/2026
+8. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
+9. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
+10. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
+11. UNITED STATES MILITARY ACADEMY Broad Agency Announcement - Dept of the Army -- Materiel Command - deadline 03/31/2027
+12. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU) - Geological Survey - deadline 05/30/2026
 
 ## Operating rules
 
