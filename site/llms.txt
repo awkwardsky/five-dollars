@@ -20,7 +20,7 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: not received
-- Last checked: 2026-07-09T04:16:02.485Z
+- Last checked: 2026-07-10T04:18:22.775Z
 
 ## Topics
 
@@ -28,7 +28,7 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Artificial Intelligence: 20 current matches
 - Automation: 4 current matches
 - Cybersecurity: 15 current matches
-- Data Science: 13 current matches
+- Data Science: 12 current matches
 - Cloud: 5 current matches
 
 ## Current top opportunities
