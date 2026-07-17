@@ -1,8 +1,8 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-07-16T03:41:49.031Z
+Generated: 2026-07-17T03:41:27.215Z
 
-Sources checked: Grants.gov 68, SAM.gov 0
+Sources checked: Grants.gov 69, SAM.gov 0
 
 ## Top Opportunities
 
@@ -72,7 +72,7 @@ Executive Summary Under the leadership of Secretary Brooke Rollins, the United S
 - Agency: U.S. Mission to Oman
 - Status: posted
 - Close date: 08/09/2026
-- Amount: $1,000 - $100,000
+- Amount: $1,000 - $50,000
 - Fit score: 11
 - Official link: https://www.grants.gov/search-results-detail/363078
 
