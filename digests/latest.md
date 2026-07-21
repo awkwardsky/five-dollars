@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-07-20T04:07:41.046Z
+Generated: 2026-07-21T03:49:51.685Z
 
 Sources checked: Grants.gov 69, SAM.gov 0
 
@@ -246,7 +246,19 @@ Executive Summary: The U.S. Department of State’s Embassy Beirut, Lebanon anno
 
 1. Executive Summary The U.S. Department of State’s Embassy Algiers is launching a competitive program to catalyze innovation and commerce between the United States and Algeria and advance key U.S. foreign policy priorities. The initiative aims to strengthen commercial ties, expand market access for American companies, and promote American business models and technology, particularly in entrepreneurship and artificial intelligence as well as English language development. Target audiences include Algerian students and young leaders (ages 18-35), entrepreneurs, and mid-career professionals, with a focus on building partnerships between U.S. and Algerian institutions and improving knowledge...
 
-### 21. Interdisciplinary Transportation Law and Policy Technology Training Development
+### 21. CyberNext: Advance Cybersecurity and AI Readiness
+
+- Source: Grants.gov
+- Agency: U.S. Mission to Albania
+- Status: posted
+- Close date: 08/20/2026
+- Amount: $5,000 - $14,000
+- Fit score: 9
+- Official link: https://www.grants.gov/search-results-detail/363249
+
+Project Background, Goals, and Objectives Albania has experienced multiple cyberattacks in recent years, placing increasingly digital government services and critical institutions at significant risk. While Albania is actively embracing AI, substantial skill gaps remain – gaps that American expertise is uniquely positioned to address. The “CyberNext: Advanced Cybersecurity and AI Readiness” program strengthens Albania’s cybersecurity and AI capabilities by leveraging U.S. technology, standards, and expertise. The program moves beyond basic awareness to build practical skills, improve resilience against digital threats, and deepen understanding of U.S. leadership in technological innovatio...
+
+### 22. Interdisciplinary Transportation Law and Policy Technology Training Development
 
 - Source: Grants.gov
 - Agency: 69A355 Research and Technology
@@ -258,7 +270,7 @@ Executive Summary: The U.S. Department of State’s Embassy Beirut, Lebanon anno
 
 The U.S. Department of Transportation’s Office of the Assistant Secretary for Research and Technology (OST-R) is announcing a Notice of Funding Opportunity (NOFO) for the Interdisciplinary Transportation Law and Policy Technology Training Development program. This 24-month cooperative agreement aims to bridge the critical knowledge gap between fast-changing transportation technologies and our Nation's policymakers, lawmakers, and legal counsel. The primary objective of this program is to research, prioritize, and provide instructional materials on rapidly developing transportation technologies, specifically artificial intelligence (AI), automated vehicles (AV), and the digital infrastruct...
 
-### 22. Postdoctoral Research Fellowships in Biology
+### 23. Postdoctoral Research Fellowships in Biology
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -270,7 +282,7 @@ The U.S. Department of Transportation’s Office of the Assistant Secretary for 
 
 The integration of Artificial Intelligence (AI) and Biological Research has the potential to pave the way for breakthroughs in biotechnology and bio-system design that will create innovations, new industries, and jobs. To capitalize on this promise, the Directorate for Biological Sciences (BIO) will make awards for Postdoctoral Research Fellowships in Biology (PRFB) to recent doctoral degree recipients, for proposals with a research and training focus at the Intersection of Artificial Intelligence and Biological Sciences to Strengthen and Safeguard Biotechnology Innovations. Applying AI to highly complex biological systems will reveal unknown mechanisms in the natural world that hold prom...
 
-### 23. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
+### 24. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
 
 - Source: Grants.gov
 - Agency: National Institutes of Health
@@ -282,7 +294,7 @@ The integration of Artificial Intelligence (AI) and Biological Research has the 
 
 The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications for a Community Engagement Evaluation and Data coordination hub (CEED) for the Community-Based Participatory Research (CBPR) consortium: Advancing Data and Practice Transformation (ADAPT) for Optimizing Oral Health for All. In addition to CEED, the ADAPT consortium will include separately funded CBPR projects, which will receive consultative services from the NIH Community Engagement Alliance Consultative Resource (CEACR) and join in the Science Collaborative for Health and Artificial Intelligence Reduction of Errors (SCHARE) platform for the overarching goal of promoting data use and transformational communi...
 
-### 24. The Genesis Mission:  Transforming Science and Energy with AI
+### 25. The Genesis Mission:  Transforming Science and Energy with AI
 
 - Source: Grants.gov
 - Agency: Office of Science
@@ -293,15 +305,3 @@ The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications
 - Official link: https://www.grants.gov/search-results-detail/361526
 
 The DOE Office of Science (SC), Office of Critical Minerals and Energy Innovation (CMEI), Office of Environmental Management (EM), Office of Nuclear Energy (NE), Office of Electricity (OE), and Hydrocarbons and Geothermal Office (HGEO) hereby announce interest in receiving applications from interdisciplinary teams addressing the Genesis Mission National Science and Technology Challenges to accelerate scientific discovery and research and development (R&D) workflows using novel artificial intelligence (AI) models and frameworks. By achieving AI advantage, these teams will advance the DOE's mission and ensure America’s security and prosperity by addressing energy, environmental, and nuclear...
-
-### 25. Manufacturing Systems Integration
-
-- Source: Grants.gov
-- Agency: U.S. National Science Foundation
-- Status: posted
-- Close date: Proposals accepted anytime
-- Amount: Not listed
-- Fit score: 9
-- Official link: https://www.grants.gov/search-results-detail/345354
-
-The Manufacturing Systems Integration (MSI) Program supports fundamental research addressing the opportunities and challenges that digital technologies present for the next industrial revolution, with particular emphasis on the digital integration of design and manufacturing within the larger life cycle ecosystem. Manufacturing Systems Integration proposals should address underlying principles and advances that are generalizable for globally competitive and world leading industries. Connectivity, automation, and secure collaboration are examples of areas that are integral to digital environments capable of supporting the innovation, realization and sustainment of manufactured products and...
