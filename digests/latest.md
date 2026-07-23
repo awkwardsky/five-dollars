@@ -1,8 +1,8 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-07-22T03:50:42.871Z
+Generated: 2026-07-23T03:48:18.606Z
 
-Sources checked: Grants.gov 69, SAM.gov 0
+Sources checked: Grants.gov 68, SAM.gov 0
 
 ## Top Opportunities
 
@@ -84,11 +84,11 @@ Funding Opportunity Title: 2027 Young Trilateral Leaders (YTL) Summit Funding Op
 - Agency: U.S. Mission to Oman
 - Status: posted
 - Close date: 08/09/2026
-- Amount: $1,000 - $50,000
+- Amount: $1,000 - $100,000
 - Fit score: 11
 - Official link: https://www.grants.gov/search-results-detail/363078
 
-The Public Diplomacy Section of U.S. Embassy Muscat announces an open competition to support projects that advance U.S. foreign policy priorities in Oman while strengthening the long-standing partnership between the United States and the Sultanate of Oman. This Annual Program Statement outlines strategic funding priorities, eligibility criteria, and application guidelines for grants ranging from $1,000 to $50,000, with project durations of up to 12 months. Successful proposals should clearly demonstrate how their projects support U.S. public diplomacy goals; showcase American excellence, expertise, innovation, and values, and strengthen the bilateral relationship. The goals of U.S. policy...
+The Public Diplomacy Section of U.S. Embassy Muscat announces an open competition to support projects that advance U.S. foreign policy priorities in Oman while strengthening the long-standing partnership between the United States and the Sultanate of Oman. This Annual Program Statement outlines strategic funding priorities, eligibility criteria, and application guidelines for grants ranging from $1,000 to $100,000, with project durations of up to 12 months. Successful proposals should clearly demonstrate how their projects support U.S. public diplomacy goals; showcase American excellence, expertise, innovation, and values, and strengthen the bilateral relationship. The goals of U.S. polic...
 
 ### 8. The 2027 YSEALI Regional Workshop: Securing Supply Chains
 
