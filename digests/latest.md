@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-07-23T03:48:18.606Z
+Generated: 2026-07-24T03:47:15.573Z
 
 Sources checked: Grants.gov 68, SAM.gov 0
 
@@ -282,7 +282,19 @@ Project Background, Goals, and Objectives Albania has experienced multiple cyber
 
 The U.S. Department of Transportation’s Office of the Assistant Secretary for Research and Technology (OST-R) is announcing a Notice of Funding Opportunity (NOFO) for the Interdisciplinary Transportation Law and Policy Technology Training Development program. This 24-month cooperative agreement aims to bridge the critical knowledge gap between fast-changing transportation technologies and our Nation's policymakers, lawmakers, and legal counsel. The primary objective of this program is to research, prioritize, and provide instructional materials on rapidly developing transportation technologies, specifically artificial intelligence (AI), automated vehicles (AV), and the digital infrastruct...
 
-### 24. Postdoctoral Research Fellowships in Biology
+### 24. American Innovation Hub: AI &amp; Digital Skills for the Creative &amp; Tech Economy
+
+- Source: Grants.gov
+- Agency: U.S. Mission to Indonesia
+- Status: posted
+- Close date: 08/30/2026
+- Amount: $250,000 - $263,114
+- Fit score: 9
+- Official link: https://www.grants.gov/search-results-detail/363293
+
+Indonesia is ASEAN’s largest economy and most populous nation, with a young, fast-growing digital population that is rapidly adopting artificial intelligence and creative-technology tools. The choices this generation makes about which technologies, standards, and platforms to build on will shape Indonesia’s digital economy for decades. Demand for trusted, high-quality AI tools is outpacing access to credible, hands-on training, and U.S. technology providers remain underrepresented in the venues where Indonesian youth, creators, and MSMEs first encounter AI. This program builds demand for full-stack U.S. artificial-intelligence technologies and standards and supports the continued growth o...
+
+### 25. Postdoctoral Research Fellowships in Biology
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
@@ -293,15 +305,3 @@ The U.S. Department of Transportation’s Office of the Assistant Secretary for 
 - Official link: https://www.grants.gov/search-results-detail/361249
 
 The integration of Artificial Intelligence (AI) and Biological Research has the potential to pave the way for breakthroughs in biotechnology and bio-system design that will create innovations, new industries, and jobs. To capitalize on this promise, the Directorate for Biological Sciences (BIO) will make awards for Postdoctoral Research Fellowships in Biology (PRFB) to recent doctoral degree recipients, for proposals with a research and training focus at the Intersection of Artificial Intelligence and Biological Sciences to Strengthen and Safeguard Biotechnology Innovations. Applying AI to highly complex biological systems will reveal unknown mechanisms in the natural world that hold prom...
-
-### 25. Community Engagement Evaluation and Data Coordination (CEED) Hub to Advance Data and Practice Transformation for Optimizing Oral Health for All (U01, Clinical Trial Not Allowed)
-
-- Source: Grants.gov
-- Agency: National Institutes of Health
-- Status: posted
-- Close date: 10/19/2026
-- Amount: Not listed
-- Fit score: 9
-- Official link: https://www.grants.gov/search-results-detail/359123
-
-The purpose of this Notice of Funding Opportunity (NOFO) is to seek applications for a Community Engagement Evaluation and Data coordination hub (CEED) for the Community-Based Participatory Research (CBPR) consortium: Advancing Data and Practice Transformation (ADAPT) for Optimizing Oral Health for All. In addition to CEED, the ADAPT consortium will include separately funded CBPR projects, which will receive consultative services from the NIH Community Engagement Alliance Consultative Resource (CEACR) and join in the Science Collaborative for Health and Artificial Intelligence Reduction of Errors (SCHARE) platform for the overarching goal of promoting data use and transformational communi...
