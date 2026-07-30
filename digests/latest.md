@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-07-29T03:44:07.722Z
+Generated: 2026-07-30T03:33:11.601Z
 
 Sources checked: Grants.gov 68, SAM.gov 0
 
@@ -282,7 +282,19 @@ Project Background, Goals, and Objectives Albania has experienced multiple cyber
 
 The U.S. Department of Transportation’s Office of the Assistant Secretary for Research and Technology (OST-R) is announcing a Notice of Funding Opportunity (NOFO) for the Interdisciplinary Transportation Law and Policy Technology Training Development program. This 24-month cooperative agreement aims to bridge the critical knowledge gap between fast-changing transportation technologies and our Nation's policymakers, lawmakers, and legal counsel. The primary objective of this program is to research, prioritize, and provide instructional materials on rapidly developing transportation technologies, specifically artificial intelligence (AI), automated vehicles (AV), and the digital infrastruct...
 
-### 24. American Innovation Hub: AI &amp; Digital Skills for the Creative &amp; Tech Economy
+### 24. Cooperative Agreement for Affiliated Partner with the Rocky Mountain Cooperative Ecosystem Studies Unit (CESU)
+
+- Source: Grants.gov
+- Agency: Geological Survey
+- Status: posted
+- Close date: 08/29/2026
+- Amount: $1 - $300,000
+- Fit score: 9
+- Official link: https://www.grants.gov/search-results-detail/363385
+
+The U.S. Geological Survey (USGS) is offering a funding opportunity to a CESU partner for research in processing and analyzing of data from the Surface Water and Ocean Topography (SWOT) mission. The project will advance hydrologic decision making from remotely sensed water surface elevation by making available water surface elevation data at unprecedented scales. Research Scientists in the Observing Systems Division have a wealth of knowledge specific to an ongoing study to process and analyze SWOT data for hydrological applications. This research will advance understanding through detailed assessments of SWOT data accuracy and the production of low-latency water resource monitoring data...
+
+### 25. American Innovation Hub: AI &amp; Digital Skills for the Creative &amp; Tech Economy
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Indonesia
@@ -293,15 +305,3 @@ The U.S. Department of Transportation’s Office of the Assistant Secretary for 
 - Official link: https://www.grants.gov/search-results-detail/363293
 
 Indonesia is ASEAN’s largest economy and most populous nation, with a young, fast-growing digital population that is rapidly adopting artificial intelligence and creative-technology tools. The choices this generation makes about which technologies, standards, and platforms to build on will shape Indonesia’s digital economy for decades. Demand for trusted, high-quality AI tools is outpacing access to credible, hands-on training, and U.S. technology providers remain underrepresented in the venues where Indonesian youth, creators, and MSMEs first encounter AI. This program builds demand for full-stack U.S. artificial-intelligence technologies and standards and supports the continued growth o...
-
-### 25. Postdoctoral Research Fellowships in Biology
-
-- Source: Grants.gov
-- Agency: U.S. National Science Foundation
-- Status: posted
-- Close date: 09/29/2026
-- Amount: Not listed
-- Fit score: 9
-- Official link: https://www.grants.gov/search-results-detail/361249
-
-The integration of Artificial Intelligence (AI) and Biological Research has the potential to pave the way for breakthroughs in biotechnology and bio-system design that will create innovations, new industries, and jobs. To capitalize on this promise, the Directorate for Biological Sciences (BIO) will make awards for Postdoctoral Research Fellowships in Biology (PRFB) to recent doctoral degree recipients, for proposals with a research and training focus at the Intersection of Artificial Intelligence and Biological Sciences to Strengthen and Safeguard Biotechnology Innovations. Applying AI to highly complex biological systems will reveal unknown mechanisms in the natural world that hold prom...
