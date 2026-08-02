@@ -20,14 +20,14 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: not received
-- Last checked: 2026-08-01T03:53:59.429Z
+- Last checked: 2026-08-02T03:56:43.767Z
 
 ## Topics
 
 - Software: 15 current matches
 - Artificial Intelligence: 20 current matches
 - Automation: 4 current matches
-- Cybersecurity: 15 current matches
+- Cybersecurity: 16 current matches
 - Data Science: 13 current matches
 - Cloud: 6 current matches
 
@@ -41,10 +41,10 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 6. Young Trilateral Leaders (YTL) Summit - U.S. Mission to South Korea - deadline 08/05/2026
 7. Muscat - Annual Program Statement (APS)- PD Small Grants Program - U.S. Mission to Oman - deadline 08/09/2026
 8. The 2027 YSEALI Regional Workshop: Securing Supply Chains - U.S. Mission to Indonesia - deadline 08/31/2026
-9. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
-10. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
-11. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
-12. UNITED STATES MILITARY ACADEMY Broad Agency Announcement - Dept of the Army -- Materiel Command - deadline 03/31/2027
+9. Advancing Investigative Journalism in Ukraine through U.S. AI Innovation - U.S. Mission to Ukraine - deadline 09/01/2026
+10. Condensed Matter and Materials Theory - U.S. National Science Foundation - deadline Proposals accepted anytime
+11. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
+12. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
 
 ## Operating rules
 
