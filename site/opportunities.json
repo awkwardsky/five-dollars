@@ -601,6 +601,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "363537",
+    "title": "Cooperative Agreement for Affiliated Partner with the Alaska Cooperative Ecosystem Studies Unit (CESU)",
+    "agency": "Geological Survey",
+    "opportunityNumber": "G26AS00156",
+    "status": "posted",
+    "openDate": "08/11/2026",
+    "closeDate": "09/11/2026",
+    "amount": "$1 - $453,203",
+    "score": 7,
+    "summary": "This Notice of Funding Opportunity (NOFO) is for a U.S. Geological Survey (USGS) National and Regional Climate Adaptation Science Center (NRCASC) competitive research award to a CESU partner.Projects supported under this cooperative agreement should advance Administration priorities, including, but not limited to, American energy dominance, critical mineral development, water security, infrastructure resilience, and natural hazard preparedness. Research and activities may incorporate scientific expertise in areas such as hydrology, geology, geospatial science, biosecurity, and near-earth space science, including extreme events such as drought, flooding, wildland fire, coastal erosion, severe storms, and geologic hazards, to develop actionable science, data, and tools that support informed decision-making by resource managers and stakeholders.The NRCASC program provides rigorous science and transparent communication) (EO 14303- Restoring Gold Standard Science (May 23, 2025)/SO 3441-Implementing the Requirements of Executive Order 14303, Restoring Gold Standard Science, May 23, 2025 (August 29, 2025) that advances administration and departmental priorities on wildfire science, (EO 14308- Empowering Commonsense Wildfire Prevention and Response (June 12, 2025)/SO 3443-Elevating and Unifying DOI's Wildland Fire Management Program (September 10, 2025), hazard and risk assessments that enhance local preparedness (EO 14239- Achieving Efficiency Through State and Local Preparedness (March 18, 2025), the development of Alaska's resource potential (EO 14153- Unleashing Alaska's Extraordinary Resource Potential (January 20, 2025)/SO 3422- Unleashing Alaska's Extraordinary Resource Potential (February 3, 2025), American energy potential EO 14154- Unleashing American Energy (January 20, 2025)/SO 3418-Unleashing American Energy (February 3, 2025)/SO 3417-Addressing the National Energy Emergency (February 3, 2025)/SO 3438-Managing Federal Energy Resources and Protecting the Environment (August 1, 2025), the strategic use of Artificial Intelligence SO 3444-Leading Interior's Path to Artificial Intelligence Transformation (September 17, 2025), and natural resource stewardship that balances the needs of ecosystems, communities, and the economy (EO 14313-Establishing the President's Make America Beautiful Again Commission (July 3, 2025), EO 14225-Immediate Expansion of American Timber Production (March 1, 2025).In Alaska's boreal forests, spruce beetle outbreaks have expanded northward with changing temperatures, often resulting in extensive mortality in spruce forests. These widespread mortality events create opportunities for invasive plants, such as the European bird cherry, to invade and reshape the forest. This project will investigate how spruce beetle disturbances influence the establishment and spread of invasive European bird cherry; how invasion subsequently affects the regeneration of spruce and other native plants following beetle outbreaks; and how changing temperatures, drought, and other weather events alter the interaction between disturbance and invasion in boreal forest ecosystems. Project outcomes will inform management decisions made by partners, including the U.S. Forest Service and the Alaska Division of Forestry and Fire Protection, to control invasive species and promote forest recovery after disturbances. This work will support the implementation of EO 14313 -Establishing the President's Make America Beautiful Again Commission (July 3, 2025) through science-based conservation of natural resources and strengthening the capacity of agencies and communities to safeguard vulnerable ecosystems from biological degradation.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/363537",
+    "slug": "grants-gov-363537-cooperative-agreement-for-affiliated-partner-with-the-alaska-cooperati"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "363468",
     "title": "Institute of Education Sciences (IES): National Center for Education Research (NCER): Statistical and Research Methodology in Education, Assistance Listing Number (ALN) 84.305D",
     "agency": "Department of Education",
@@ -883,20 +898,5 @@
     "summary": "Data science is an important cross-cutting research approach in the 2022 - 2026 NIDA Strategic Plan and increasing the capacity of experts in addiction related data science is critical. The purpose of this Notice is to facilitate the entry of investigators to the area of addiction-related data science, including newly independent data scientists or established investigators seeking to incorporate novel and cutting-edge data science methodologies into their research programs for the first time. Through this opportunity, investigators will propose to apply emerging data science methods to answer critical questions requiring advanced data analytic strategies. Projects should be small in scale and answer specific research questions or provide preliminary data for a larger scale project. Applicants are encouraged to use existing datasets, follow FAIR principles, and, when applicable, attend to ethical concerns in the conduct of research involving human subjects. Ultimately, the aim is to expedite the development of robust research programs focused on the convergence of innovative data science techniques and addiction research, with initial projects serving as precursors for subsequent, more expansive research projects.",
     "officialUrl": "https://www.grants.gov/search-results-detail/357733",
     "slug": "grants-gov-357733-d-start-data-science-track-award-for-research-transition-d-start-r03-c"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "363027",
-    "title": "Pax Silica Artificial Intelligence Assistance Project",
-    "agency": "Bureau of Economic and Business Affairs",
-    "opportunityNumber": "DFOP0019193",
-    "status": "posted",
-    "openDate": "07/01/2026",
-    "closeDate": "08/20/2026",
-    "amount": "$1,000,000 - $50,000,000",
-    "score": 5,
-    "summary": "Leveraging foreign assistance from the Pax Fund, this NOFO launches the Pax Silica Artificial Intelligence (AI) Assistance Project—a historic first-of-its-kind programmatic initiative to strengthen global AI supply chain security by creating a trusted supply chain credentialing and provenance platform to secure the AI supply chain in partner countries and economies. This NOFO seeks to fund the establishment of a Silicon Highway: a digital-physical corridor that accelerates logistics and compliance operations among partner countries with cryptographic cargo verification, AI-expedited risk assessment, and pre-approved expedited processing early in the supply chain. The Department maintains its rights of use to intangible property created under this project per 2 CFR 200.315.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/363027",
-    "slug": "grants-gov-363027-pax-silica-artificial-intelligence-assistance-project"
   }
 ]
