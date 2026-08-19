@@ -452,7 +452,7 @@
   {
     "source": "Grants.gov",
     "sourceId": "345354",
-    "title": "Manufacturing Systems Integration",
+    "title": "Manufacturing Systems Integration (MSI)",
     "agency": "U.S. National Science Foundation",
     "opportunityNumber": "PD-23-229Y",
     "status": "posted",
@@ -462,7 +462,7 @@
     "score": 9,
     "summary": "The Manufacturing Systems Integration (MSI) Program supports fundamental research addressing the opportunities and challenges that digital technologies present for the next industrial revolution, with particular emphasis on the digital integration of design and manufacturing within the larger life cycle ecosystem. Manufacturing Systems Integration proposals should address underlying principles and advances that are generalizable for globally competitive and world leading industries. Connectivity, automation, and secure collaboration are examples of areas that are integral to digital environments capable of supporting the innovation, realization and sustainment of manufactured products and systems in the value creation process. Fundamental generalizable research for manufacturing systems integration might include, for example: Digital representation, protocols, and/or processes for integration and collaboration in manufacturing systems (machines and/or humans) Intelligent self-organizing production systems Ease of use, interoperability and seamless integration of technologies, machines, and humans Service-oriented architectures and systems Data sets that are compatible and usable across platforms Reliable and secure communications within and across the manufacturing value chain Integration of distributed manufacturing systems across time and space, including incorporating both legacy and leading-edge equipment and technologies Methods for assessing the impact and value of externalities throughout the life cycle within the digital environment Interdisciplinary, convergent proposals that bring diverse perspectives, populations, disciplines, and capabilities together are welcome. It is strongly encouraged and expected that investigators discuss their ideas with a MSI program director well in advance of proposal submission.",
     "officialUrl": "https://www.grants.gov/search-results-detail/345354",
-    "slug": "grants-gov-345354-manufacturing-systems-integration"
+    "slug": "grants-gov-345354-manufacturing-systems-integration-msi"
   },
   {
     "source": "Grants.gov",
@@ -826,6 +826,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "363645",
+    "title": "University-led Networks for Innovation, Technology, and Expertise (UNITE)",
+    "agency": "U.S. Mission to Saudi Arabia",
+    "opportunityNumber": "DOS-SAU-2603-PD",
+    "status": "posted",
+    "openDate": "08/18/2026",
+    "closeDate": "09/17/2026",
+    "amount": "$90,000 - $150,000",
+    "score": 6,
+    "summary": "The U.S. Embassy Riyadh Public Diplomacy Section is accepting applications for a cooperative agreement to run the University-led Networks for Innovation, Technology, and Expertise (UNITE) program. UNITE will support approximately four to five applied project teams — university-industry partnerships between U.S. universities, U.S. companies or technical partners, and Saudi institutions — through project seed awards of up to $25,000 each to solve specific Saudi workforce and development gaps in high-demand strategic sectors, including Artificial Intelligence, critical minerals, cybersecurity, emerging technologies, and workforce development. Each project team will produce a U.S.-linked deliverable — such as a curriculum, module, technical roadmap, or standards briefs — that creates durable pathways for Saudi investment in American academic, workforce, and industry collaboration. Mission KSA will award a cooperative agreement to a single U.S. academic implementing partner to manage the portfolio. Each participating project team must provide a 1:1 cost-share match to ensure genuine institutional commitment and long-term viability.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/363645",
+    "slug": "grants-gov-363645-university-led-networks-for-innovation-technology-and-expertise-unite"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "358864",
     "title": "Community-Based Participatory Research to Advance Data and Practice Transformation (ADAPT) for Optimizing Oral Health for All (UG3/UH3 Clinical Trial Optional)",
     "agency": "National Institutes of Health",
@@ -883,20 +898,5 @@
     "summary": "This Notice of Funding Opportunity (NOFO) encourages applications for support of resources that will provide access to state-of-the-art equipment, technologies, research tools, materials, organisms, software, and/or services to a substantial regional (multi-state) or national user base. Only those resources with technical capabilities that fall within the NIGMS-supported program areas are eligible for awards. The resources should already be established or may be formed through consolidation of existing local or regional facilities. The intent is to provide resource access to investigators without regard to the specific biomedical focus of their research, while not duplicating or replacing resources supported by sources such as other NIH Institutes and Centers (ICs) or host institutions. The resource is expected to be maintained or upgraded to current best practices, make its capabilities and availability known to the biomedical research community through a robust web presence and outreach activities, and provide user training and support.",
     "officialUrl": "https://www.grants.gov/search-results-detail/358934",
     "slug": "grants-gov-358934-nigms-national-and-regional-resources-r24-clinical-trial-not-allowed"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "362406",
-    "title": "NIJ FY25 Research and Evaluation of Artificial Intelligence for Criminal Justice Purposes",
-    "agency": "National Institute of Justice",
-    "opportunityNumber": "O-NIJ-2025-172615",
-    "status": "posted",
-    "openDate": "05/14/2026",
-    "closeDate": "06/15/2026",
-    "amount": "Up to $2,500,000",
-    "score": 5,
-    "summary": "This NOFO seeks to support research and evaluation that advances the use of artificial intelligence (AI) in the criminal justice system. The goal of this NOFO is to enhance lawful decision-making and help improve its accuracy and effectiveness through AI applications supporting crime prevention, public safety, and criminal justice systems. Research should explore both the benefits and limitations of AI, addressing potential risks and downstream impacts. NIJ expects to fund studies that explore use cases in policing, corrections, courts, or other criminal justice adjacent areas to examine the suitability of using AI to solve operational problems, as well as evaluate the impacts and outcomes when integrated into criminal justice practice. Applying for this funding opportunity involves a two-stage process that begins with submission of a concept paper. Based on the merits of the concept paper, NIJ may request that the applicant submit a full proposal. Applicants should not submit a full proposal unless invited. For information on the concept paper format, please see the General Purpose of the Funding section of this NOFO.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/362406",
-    "slug": "grants-gov-362406-nij-fy25-research-and-evaluation-of-artificial-intelligence-for-crimin"
   }
 ]

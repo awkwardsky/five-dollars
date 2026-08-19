@@ -1,12 +1,25 @@
 {
-  "checkedAt": "2026-08-18T01:53:13.836Z",
-  "received": false,
+  "checkedAt": "2026-08-19T01:54:45.616Z",
+  "received": true,
   "address": "TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ",
   "network": "TRON",
   "token": "USDT",
   "minimumReceipt": 5,
-  "matchingTransferCount": 0,
-  "firstReceipt": null,
+  "matchingTransferCount": 1,
+  "firstReceipt": {
+    "txid": "d56d59f764c406351d877e0e9edc6056440527b2ba98aff2cd01ab163662a309",
+    "from": "TJAMqhR5bexmdz6hVuJpZ86Patk7Cd8LXS",
+    "to": "TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ",
+    "amount": 5,
+    "rawValue": "5000000",
+    "symbol": "USDT",
+    "contractAddress": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+    "timestamp": 1787043318000,
+    "timestampIso": "2026-08-18T08:55:18.000Z",
+    "confirmed": true,
+    "provider": "TronGrid",
+    "explorerUrl": "https://tronscan.org/#/transaction/d56d59f764c406351d877e0e9edc6056440527b2ba98aff2cd01ab163662a309"
+  },
   "sources": [
     "TronGrid"
   ],
