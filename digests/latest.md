@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-08-20T01:53:46.378Z
+Generated: 2026-08-21T01:59:44.259Z
 
 Sources checked: Grants.gov 71, SAM.gov 0
 
@@ -90,19 +90,7 @@ Funding Opportunity Title: 2027 Young Trilateral Leaders (YTL) Summit Funding Op
 
 The Public Diplomacy Section of U.S. Embassy Muscat announces an open competition to support projects that advance U.S. foreign policy priorities in Oman while strengthening the long-standing partnership between the United States and the Sultanate of Oman. This Annual Program Statement outlines strategic funding priorities, eligibility criteria, and application guidelines for grants ranging from $1,000 to $100,000, with project durations of up to 12 months. Successful proposals should clearly demonstrate how their projects support U.S. public diplomacy goals; showcase American excellence, expertise, innovation, and values, and strengthen the bilateral relationship. The goals of U.S. polic...
 
-### 8. Division of Materials Research: Condensed Matter and Materials Theory (CMMT)
-
-- Source: Grants.gov
-- Agency: U.S. National Science Foundation
-- Status: posted
-- Close date: 08/14/2076
-- Amount: Not listed
-- Fit score: 11
-- Official link: https://www.grants.gov/search-results-detail/349654
-
-CMMT supports theoretical and computational materials research in the topical areas represented in DMR's other Topical Materials Research Programs (these are also variously known as Individual Investigator Award (IIA) Programs, or Core Programs, or Disciplinary Programs), which are: Condensed Matter Physics (CMP), Biomaterials (BMAT), Ceramics (CER), Electronic and Photonic Materials (EPM), Metals and Metallic Nanostructures (MMN), Polymers (POL), and Solid State and Materials Chemistry (SSMC). The CMMT program supports fundamental research that advances conceptual understanding of hard and soft materials, and materials-related phenomena; the development of associated analytical, computat...
-
-### 9. The 2027 YSEALI Regional Workshop: Securing Supply Chains
+### 8. The 2027 YSEALI Regional Workshop: Securing Supply Chains
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Indonesia
@@ -114,7 +102,7 @@ CMMT supports theoretical and computational materials research in the topical ar
 
 Project Background, Goals, and Objectives In an era of global disruption and rapid technological change, secure and resilient supply chains are more critical than ever. This workshop will bring together early-stage professionals from across Southeast Asia to explore how supply chains operate, the impact of advanced technologies, and the critical minerals that power modern economies. They will leave equipped with tools to increase advocacy efforts that support national-level policy, encouraging the expansion of U.S.- ASEAN commercial opportunities and prioritizing secure supply chains that strengthen U.S. - ASEAN economic and regional security. Workshop Objectives • Enhance understanding o...
 
-### 10. Advancing Investigative Journalism in Ukraine through U.S. AI Innovation
+### 9. Advancing Investigative Journalism in Ukraine through U.S. AI Innovation
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Ukraine
@@ -125,6 +113,18 @@ Project Background, Goals, and Objectives In an era of global disruption and rap
 - Official link: https://www.grants.gov/search-results-detail/363440
 
 The U.S. Department of State's Embassy Kyiv announces an open competition for Ukrainian non-governmental media organizations and independent media outlets to implement a program that strengthens data-driven and AI-enabled journalism in Ukraine. It will build the capacity of journalists and newsrooms to produce high-quality reporting on economic development, reconstruction and investment through training in investigative reporting, data journalism, artificial intelligence, open-source research, cybersecurity, and responsible use of emerging technologies. The program will also aim to support regional and frontline media, where AI and modern digital tools can help offset wartime staffing sho...
+
+### 10. Division of Materials Research: Condensed Matter and Materials Theory (CMMT)
+
+- Source: Grants.gov
+- Agency: U.S. National Science Foundation
+- Status: posted
+- Close date: Proposals accepted anytime
+- Amount: Not listed
+- Fit score: 11
+- Official link: https://www.grants.gov/search-results-detail/349654
+
+CMMT supports theoretical and computational materials research in the topical areas represented in DMR's other Topical Materials Research Programs (these are also variously known as Individual Investigator Award (IIA) Programs, or Core Programs, or Disciplinary Programs), which are: Condensed Matter Physics (CMP), Biomaterials (BMAT), Ceramics (CER), Electronic and Photonic Materials (EPM), Metals and Metallic Nanostructures (MMN), Polymers (POL), and Solid State and Materials Chemistry (SSMC). The CMMT program supports fundamental research that advances conceptual understanding of hard and soft materials, and materials-related phenomena; the development of associated analytical, computat...
 
 ### 11. Energy, Power, Control, and Networks
 
