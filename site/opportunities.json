@@ -136,6 +136,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "362259",
+    "title": "DoW Prostate Cancer, Data Science Award",
+    "agency": "Defense Health Agency Contracting Activity - DHACA",
+    "opportunityNumber": "HT942526PCRPDSA",
+    "status": "posted",
+    "openDate": "05/21/2026",
+    "closeDate": "09/02/2026",
+    "amount": "",
+    "score": 11,
+    "summary": "Summary: The fiscal year 2026 (FY26) Prostate Cancer Research Program (PCRP) Data Science Award (DSA) supports research that develops or uses quantitative and analytical approaches, processes and/or systems to obtain knowledge and insight from large and/or complex sets of prostate cancer data in one or more of the following research areas: Analysis of clinically annotated datasets; analysis of -omics data; artificial intelligence and machine learning; bioinformatics; computational biology; digital pathology; epidemiology; and medical imaging. All applications must address one of the FY26 PCRP Overarching Challenges . Distinctive Features: This funding mechanism allows for multiple Principal Investigators (PIs). Only the initiating PI will submit a pre-application, but all PIs will need to submit full applications. The partnering PI application is an abbreviated package specific to their distinct portion of the research project. Be advised, all associated applications for a research project may be withdrawn if the initiating or partnering application is rejected or administratively withdrawn.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/362259",
+    "slug": "grants-gov-362259-dow-prostate-cancer-data-science-award"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "349654",
     "title": "Division of Materials Research: Condensed Matter and Materials Theory (CMMT)",
     "agency": "U.S. National Science Foundation",
@@ -883,20 +898,5 @@
     "summary": "The National Center for Science and Engineering Statistics (NCSES) of the National Science Foundation (NSF) is one of the thirteen principal federal statistical agencies within the United States. It is responsible for the collection, acquisition, analysis, reporting and dissemination of objective, statistical data related to the science and technology (S&T) enterprise in the United States and other nations that is relevant and useful to practitioners, researchers, policymakers and the public. NCSES uses this information to prepare a number of statistical data reports including Women, Minorities and Persons with Disabilities in Science and Engineering and the National Science Board's biennial report, Science and Engineering (S&E) Indicators. The Center would like to enhance its efforts to support analytic and methodological research in support of its surveys as well as promote the education and training of researchers in the use of large-scale nationally representative datasets. NCSES welcomes efforts by the research community to use NCSES or other data to conduct research on the S&T enterprise, develop improved survey methodologies that could benefit NCSES surveys, explore alternate data sources that could supplement NCSES data, create and improve indicators of S&T activities and resources, strengthen methodologies to analyze S&T statistical data, and explore innovative ways to communicate S&T statistics. To that end, NCSES invites proposals for individual or multi-investigator research projects, doctoral dissertation improvement awards, conferences, experimental research, survey research and data collection, and dissemination projects under its program for Research on the Science and Technology Enterprise: Indicators, Statistics, and Methods (NCSES S&T).",
     "officialUrl": "https://www.grants.gov/search-results-detail/355219",
     "slug": "grants-gov-355219-research-on-the-science-and-technology-enterprise-indicators-statistic"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "359942",
-    "title": "NHLBI TOPMed: Omics Phenotypes of Heart, Lung, and Blood Disorders (X01 - Clinical Trial Not Allowed)",
-    "agency": "National Institutes of Health",
-    "opportunityNumber": "PAR-25-447",
-    "status": "posted",
-    "openDate": "09/22/2025",
-    "closeDate": "05/08/2028",
-    "amount": "",
-    "score": 5,
-    "summary": "This Notice of Funding Opportunity (NOFO) invites applications to use NHLBI-funded TransOmics for Precision Medicine (TOPMed) program to generate a large volume of integrated genetic and multi-omics data to facilitate discovery of the molecular mechanisms of Heart, Lung, Blood, and Sleep (HLBS) disorders. No funding will be provided under this NOFO. The genomic data and related phenotypic data will be deposited in a public NIH-designated controlled-access database such as the database for Genotypes and Phenotypes (dbGaP) and NHLBIs BioData Catalyst (BDC). The overall goal is to move from simply cataloguing genetic associations to understanding how genetic factors contribute to HLBS diseases at the molecular and cellular levels. This transformation will help move TOPMed from genetic Map to Mechanism with potential applications of AI and ML tool sets where possible, enabling functional genomics research that will accelerate mechanistic personalized medicine",
-    "officialUrl": "https://www.grants.gov/search-results-detail/359942",
-    "slug": "grants-gov-359942-nhlbi-topmed-omics-phenotypes-of-heart-lung-and-blood-disorders-x01-cl"
   }
 ]

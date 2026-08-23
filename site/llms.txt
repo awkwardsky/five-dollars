@@ -20,7 +20,7 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: received
-- Last checked: 2026-08-22T01:53:01.182Z
+- Last checked: 2026-08-23T02:01:35.201Z
 
 ## Topics
 
@@ -28,7 +28,7 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Artificial Intelligence: 20 current matches
 - Automation: 4 current matches
 - Cybersecurity: 17 current matches
-- Data Science: 15 current matches
+- Data Science: 16 current matches
 - Cloud: 6 current matches
 
 ## Current top opportunities
@@ -42,9 +42,9 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 7. Muscat - Annual Program Statement (APS)- PD Small Grants Program - U.S. Mission to Oman - deadline 08/09/2026
 8. The 2027 YSEALI Regional Workshop: Securing Supply Chains - U.S. Mission to Indonesia - deadline 08/31/2026
 9. Advancing Investigative Journalism in Ukraine through U.S. AI Innovation - U.S. Mission to Ukraine - deadline 09/01/2026
-10. Division of Materials Research: Condensed Matter and Materials Theory (CMMT) - U.S. National Science Foundation - deadline Proposals accepted anytime
-11. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
-12. Cybersecurity Innovation for Cyberinfrastructure - U.S. National Science Foundation - deadline 01/20/2027
+10. DoW Prostate Cancer, Data Science Award - Defense Health Agency Contracting Activity - DHACA - deadline 09/02/2026
+11. Division of Materials Research: Condensed Matter and Materials Theory (CMMT) - U.S. National Science Foundation - deadline Proposals accepted anytime
+12. Energy, Power, Control, and Networks - U.S. National Science Foundation - deadline Proposals accepted anytime
 
 ## Operating rules
 
