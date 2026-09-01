@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-31T05:43:26.803Z",
+  "checkedAt": "2026-09-01T05:16:41.585Z",
   "delivered": false,
   "skipped": true,
   "reason": "RESEND_API_KEY is not set.",
