@@ -1,17 +1,17 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-09-01T05:16:39.767Z
+Generated: 2026-09-02T04:41:49.884Z
 
 Sources checked: Grants.gov 72, SAM.gov 0
 
 ## Top Opportunities
 
-### 1. Pathways to Enable Secure Open-Source Ecosystems
+### 1. Pathways to Enable Secure Open-Source Ecosystems (PESOSE)
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
 - Status: posted
-- Close date: 09/01/2026
+- Close date: 03/02/2027
 - Amount: Not listed
 - Fit score: 15
 - Official link: https://www.grants.gov/search-results-detail/361333
