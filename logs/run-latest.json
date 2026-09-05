@@ -1,13 +1,13 @@
 {
-  "startedAt": "2026-09-04T04:40:23.475Z",
-  "finishedAt": "2026-09-04T04:40:36.517Z",
+  "startedAt": "2026-09-05T04:36:09.384Z",
+  "finishedAt": "2026-09-05T04:36:19.046Z",
   "niche": "software-ai-automation",
   "fetched": {
-    "grants": 72,
+    "grants": 70,
     "sam": 0,
-    "total": 72
+    "total": 70
   },
-  "matched": 71,
+  "matched": 69,
   "savedDigest": "/home/runner/work/five-dollars/five-dollars/digests/latest.md",
   "savedDatabase": "/home/runner/work/five-dollars/five-dollars/data/opportunities.sqlite",
   "notes": [
