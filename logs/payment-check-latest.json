@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-09-16T04:55:19.379Z",
+  "checkedAt": "2026-09-17T04:58:25.075Z",
   "received": true,
   "address": "TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ",
   "network": "TRON",
   "token": "USDT",
   "minimumReceipt": 5,
-  "matchingTransferCount": 1,
+  "matchingTransferCount": 2,
   "firstReceipt": {
     "txid": "d56d59f764c406351d877e0e9edc6056440527b2ba98aff2cd01ab163662a309",
     "from": "TJAMqhR5bexmdz6hVuJpZ86Patk7Cd8LXS",
