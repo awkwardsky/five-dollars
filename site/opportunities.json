@@ -481,6 +481,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "363907",
+    "title": "BJA FY 2026 Rural Violent Crime Reduction Initiative",
+    "agency": "Bureau of Justice Assistance",
+    "opportunityNumber": "O-BJA-2026-172761",
+    "status": "posted",
+    "openDate": "09/21/2026",
+    "closeDate": "10/30/2026",
+    "amount": "Up to $2,637,041",
+    "score": 9,
+    "summary": "This is a notice of funding opportunity (NOFO) for the BJA FY 2026 Rural Violent Crime Reduction Initiative. This opportunity supports local law enforcement in rural jurisdictions to prevent, respond to, and reduce violent crime. The goal is to equip rural law enforcement agencies and prosecutors’ offices with the resources necessary to implement a violent crime reduction strategy to solve a specific violent crime challenge utilizing one or more of the following approaches: • Personnel, Tactics, Training, and Equipment to Reduce Violent Crime. This includes updated technology and tools, including records management systems, vehicles, vests, and firearms that assist agencies in responding to and preventing violent crime. This also includes hiring additional personnel such as a prosecutor or criminologist to strategically address persistent crimes, early case management, and increased police training. • Technological Enhancements to Reduce Violent Crime. Technology takes the form of hardware, software, communications systems, intelligence centers, and equipment. Technology systems can create the infrastructure for actionable intelligence, enhance officer safety, support efficient operations, shorten case filing timelines, and manage risk. • Data Analytics and Intelligence. Enhance crime analysis capabilities through personnel, training, and software enhancements to identify crime hotspots, predict high-risk times and locations, and allocate resources more effectively to prevent violent incidents before they occur. • Other approaches that align with the Department’s priorities and provide a significant reduction in violent crime rates.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/363907",
+    "slug": "grants-gov-363907-bja-fy-2026-rural-violent-crime-reduction-initiative"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "361526",
     "title": "The Genesis Mission: Transforming Science and Energy with AI",
     "agency": "Office of Science",
@@ -883,20 +898,5 @@
     "summary": "The U.S. Embassy Riyadh Public Diplomacy Section is accepting applications for a cooperative agreement to run the University-led Networks for Innovation, Technology, and Expertise (UNITE) program. UNITE will support approximately four to five applied project teams — university-industry partnerships between U.S. universities, U.S. companies or technical partners, and Saudi institutions — through project seed awards of up to $25,000 each to solve specific Saudi workforce and development gaps in high-demand strategic sectors, including Artificial Intelligence, critical minerals, cybersecurity, emerging technologies, and workforce development. Each project team will produce a U.S.-linked deliverable — such as a curriculum, module, technical roadmap, or standards briefs — that creates durable pathways for Saudi investment in American academic, workforce, and industry collaboration. Mission KSA will award a cooperative agreement to a single U.S. academic implementing partner to manage the portfolio. Each participating project team must provide a 1:1 cost-share match to ensure genuine institutional commitment and long-term viability.",
     "officialUrl": "https://www.grants.gov/search-results-detail/363645",
     "slug": "grants-gov-363645-university-led-networks-for-innovation-technology-and-expertise-unite"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "358864",
-    "title": "Community-Based Participatory Research to Advance Data and Practice Transformation (ADAPT) for Optimizing Oral Health for All (UG3/UH3 Clinical Trial Optional)",
-    "agency": "National Institutes of Health",
-    "opportunityNumber": "PAR-27-015",
-    "status": "posted",
-    "openDate": "04/27/2026",
-    "closeDate": "11/16/2028",
-    "amount": "Up to $300,000",
-    "score": 6,
-    "summary": "The purpose of this Notice of Funding Opportunity (NOFO) is to solicit UG3/UH3 phased, cooperative agreement research applications to evaluate, implement, and/or test population-based interventions to policies, programs, and/or practices for promoting integration of services, systems, and/or values by leveraging cross-sector partnerships in communities. Such interventions must address social and chronic disease common risk factors and/or barriers driving oral disease burden in communities. Projects funded through this funding opportunity and a separately funded Community Engagement Evaluation and Data Coordination hub (CEED) will form a Community-Based Participatory Research (CBPR) consortium: Advancing Data and Practice Transformation (ADAPT), which will receive consultative services from the NIH Community Engagement Alliance Consultative Resource (CEACR) and join in the Science Collaborative for Health and Artificial Intelligence Reduction of Errors (SCHARE) platform for the overarching goal of promoting data use and transformational community engagement to optimize oral health for all people across the lifespan.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/358864",
-    "slug": "grants-gov-358864-community-based-participatory-research-to-advance-data-and-practice-tr"
   }
 ]
