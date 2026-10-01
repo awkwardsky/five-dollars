@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-09-30T05:39:24.594Z
+Generated: 2026-10-01T06:04:27.573Z
 
 Sources checked: Grants.gov 69, SAM.gov 0
 
@@ -162,7 +162,19 @@ The Energy, Power, Control, andNetworks (EPCN) Program supports innovative resea
 
 The objective of the Cybersecurity Innovation for Cyberinfrastructure (CICI) program is to advance scientific discovery and innovation by enhancing the security and privacy of cyberinfrastructure. CICI supports efforts to develop, deploy and integrate cybersecurity that will benefit the broader scientific community by securing science data, computation, collaborations workflows, and infrastructure. CICI recognizes the unique nature of modern, complex, data-driven, distributed, rapid, and collaborative science and the breadth of infrastructure and requirements across scientific disciplines, practitioners, researchers, and projects. CICI seeks proposals in four program areas: 1. Usable and...
 
-### 14. Advancing Bioinformatics, Translational Bioinformatics and Computational Biology Research (R01 Clinical Trial Optional)
+### 14. Science of Learning and Augmented Intelligence (SL)
+
+- Source: Grants.gov
+- Agency: U.S. National Science Foundation
+- Status: posted
+- Close date: 02/10/2027
+- Amount: Not listed
+- Fit score: 9
+- Official link: https://www.grants.gov/search-results-detail/320753
+
+Science of Learning and Augmented Intelligence (SL) supports potentially transformative research that develops basic theoretical insights and fundamental knowledge about principles, processes and mechanisms of learning, and about augmented intelligence - how human cognitive function can be augmented through interactions with others or with technology, or through variations in context. The program supports research addressing learning in individuals and in groups, across a wide range of domains at one or more levels of analysis, including molecular and cellular mechanisms; brain systems; cognitive, affective and behavioral processes; and social and cultural influences. The program also sup...
+
+### 15. Advancing Bioinformatics, Translational Bioinformatics and Computational Biology Research (R01 Clinical Trial Optional)
 
 - Source: Grants.gov
 - Agency: National Institutes of Health
@@ -174,7 +186,7 @@ The objective of the Cybersecurity Innovation for Cyberinfrastructure (CICI) pro
 
 The National Library of Medicine (NLM) seeks applications for research projects that drive groundbreaking innovation and advanced development in the fields of bioinformatics, translational bioinformatics, and computational biology. The primary goal of this initiative is to support the creation and implementation of cutting-edge methods, tools, and approaches that can transform the landscape of biomedical data science. This NOFO aims to address the growing need to leverage transformative technologies — such as artificial intelligence (AI), machine learning, and large-scale computational platforms — to extract actionable knowledge from vast, diverse, and complex biological datasets. By enab...
 
-### 15. UNITED STATES MILITARY ACADEMY Broad Agency Announcement
+### 16. UNITED STATES MILITARY ACADEMY Broad Agency Announcement
 
 - Source: Grants.gov
 - Agency: Dept of the Army -- Materiel Command
@@ -186,7 +198,7 @@ The National Library of Medicine (NLM) seeks applications for research projects 
 
 The U.S. Military Academy at West Point's mission is "to educate, train, and inspire the Corps of Cadets so that each graduate is a commissioned leader of character committed to the values of Duty, Honor, Country and prepared for a career of professional excellence and service to the Nation as an officer in the United States Army." The United States Military Academy is located at West Point, New York. USMA executes research to enhance the education of cadets, develop the faculty professionally, and address important issues facing the Army and the Nation. In addition, the Academy conducts research and analysis in emerging fields that may realize novel or vastly improved Army capabilities....
 
-### 16. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU)
+### 17. Cooperative Agreement for Affiliated Partner with the Gulf Coast Cooperative Ecosystem Studies Unit (CESU)
 
 - Source: Grants.gov
 - Agency: Geological Survey
@@ -198,7 +210,7 @@ The U.S. Military Academy at West Point's mission is "to educate, train, and ins
 
 The USGS is offering a funding opportunity to a CESU partner for research on the utility of the Skydio Dock for X10 to (1) fly remotely beyond visual line of site (BVLOS), (2) collect image velocimetry (IV) data, (3) upload IV data via the Skydio Cloud and satellite communications (SatComms), and (4) develop a workflow for processing camera imagery to compute IV-derived discharge.The cost to operate stream gages in gage-poor or hard-to-access basins is both costly and a potential safety risk. The Next Generation Water Observing System (NGWOS) is seeking to trial and develop a workflow that is reliable and capable of transmitting camera imagery via SatComms and compute IV-derived discrete...
 
-### 17. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina
+### 18. Secure Innovation: Advancing Artificial Intelligence, Cybersecurity, and Digital Resilience in Argentina
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Argentina
@@ -210,7 +222,7 @@ The USGS is offering a funding opportunity to a CESU partner for research on the
 
 U.S. Embassy Buenos Aires announces an open competition to promote innovation, cybersecurity, and responsible Artificial Intelligence (AI) adoption in Argentina. This program will equip entrepreneurs, students, and small businesses with practical tools and knowledge based on U.S. technological standards, strengthening economic resilience, protecting intellectual property, and fostering open and secure digital ecosystems. Applicants are encouraged to propose scalable models and sustainable partnerships that can extend program impact beyond the initial funding period. 1. Project Background, Goals, and Objectives Artificial intelligence and digital technologies are reshaping economies and go...
 
-### 18. Public Diplomacy Section Praia: Small Grants Program
+### 19. Public Diplomacy Section Praia: Small Grants Program
 
 - Source: Grants.gov
 - Agency: U.S. Mission to Cape Verde
@@ -222,7 +234,7 @@ U.S. Embassy Buenos Aires announces an open competition to promote innovation, c
 
 As the United States commemorates 250 years of independence through the America250 and Freedom250 initiatives, the U.S. Department of State's U.S. Embassy Praia announces an open competition to celebrate this historic milestone while advancing core U.S. foreign policy priorities in Cabo Verde. This initiative promotes democratic governance, inclusive economic growth, and strengthened bilateral partnerships through interactive programming highlighting American excellence in innovation, education, culture, and democratic institutions. In alignment with the U.S. Strategy for Sub-Saharan Africa, this program seeks proposals from eligible organizations and individuals to engage youth, emerging...
 
-### 19. U.S. Mission UAE PDS Annual Program Statement
+### 20. U.S. Mission UAE PDS Annual Program Statement
 
 - Source: Grants.gov
 - Agency: U.S. Mission to United Arab Emirates
@@ -233,18 +245,6 @@ As the United States commemorates 250 years of independence through the America2
 - Official link: https://www.grants.gov/search-results-detail/362624
 
 The Public Diplomacy Section (PDS) at U.S. Mission UAE invites results-oriented proposals for programs that foster economic opportunities for U.S. businesses, investors, and innovators, and showcase American leadership and excellence in science, technology, culture, arts, sports, culinary diplomacy, artificial intelligence (AI), and health. The purpose is to strengthen ties between the United States and the United Arab Emirates in ways that make America safer, stronger, and more prosperous and advance the interests of the American people as we commemorate the 250th anniversary of U.S. independence (2026) and celebrate the enduring U.S.-UAE partnership. See Section C, Program Description f...
-
-### 20. Science of Learning and Augmented Intelligence
-
-- Source: Grants.gov
-- Agency: U.S. National Science Foundation
-- Status: posted
-- Close date: 08/05/2026
-- Amount: Not listed
-- Fit score: 9
-- Official link: https://www.grants.gov/search-results-detail/320753
-
-Science of Learning and Augmented Intelligence (SL) supports potentially transformative research that develops basic theoretical insights and fundamental knowledge about principles, processes and mechanisms of learning, and about augmented intelligence - how human cognitive function can be augmented through interactions with others or with technology, or through variations in context. The program supportsresearch addressing learning in individuals and in groups, across a wide range of domains at one or more levels of analysis, including molecular and cellular mechanisms; brain systems; cognitive, affective and behavioral processes; and social and cultural influences. The program also supp...
 
 ### 21. Escape The Hack: Countering Cyber Scams with an Immersive Experience for Everyday Indonesians
 
