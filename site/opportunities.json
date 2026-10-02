@@ -511,6 +511,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "364017",
+    "title": "Foundations for Operating the National Artificial Intelligence Research Resource: the NAIRR Operations Center (NAIRR-OC)",
+    "agency": "U.S. National Science Foundation",
+    "opportunityNumber": "25-546",
+    "status": "posted",
+    "openDate": "10/01/2026",
+    "closeDate": "Funding Opportunity is Archived, Proposals are not accepted",
+    "amount": "",
+    "score": 9,
+    "summary": "The National Artificial Intelligence Research Resource (NAIRR) Pilot is a pioneering public-private initiative to catalyze a competitive national artificial intelligence (AI) ecosystem for discovery and innovation by connecting U.S. researchers and educators to the most advanced public and private-sector computational and data platforms, datasets, software, AI models, and technological expertise necessary to accelerate AI-driven discovery and innovation. Beginning in January 2024, U.S. National Science Foundation (NSF) - together with 14 other federal agencies and 28 private sector partners - established the NAIRR Pilot, which has immediately advanced innovative AI and science research and accelerated AI workforce training and education. As recommended by America's AI Action Plan, the NAIRR Operations Center (NAIRR-OC) will serve as a lean and sustainable operations capability and be the focal point for operational transition from the current Pilot towards a sustainable long-term NAIRR. This solicitation seeks proposals to establish a community-based organization that will be responsible for the foundational visioning, coordination, operations, and development activities in support of an integrated national infrastructure for AI research and education. The resulting award would advance the National Artificial Intelligence Research Resource (NAIRR) vision for a public-private partnership to accelerate AI innovation and national competitiveness. This NAIRR Operations Center (NAIRR-OC) will be responsible for the following overarching goals and responsibilities: Organizational leadership : Establishing the operational framework, organizational management, and success metrics for the NAIRR and its successful operations according to the vision, goals, and requirements established by the NSF and other federal partners. Building NAIRR capabilities and community: Undertaking specific development activities in support of NAIRR stakeholders, including interfacing with partner organizations and resources, deploying a unified web portal, integrating data-focused and other resources into the NAIRR, and conducting outreach and community building activities. Interfacing with Pilot Operations: Coordinating with existing NAIRR Pilot contributing partners and interfacing with the independently supported teams conducting NAIRR Pilot operational functions, while developing tailored plans to execute such functions via the NAIRR-OC in the future. NSF anticipates making a single award for this competition. NSF will provide oversight of award activities via the NAIRR Program Management Office (PMO) which may include representatives from partnering agencies. The awardee from this competition may be eligible for expansion of operational responsibilities and duties in a future phase, depending on NAIRR priorities, awardee performance and availability of funds.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/364017",
+    "slug": "grants-gov-364017-foundations-for-operating-the-national-artificial-intelligence-researc"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "345354",
     "title": "Manufacturing Systems Integration (MSI)",
     "agency": "U.S. National Science Foundation",
@@ -883,20 +898,5 @@
     "summary": "The purpose of this funding opportunity announcement (FOA) is to invite applications for a broad range of research efforts in computational genomics, data science, statistics, and bioinformatics relevant to one or both of basic or clinical genomic science, and broadly applicable to human health and disease. This FOA supports fundamental genomics research developing innovative analytical methodologies and approaches, early-stage development of tools and software, and refinement or hardening of software and tools of high value to the biomedical genomics community. Work supported under this FOA should be enabling for genomics and be generalizable or broadly applicable across diseases and biological systems. All applications should address how the methods would scale to address increasingly larger data sets.",
     "officialUrl": "https://www.grants.gov/search-results-detail/357195",
     "slug": "grants-gov-357195-investigator-initiated-innovation-in-computational-genomics-and-data-s"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "363645",
-    "title": "University-led Networks for Innovation, Technology, and Expertise (UNITE)",
-    "agency": "U.S. Mission to Saudi Arabia",
-    "opportunityNumber": "DOS-SAU-2603-PD",
-    "status": "posted",
-    "openDate": "08/18/2026",
-    "closeDate": "09/14/2026",
-    "amount": "$90,000 - $150,000",
-    "score": 6,
-    "summary": "The U.S. Embassy Riyadh Public Diplomacy Section is accepting applications for a cooperative agreement to run the University-led Networks for Innovation, Technology, and Expertise (UNITE) program. UNITE will support approximately four to five applied project teams — university-industry partnerships between U.S. universities, U.S. companies or technical partners, and Saudi institutions — through project seed awards of up to $25,000 each to solve specific Saudi workforce and development gaps in high-demand strategic sectors, including Artificial Intelligence, critical minerals, cybersecurity, emerging technologies, and workforce development. Each project team will produce a U.S.-linked deliverable — such as a curriculum, module, technical roadmap, or standards briefs — that creates durable pathways for Saudi investment in American academic, workforce, and industry collaboration. Mission KSA will award a cooperative agreement to a single U.S. academic implementing partner to manage the portfolio. Each participating project team must provide a 1:1 cost-share match to ensure genuine institutional commitment and long-term viability.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/363645",
-    "slug": "grants-gov-363645-university-led-networks-for-innovation-technology-and-expertise-unite"
   }
 ]
