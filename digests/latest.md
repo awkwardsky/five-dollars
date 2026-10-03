@@ -1,6 +1,6 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-10-02T05:47:21.709Z
+Generated: 2026-10-03T05:24:24.133Z
 
 Sources checked: Grants.gov 69, SAM.gov 0
 
@@ -150,7 +150,7 @@ CMMT supports theoretical and computational materials research in the topical ar
 
 The Energy, Power, Control, andNetworks (EPCN) Program supports innovative research in modeling, optimization, learning, adaptation, and control of networked multi-agent systems, higher-level decision making, and dynamic resource allocation, as well as risk management in the presence of uncertainty, sub-system failures, and stochastic disturbances. EPCN also invests in novel machine learning algorithms and analysis, adaptive dynamic programming, brain-like networked architectures performing real-time learning, and neuromorphic engineering. EPCN's goal is to encourage research on emerging technologies and applications including energy, transportation, robotics, and biomedical devices & sys...
 
-### 13. Cybersecurity Innovation for Cyberinfrastructure
+### 13. Cybersecurity Innovation for Cyberinfrastructure (CICI)
 
 - Source: Grants.gov
 - Agency: U.S. National Science Foundation
