@@ -796,6 +796,21 @@
   },
   {
     "source": "Grants.gov",
+    "sourceId": "364075",
+    "title": "Cooperative Agreement for Affiliated Partner with the Great Lakes-Northern Forest Cooperative Ecosystem Studies Unit (CESU)",
+    "agency": "Geological Survey",
+    "opportunityNumber": "G27AS00079",
+    "status": "posted",
+    "openDate": "10/14/2026",
+    "closeDate": "11/14/2026",
+    "amount": "$1 - $150,000",
+    "score": 7,
+    "summary": "The U.S. Geological Survey (USGS) is offering a funding opportunity to a CESU partner for research in the development, evaluation, and synthesis of national-scale biogeographic information for fish and other aquatic organisms. This project supports research that improves how species distributions, habitat conditions, and conservation needs are mapped and analyzed across the United States. The project focuses on three technical areas: (1) advancing statistical and analytical methods that integrate multiple lines of evidence to improve species distribution models for freshwater organisms; (2) evaluating the accuracy, uncertainty, and environmental sensitivity of habitat models; and (3) using modern synthesis tools, including artificial intelligence, to assemble and maintain up-to-date information on species traits, conservation status, and habitat preferences. These activities will help resource managers make informed decisions about conserving aquatic species and freshwater ecosystems. The USGS intends to provide support for work that directly aligns with Department of the Interior (DOI) scientific and conservation priorities, including the development and application of actionable science for species management and cooperative conservation with local communities and Tribes. This opportunity supports DOI strategic objectives related to conserving land and water resources, improving ecological data and analysis, and strengthening shared stewardship across agencies and partners. The proposal objectives clearly supports, informs, and benefits the following: SO 3447 - Expanding Hunting and Fishing Access, Removing Unnecessary Barriers, and Ensuring Consistency Across the Depart of the Interior Lands and Waters (January 7, 2026) SO 3442 - Land and Water Conservation Fund Implementation by the U.S. Department of the Interior September 4, 2025), EO 14303 – Restoring Gold Standard Science (May 23, 2025) SO 3441 –Implementing the Requirements of Executive Order 14303, Restoring Gold Standard Science, May 23, 2025 (August 29, 2025) SO 3444 - Leading Interior's Path to Artificial Intelligence Transformation (September 17, 2025), and SO 3435 - Implementation of the Expanding Public Lands Outdoor Recreation Experiences Act June 25, 2025). This funding opportunity is appropriate for applicants with expertise in aquatic ecology, species distribution modeling, geospatial analysis, and ecological data synthesis. Prospective applicants should review the focus areas above to determine alignment of their capabilities with project needs and assess their interest in contributing to collaborative, nationally relevant biogeographic science.",
+    "officialUrl": "https://www.grants.gov/search-results-detail/364075",
+    "slug": "grants-gov-364075-cooperative-agreement-for-affiliated-partner-with-the-great-lakes-nort"
+  },
+  {
+    "source": "Grants.gov",
     "sourceId": "361604",
     "title": "National Science Foundation Fostering Interdisciplinary Networks to Develop Emergent and Responsive Solutions Foundry (NSF FINDERS FOUNDRY)",
     "agency": "U.S. National Science Foundation",
@@ -883,20 +898,5 @@
     "summary": "The purpose of this funding opportunity announcement (FOA) is to invite applications for a broad range of research efforts in computational genomics, data science, statistics, and bioinformatics relevant to one or both of basic or clinical genomic science, and broadly applicable to human health and disease. This FOA supports fundamental genomics research developing innovative analytical methodologies and approaches, early-stage development of tools and software, and refinement or hardening of software and tools of high value to the biomedical genomics community. Work supported under this FOA should be enabling for genomics and be generalizable or broadly applicable across diseases and biological systems. All applications should address how the methods would scale to address increasingly larger data sets.",
     "officialUrl": "https://www.grants.gov/search-results-detail/357194",
     "slug": "grants-gov-357194-investigator-initiated-innovation-in-computational-genomics-and-data-s"
-  },
-  {
-    "source": "Grants.gov",
-    "sourceId": "357195",
-    "title": "Investigator Initiated Innovation in Computational Genomics and Data Science (R21 Clinical Trial Not Allowed)",
-    "agency": "National Institutes of Health",
-    "opportunityNumber": "PAR-25-229",
-    "status": "posted",
-    "openDate": "11/18/2024",
-    "closeDate": "09/07/2027",
-    "amount": "",
-    "score": 6,
-    "summary": "The purpose of this funding opportunity announcement (FOA) is to invite applications for a broad range of research efforts in computational genomics, data science, statistics, and bioinformatics relevant to one or both of basic or clinical genomic science, and broadly applicable to human health and disease. This FOA supports fundamental genomics research developing innovative analytical methodologies and approaches, early-stage development of tools and software, and refinement or hardening of software and tools of high value to the biomedical genomics community. Work supported under this FOA should be enabling for genomics and be generalizable or broadly applicable across diseases and biological systems. All applications should address how the methods would scale to address increasingly larger data sets.",
-    "officialUrl": "https://www.grants.gov/search-results-detail/357195",
-    "slug": "grants-gov-357195-investigator-initiated-innovation-in-computational-genomics-and-data-s"
   }
 ]
