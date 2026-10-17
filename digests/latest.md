@@ -1,8 +1,8 @@
 # Software, AI, and Automation Opportunities
 
-Generated: 2026-10-16T04:38:55.978Z
+Generated: 2026-10-17T04:36:02.650Z
 
-Sources checked: Grants.gov 68, SAM.gov 0
+Sources checked: Grants.gov 0, SAM.gov 0
 
 ## Top Opportunities
 
