@@ -20,15 +20,15 @@ Homepage use: start with the priority picks. Each pick explains fit, deadline, t
 - Receive address: TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ
 - Support target: 5 USDT
 - Current status: received
-- Last checked: 2026-11-02T06:18:52.933Z
+- Last checked: 2026-11-03T06:55:50.024Z
 
 ## Topics
 
-- Software: 16 current matches
+- Software: 15 current matches
 - Artificial Intelligence: 20 current matches
 - Automation: 4 current matches
 - Cybersecurity: 17 current matches
-- Data Science: 16 current matches
+- Data Science: 15 current matches
 - Cloud: 6 current matches
 
 ## Current top opportunities
