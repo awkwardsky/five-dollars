@@ -23,9 +23,9 @@ Automated project for publishing a searchable daily shortlist of U.S. government
 - Support target: 5 USDT
 - Network: TRON / TRC20
 - Receive address: `TW4aVr9dQa4eAEyMmqfwYSyjs8Woq4aBgZ`
-- Matching transfers: 3
-- Last checked: 2026-11-15T06:43:39.425Z
-- Latest run: 2026-11-15T06:43:39.285Z
+- Matching transfers: 4
+- Last checked: 2026-11-17T08:01:48.789Z
+- Latest run: 2026-11-17T08:01:48.642Z
 
 ### Current Top Opportunities
 
